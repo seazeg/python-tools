@@ -7,9 +7,21 @@ import sys
 from bs4 import BeautifulSoup
 import os
 
-key = input('请输入关键词:')
-print(">=→")
-print("**正在获取中,请稍候...")
+def desc():
+    print("\n********************************************************************")
+    print('''
+        ███████╗██╗   ██╗ █████╗ ███╗   ██╗    ██████╗ 
+        ██╔════╝██║   ██║██╔══██╗████╗  ██║   ██╔════╝ 
+        █████╗  ██║   ██║███████║██╔██╗ ██║   ██║  ███╗
+        ██╔══╝  ╚██╗ ██╔╝██╔══██║██║╚██╗██║   ██║   ██║
+        ███████╗ ╚████╔╝ ██║  ██║██║ ╚████║██╗╚██████╔╝
+        ╚══════╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝ ╚═════╝ 
+                                                    
+        ''')
+    print("电影搜索器")
+    print("\n********************************************************************")
+
+
 
 # sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gbk') #改变标准输出的默认编码 
 
@@ -60,28 +72,32 @@ def search(l_url):
 
 
 
-result = '<html><head><meta http-equiv="Content-Type" content="text/html" /><style>table{border-collapse:collapse;}th,td{font-size:14px;border:1px solid #111;padding: 15px;}.highlight{color:red}a{color:#111;text-decoration: none;}</style></head><body><table><thead><tr><th style="width: 1000px;">资源名称</th><th style="width:20%">文件大小</th><th style="width:20%">磁力链接</th></tr></thead><tbody>'
-
-for pageNum in range(3):
-    url = 'https://www.btavn.com/s/%s/%s.html' % (key,pageNum+1)
-    result += search(url)
 
 
+if __name__ == '__main__':
+    try:
+        desc();
+        key = input('请输入关键词:')
+        print(">=→")
+        print("**正在获取中,请稍候...")
 
-result+='</tbody></table></body></html>'
+        result = '<html><head><meta http-equiv="Content-Type" content="text/html" /><style>table{border-collapse:collapse;}th,td{font-size:14px;border:1px solid #111;padding: 15px;}.highlight{color:red}a{color:#111;text-decoration: none;}</style></head><body><table><thead><tr><th style="width: 1000px;">资源名称</th><th style="width:20%">文件大小</th><th style="width:20%">磁力链接</th></tr></thead><tbody>'
 
+        for pageNum in range(3):
+            url = 'https://www.btavn.com/s/%s/%s.html' % (key,pageNum+1)
+            result += search(url)
 
-try:
-    os.remove('list.html');
-    f = open("list.html",'w')
-    f.write(result)  
-except UnicodeEncodeError as e:
-    print("保存编码错误:",str(e).split(' ')[5])
-else:
-    f.close()
-    print(">=→")
-    print("**搜索结果列表生成成功!")  
-    # os.system("list.html")
+        result+='</tbody></table></body></html>'
+
+        f = open("list.html",'w')
+        f.write(result)  
+    except UnicodeEncodeError as e:
+        print("保存编码错误:",str(e).split(' ')[5])
+    else:
+        f.close()
+        print(">=→")
+        print("**搜索结果列表生成成功!")  
+        # os.system("list.html")
 
 
 
