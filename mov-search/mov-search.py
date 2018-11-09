@@ -96,7 +96,8 @@ if __name__ == '__main__':
     else:
         f.close()
         print(">=→")
-        print("**搜索结果列表生成成功!")  
+        print("**搜索结果列表生成成功!")
+        os.system("open list.html");
         # os.system("list.html")
 
 
