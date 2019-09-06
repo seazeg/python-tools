@@ -4,7 +4,7 @@ import sys
 import shutil
 
 #需整理的文件后缀数组
-extList = [['txt','Docs'],['doc','Docs'],['docx','Docs'],['xls','Docs'],['xlsx','Docs'],['csv','Docs'],['mp3','Music'],['wma','Music'],['mid','Music'],['wav','Music'],['avi','Movie'],['mp4','Movie'],['rmvb','Movie'],['rm','Movie'],['mov','Movie'],['wmv','Movie'],['mkv','Movie'],['flv','Movie'],['3gp','Movie'],['png','Pictures'],['gif','Pictures'],['jpeg','Pictures'],['svg','Pictures'],['bmp','Pictures'],['psd','Pictures'],['tiff','Pictures'],['ai','Pictures'],['cdr','Pictures'],['raw','Pictures'],['eps','Pictures'],['webp','Pictures'],['ico','Pictures'],['icns','Pictures'],['jpg','Pictures']]
+extList = [['txt','Docs'],['doc','Docs'],['docx','Docs'],['xls','Docs'],['xlsx','Docs'],['csv','Docs'],['mp3','Music'],['wma','Music'],['mid','Music'],['wav','Music'],['avi','Movie'],['mp4','Movie'],['rmvb','Movie'],['rm','Movie'],['mov','Movie'],['wmv','Movie'],['mkv','Movie'],['flv','Movie'],['3gp','Movie'],['png','Pictures'],['gif','Pictures'],['jpeg','Pictures'],['svg','Pictures'],['bmp','Pictures'],['psd','Pictures'],['tiff','Pictures'],['ai','Pictures'],['cdr','Pictures'],['raw','Pictures'],['eps','Pictures'],['webp','Pictures'],['ico','Pictures'],['icns','Pictures'],['jpg','Pictures'],['pdf','Books']]
 
 def desc():
     print("\n********************************************************************")
