@@ -1,0 +1,6094 @@
+目录扫描结果 - https://test.haier.com/cn/
+扫描时间: 2025-04-02 16:59:43
+------------------------------------------------------------
+
+路径: .env
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/.env
+----------------------------------------
+路径: .git/HEAD
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/.git/HEAD
+----------------------------------------
+路径: .htaccess
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/.htaccess
+----------------------------------------
+路径: CHANGELOG.md
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/CHANGELOG.md
+----------------------------------------
+路径: LICENSE
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/LICENSE
+----------------------------------------
+路径: README.md
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/README.md
+----------------------------------------
+路径: admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin
+----------------------------------------
+路径: admin.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.action
+----------------------------------------
+路径: admin.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.asp
+----------------------------------------
+路径: admin.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.aspx
+----------------------------------------
+路径: admin.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.do
+----------------------------------------
+路径: admin.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.html
+----------------------------------------
+路径: admin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.jsp
+----------------------------------------
+路径: admin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.php
+----------------------------------------
+路径: admin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin.php
+----------------------------------------
+路径: admin/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/admin
+----------------------------------------
+路径: admin/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/administrator
+----------------------------------------
+路径: admin/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/backup
+----------------------------------------
+路径: admin/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/bak
+----------------------------------------
+路径: admin/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/beta
+----------------------------------------
+路径: admin/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/bin
+----------------------------------------
+路径: admin/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/cgi-bin
+----------------------------------------
+路径: admin/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/config
+----------------------------------------
+路径: admin/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/data
+----------------------------------------
+路径: admin/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/db
+----------------------------------------
+路径: admin/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.action
+----------------------------------------
+路径: admin/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.asp
+----------------------------------------
+路径: admin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.aspx
+----------------------------------------
+路径: admin/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.do
+----------------------------------------
+路径: admin/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.html
+----------------------------------------
+路径: admin/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.jsp
+----------------------------------------
+路径: admin/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/admin/index.php
+----------------------------------------
+路径: administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator
+----------------------------------------
+路径: administrator.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.action
+----------------------------------------
+路径: administrator.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.asp
+----------------------------------------
+路径: administrator.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.aspx
+----------------------------------------
+路径: administrator.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.do
+----------------------------------------
+路径: administrator.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.html
+----------------------------------------
+路径: administrator.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.jsp
+----------------------------------------
+路径: administrator.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator.php
+----------------------------------------
+路径: administrator/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/admin
+----------------------------------------
+路径: administrator/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/administrator
+----------------------------------------
+路径: administrator/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/backup
+----------------------------------------
+路径: administrator/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/bak
+----------------------------------------
+路径: administrator/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/beta
+----------------------------------------
+路径: administrator/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/bin
+----------------------------------------
+路径: administrator/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/cgi-bin
+----------------------------------------
+路径: administrator/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/config
+----------------------------------------
+路径: administrator/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/data
+----------------------------------------
+路径: administrator/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/db
+----------------------------------------
+路径: administrator/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.action
+----------------------------------------
+路径: administrator/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.asp
+----------------------------------------
+路径: administrator/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.aspx
+----------------------------------------
+路径: administrator/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.do
+----------------------------------------
+路径: administrator/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.html
+----------------------------------------
+路径: administrator/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.jsp
+----------------------------------------
+路径: administrator/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/administrator/index.php
+----------------------------------------
+路径: api
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api
+----------------------------------------
+路径: api.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.action
+----------------------------------------
+路径: api.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.asp
+----------------------------------------
+路径: api.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.aspx
+----------------------------------------
+路径: api.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.do
+----------------------------------------
+路径: api.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.html
+----------------------------------------
+路径: api.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.jsp
+----------------------------------------
+路径: api.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api.php
+----------------------------------------
+路径: api/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.action
+----------------------------------------
+路径: api/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.asp
+----------------------------------------
+路径: api/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.aspx
+----------------------------------------
+路径: api/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.do
+----------------------------------------
+路径: api/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.html
+----------------------------------------
+路径: api/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.jsp
+----------------------------------------
+路径: api/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/api/index.php
+----------------------------------------
+路径: app
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app
+----------------------------------------
+路径: app.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.action
+----------------------------------------
+路径: app.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.asp
+----------------------------------------
+路径: app.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.aspx
+----------------------------------------
+路径: app.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.do
+----------------------------------------
+路径: app.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.html
+----------------------------------------
+路径: app.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.jsp
+----------------------------------------
+路径: app.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app.php
+----------------------------------------
+路径: app/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.action
+----------------------------------------
+路径: app/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.asp
+----------------------------------------
+路径: app/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.aspx
+----------------------------------------
+路径: app/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.do
+----------------------------------------
+路径: app/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.html
+----------------------------------------
+路径: app/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.jsp
+----------------------------------------
+路径: app/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/app/index.php
+----------------------------------------
+路径: assets
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets
+----------------------------------------
+路径: assets.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.action
+----------------------------------------
+路径: assets.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.asp
+----------------------------------------
+路径: assets.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.aspx
+----------------------------------------
+路径: assets.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.do
+----------------------------------------
+路径: assets.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.html
+----------------------------------------
+路径: assets.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.jsp
+----------------------------------------
+路径: assets.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets.php
+----------------------------------------
+路径: assets/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.action
+----------------------------------------
+路径: assets/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.asp
+----------------------------------------
+路径: assets/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.aspx
+----------------------------------------
+路径: assets/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.do
+----------------------------------------
+路径: assets/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.html
+----------------------------------------
+路径: assets/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.jsp
+----------------------------------------
+路径: assets/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/assets/index.php
+----------------------------------------
+路径: auth
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth
+----------------------------------------
+路径: auth.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.action
+----------------------------------------
+路径: auth.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.asp
+----------------------------------------
+路径: auth.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.aspx
+----------------------------------------
+路径: auth.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.do
+----------------------------------------
+路径: auth.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.html
+----------------------------------------
+路径: auth.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.jsp
+----------------------------------------
+路径: auth.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth.php
+----------------------------------------
+路径: auth/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.action
+----------------------------------------
+路径: auth/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.asp
+----------------------------------------
+路径: auth/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.aspx
+----------------------------------------
+路径: auth/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.do
+----------------------------------------
+路径: auth/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.html
+----------------------------------------
+路径: auth/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.jsp
+----------------------------------------
+路径: auth/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/auth/index.php
+----------------------------------------
+路径: backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup
+----------------------------------------
+路径: backup.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.action
+----------------------------------------
+路径: backup.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.asp
+----------------------------------------
+路径: backup.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.aspx
+----------------------------------------
+路径: backup.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.do
+----------------------------------------
+路径: backup.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.html
+----------------------------------------
+路径: backup.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.jsp
+----------------------------------------
+路径: backup.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.php
+----------------------------------------
+路径: backup.sql
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup.sql
+----------------------------------------
+路径: backup/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/admin
+----------------------------------------
+路径: backup/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/administrator
+----------------------------------------
+路径: backup/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/backup
+----------------------------------------
+路径: backup/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/bak
+----------------------------------------
+路径: backup/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/beta
+----------------------------------------
+路径: backup/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/bin
+----------------------------------------
+路径: backup/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/cgi-bin
+----------------------------------------
+路径: backup/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/config
+----------------------------------------
+路径: backup/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/data
+----------------------------------------
+路径: backup/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/db
+----------------------------------------
+路径: backup/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.action
+----------------------------------------
+路径: backup/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.asp
+----------------------------------------
+路径: backup/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.aspx
+----------------------------------------
+路径: backup/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.do
+----------------------------------------
+路径: backup/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.html
+----------------------------------------
+路径: backup/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.jsp
+----------------------------------------
+路径: backup/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/backup/index.php
+----------------------------------------
+路径: bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak
+----------------------------------------
+路径: bak.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.action
+----------------------------------------
+路径: bak.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.asp
+----------------------------------------
+路径: bak.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.aspx
+----------------------------------------
+路径: bak.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.do
+----------------------------------------
+路径: bak.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.html
+----------------------------------------
+路径: bak.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.jsp
+----------------------------------------
+路径: bak.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak.php
+----------------------------------------
+路径: bak/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/admin
+----------------------------------------
+路径: bak/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/administrator
+----------------------------------------
+路径: bak/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/backup
+----------------------------------------
+路径: bak/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/bak
+----------------------------------------
+路径: bak/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/beta
+----------------------------------------
+路径: bak/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/bin
+----------------------------------------
+路径: bak/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/cgi-bin
+----------------------------------------
+路径: bak/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/config
+----------------------------------------
+路径: bak/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/data
+----------------------------------------
+路径: bak/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/db
+----------------------------------------
+路径: bak/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.action
+----------------------------------------
+路径: bak/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.asp
+----------------------------------------
+路径: bak/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.aspx
+----------------------------------------
+路径: bak/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.do
+----------------------------------------
+路径: bak/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.html
+----------------------------------------
+路径: bak/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.jsp
+----------------------------------------
+路径: bak/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bak/index.php
+----------------------------------------
+路径: beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta
+----------------------------------------
+路径: beta.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.action
+----------------------------------------
+路径: beta.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.asp
+----------------------------------------
+路径: beta.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.aspx
+----------------------------------------
+路径: beta.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.do
+----------------------------------------
+路径: beta.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.html
+----------------------------------------
+路径: beta.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.jsp
+----------------------------------------
+路径: beta.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta.php
+----------------------------------------
+路径: beta/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/admin
+----------------------------------------
+路径: beta/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/administrator
+----------------------------------------
+路径: beta/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/backup
+----------------------------------------
+路径: beta/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/bak
+----------------------------------------
+路径: beta/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/beta
+----------------------------------------
+路径: beta/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/bin
+----------------------------------------
+路径: beta/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/cgi-bin
+----------------------------------------
+路径: beta/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/config
+----------------------------------------
+路径: beta/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/data
+----------------------------------------
+路径: beta/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/db
+----------------------------------------
+路径: beta/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.action
+----------------------------------------
+路径: beta/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.asp
+----------------------------------------
+路径: beta/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.aspx
+----------------------------------------
+路径: beta/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.do
+----------------------------------------
+路径: beta/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.html
+----------------------------------------
+路径: beta/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.jsp
+----------------------------------------
+路径: beta/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/beta/index.php
+----------------------------------------
+路径: bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin
+----------------------------------------
+路径: bin.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.action
+----------------------------------------
+路径: bin.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.asp
+----------------------------------------
+路径: bin.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.aspx
+----------------------------------------
+路径: bin.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.do
+----------------------------------------
+路径: bin.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.html
+----------------------------------------
+路径: bin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.jsp
+----------------------------------------
+路径: bin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin.php
+----------------------------------------
+路径: bin/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/admin
+----------------------------------------
+路径: bin/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/administrator
+----------------------------------------
+路径: bin/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/backup
+----------------------------------------
+路径: bin/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/bak
+----------------------------------------
+路径: bin/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/beta
+----------------------------------------
+路径: bin/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/bin
+----------------------------------------
+路径: bin/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/cgi-bin
+----------------------------------------
+路径: bin/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/config
+----------------------------------------
+路径: bin/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/data
+----------------------------------------
+路径: bin/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/db
+----------------------------------------
+路径: bin/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.action
+----------------------------------------
+路径: bin/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.asp
+----------------------------------------
+路径: bin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.aspx
+----------------------------------------
+路径: bin/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.do
+----------------------------------------
+路径: bin/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.html
+----------------------------------------
+路径: bin/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.jsp
+----------------------------------------
+路径: bin/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/bin/index.php
+----------------------------------------
+路径: cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin
+----------------------------------------
+路径: cgi-bin.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.action
+----------------------------------------
+路径: cgi-bin.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.asp
+----------------------------------------
+路径: cgi-bin.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.aspx
+----------------------------------------
+路径: cgi-bin.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.do
+----------------------------------------
+路径: cgi-bin.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.html
+----------------------------------------
+路径: cgi-bin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.jsp
+----------------------------------------
+路径: cgi-bin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin.php
+----------------------------------------
+路径: cgi-bin/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/admin
+----------------------------------------
+路径: cgi-bin/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/administrator
+----------------------------------------
+路径: cgi-bin/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/backup
+----------------------------------------
+路径: cgi-bin/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/bak
+----------------------------------------
+路径: cgi-bin/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/beta
+----------------------------------------
+路径: cgi-bin/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/bin
+----------------------------------------
+路径: cgi-bin/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/cgi-bin
+----------------------------------------
+路径: cgi-bin/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/config
+----------------------------------------
+路径: cgi-bin/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/data
+----------------------------------------
+路径: cgi-bin/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/db
+----------------------------------------
+路径: cgi-bin/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.action
+----------------------------------------
+路径: cgi-bin/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.asp
+----------------------------------------
+路径: cgi-bin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.aspx
+----------------------------------------
+路径: cgi-bin/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.do
+----------------------------------------
+路径: cgi-bin/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.html
+----------------------------------------
+路径: cgi-bin/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.jsp
+----------------------------------------
+路径: cgi-bin/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/cgi-bin/index.php
+----------------------------------------
+路径: config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config
+----------------------------------------
+路径: config.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.action
+----------------------------------------
+路径: config.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.asp
+----------------------------------------
+路径: config.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.aspx
+----------------------------------------
+路径: config.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.do
+----------------------------------------
+路径: config.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.html
+----------------------------------------
+路径: config.ini
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.ini
+----------------------------------------
+路径: config.json
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.json
+----------------------------------------
+路径: config.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.jsp
+----------------------------------------
+路径: config.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.php
+----------------------------------------
+路径: config.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config.php
+----------------------------------------
+路径: config/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/admin
+----------------------------------------
+路径: config/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/administrator
+----------------------------------------
+路径: config/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/backup
+----------------------------------------
+路径: config/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/bak
+----------------------------------------
+路径: config/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/beta
+----------------------------------------
+路径: config/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/bin
+----------------------------------------
+路径: config/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/cgi-bin
+----------------------------------------
+路径: config/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/config
+----------------------------------------
+路径: config/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/data
+----------------------------------------
+路径: config/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/db
+----------------------------------------
+路径: config/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.action
+----------------------------------------
+路径: config/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.asp
+----------------------------------------
+路径: config/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.aspx
+----------------------------------------
+路径: config/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.do
+----------------------------------------
+路径: config/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.html
+----------------------------------------
+路径: config/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.jsp
+----------------------------------------
+路径: config/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/config/index.php
+----------------------------------------
+路径: crossdomain.xml
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/crossdomain.xml
+----------------------------------------
+路径: css
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css
+----------------------------------------
+路径: css.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.action
+----------------------------------------
+路径: css.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.asp
+----------------------------------------
+路径: css.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.aspx
+----------------------------------------
+路径: css.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.do
+----------------------------------------
+路径: css.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.html
+----------------------------------------
+路径: css.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.jsp
+----------------------------------------
+路径: css.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css.php
+----------------------------------------
+路径: css/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.action
+----------------------------------------
+路径: css/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.asp
+----------------------------------------
+路径: css/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.aspx
+----------------------------------------
+路径: css/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.do
+----------------------------------------
+路径: css/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.html
+----------------------------------------
+路径: css/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.jsp
+----------------------------------------
+路径: css/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/css/index.php
+----------------------------------------
+路径: data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data
+----------------------------------------
+路径: data.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.action
+----------------------------------------
+路径: data.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.asp
+----------------------------------------
+路径: data.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.aspx
+----------------------------------------
+路径: data.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.do
+----------------------------------------
+路径: data.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.html
+----------------------------------------
+路径: data.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.jsp
+----------------------------------------
+路径: data.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data.php
+----------------------------------------
+路径: data/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/admin
+----------------------------------------
+路径: data/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/administrator
+----------------------------------------
+路径: data/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/backup
+----------------------------------------
+路径: data/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/bak
+----------------------------------------
+路径: data/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/beta
+----------------------------------------
+路径: data/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/bin
+----------------------------------------
+路径: data/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/cgi-bin
+----------------------------------------
+路径: data/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/config
+----------------------------------------
+路径: data/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/data
+----------------------------------------
+路径: data/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/db
+----------------------------------------
+路径: data/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.action
+----------------------------------------
+路径: data/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.asp
+----------------------------------------
+路径: data/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.aspx
+----------------------------------------
+路径: data/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.do
+----------------------------------------
+路径: data/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.html
+----------------------------------------
+路径: data/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.jsp
+----------------------------------------
+路径: data/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/data/index.php
+----------------------------------------
+路径: database.sql
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/database.sql
+----------------------------------------
+路径: db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db
+----------------------------------------
+路径: db.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.action
+----------------------------------------
+路径: db.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.asp
+----------------------------------------
+路径: db.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.aspx
+----------------------------------------
+路径: db.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.do
+----------------------------------------
+路径: db.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.html
+----------------------------------------
+路径: db.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.jsp
+----------------------------------------
+路径: db.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db.php
+----------------------------------------
+路径: db/admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/admin
+----------------------------------------
+路径: db/administrator
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/administrator
+----------------------------------------
+路径: db/backup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/backup
+----------------------------------------
+路径: db/bak
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/bak
+----------------------------------------
+路径: db/beta
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/beta
+----------------------------------------
+路径: db/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/bin
+----------------------------------------
+路径: db/cgi-bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/cgi-bin
+----------------------------------------
+路径: db/config
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/config
+----------------------------------------
+路径: db/data
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/data
+----------------------------------------
+路径: db/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/db
+----------------------------------------
+路径: db/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.action
+----------------------------------------
+路径: db/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.asp
+----------------------------------------
+路径: db/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.aspx
+----------------------------------------
+路径: db/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.do
+----------------------------------------
+路径: db/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.html
+----------------------------------------
+路径: db/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.jsp
+----------------------------------------
+路径: db/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/db/index.php
+----------------------------------------
+路径: default.htm
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/default.htm
+----------------------------------------
+路径: default.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/default.html
+----------------------------------------
+路径: default.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/default.php
+----------------------------------------
+路径: dev
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev
+----------------------------------------
+路径: dev.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.action
+----------------------------------------
+路径: dev.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.asp
+----------------------------------------
+路径: dev.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.aspx
+----------------------------------------
+路径: dev.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.do
+----------------------------------------
+路径: dev.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.html
+----------------------------------------
+路径: dev.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.jsp
+----------------------------------------
+路径: dev.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev.php
+----------------------------------------
+路径: dev/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.action
+----------------------------------------
+路径: dev/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.asp
+----------------------------------------
+路径: dev/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.aspx
+----------------------------------------
+路径: dev/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.do
+----------------------------------------
+路径: dev/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.html
+----------------------------------------
+路径: dev/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.jsp
+----------------------------------------
+路径: dev/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dev/index.php
+----------------------------------------
+路径: doc
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc
+----------------------------------------
+路径: doc.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.action
+----------------------------------------
+路径: doc.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.asp
+----------------------------------------
+路径: doc.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.aspx
+----------------------------------------
+路径: doc.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.do
+----------------------------------------
+路径: doc.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.html
+----------------------------------------
+路径: doc.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.jsp
+----------------------------------------
+路径: doc.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc.php
+----------------------------------------
+路径: doc/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.action
+----------------------------------------
+路径: doc/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.asp
+----------------------------------------
+路径: doc/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.aspx
+----------------------------------------
+路径: doc/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.do
+----------------------------------------
+路径: doc/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.html
+----------------------------------------
+路径: doc/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.jsp
+----------------------------------------
+路径: doc/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/doc/index.php
+----------------------------------------
+路径: docs
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs
+----------------------------------------
+路径: docs.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.action
+----------------------------------------
+路径: docs.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.asp
+----------------------------------------
+路径: docs.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.aspx
+----------------------------------------
+路径: docs.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.do
+----------------------------------------
+路径: docs.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.html
+----------------------------------------
+路径: docs.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.jsp
+----------------------------------------
+路径: docs.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs.php
+----------------------------------------
+路径: docs/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.action
+----------------------------------------
+路径: docs/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.asp
+----------------------------------------
+路径: docs/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.aspx
+----------------------------------------
+路径: docs/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.do
+----------------------------------------
+路径: docs/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.html
+----------------------------------------
+路径: docs/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.jsp
+----------------------------------------
+路径: docs/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/docs/index.php
+----------------------------------------
+路径: download
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download
+----------------------------------------
+路径: download.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.action
+----------------------------------------
+路径: download.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.asp
+----------------------------------------
+路径: download.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.aspx
+----------------------------------------
+路径: download.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.do
+----------------------------------------
+路径: download.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.html
+----------------------------------------
+路径: download.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.jsp
+----------------------------------------
+路径: download.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download.php
+----------------------------------------
+路径: download/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.action
+----------------------------------------
+路径: download/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.asp
+----------------------------------------
+路径: download/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.aspx
+----------------------------------------
+路径: download/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.do
+----------------------------------------
+路径: download/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.html
+----------------------------------------
+路径: download/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.jsp
+----------------------------------------
+路径: download/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/download/index.php
+----------------------------------------
+路径: downloads
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads
+----------------------------------------
+路径: downloads.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.action
+----------------------------------------
+路径: downloads.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.asp
+----------------------------------------
+路径: downloads.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.aspx
+----------------------------------------
+路径: downloads.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.do
+----------------------------------------
+路径: downloads.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.html
+----------------------------------------
+路径: downloads.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.jsp
+----------------------------------------
+路径: downloads.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads.php
+----------------------------------------
+路径: downloads/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.action
+----------------------------------------
+路径: downloads/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.asp
+----------------------------------------
+路径: downloads/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.aspx
+----------------------------------------
+路径: downloads/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.do
+----------------------------------------
+路径: downloads/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.html
+----------------------------------------
+路径: downloads/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.jsp
+----------------------------------------
+路径: downloads/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/downloads/index.php
+----------------------------------------
+路径: dump.sql
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/dump.sql
+----------------------------------------
+路径: file
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file
+----------------------------------------
+路径: file.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.action
+----------------------------------------
+路径: file.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.asp
+----------------------------------------
+路径: file.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.aspx
+----------------------------------------
+路径: file.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.do
+----------------------------------------
+路径: file.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.html
+----------------------------------------
+路径: file.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.jsp
+----------------------------------------
+路径: file.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file.php
+----------------------------------------
+路径: file/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.action
+----------------------------------------
+路径: file/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.asp
+----------------------------------------
+路径: file/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.aspx
+----------------------------------------
+路径: file/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.do
+----------------------------------------
+路径: file/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.html
+----------------------------------------
+路径: file/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.jsp
+----------------------------------------
+路径: file/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/file/index.php
+----------------------------------------
+路径: files
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files
+----------------------------------------
+路径: files.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.action
+----------------------------------------
+路径: files.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.asp
+----------------------------------------
+路径: files.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.aspx
+----------------------------------------
+路径: files.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.do
+----------------------------------------
+路径: files.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.html
+----------------------------------------
+路径: files.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.jsp
+----------------------------------------
+路径: files.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files.php
+----------------------------------------
+路径: files/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.action
+----------------------------------------
+路径: files/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.asp
+----------------------------------------
+路径: files/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.aspx
+----------------------------------------
+路径: files/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.do
+----------------------------------------
+路径: files/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.html
+----------------------------------------
+路径: files/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.jsp
+----------------------------------------
+路径: files/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/files/index.php
+----------------------------------------
+路径: home
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home
+----------------------------------------
+路径: home.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.action
+----------------------------------------
+路径: home.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.asp
+----------------------------------------
+路径: home.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.aspx
+----------------------------------------
+路径: home.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.do
+----------------------------------------
+路径: home.htm
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.htm
+----------------------------------------
+路径: home.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.html
+----------------------------------------
+路径: home.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.html
+----------------------------------------
+路径: home.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.jsp
+----------------------------------------
+路径: home.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.php
+----------------------------------------
+路径: home.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home.php
+----------------------------------------
+路径: home/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.action
+----------------------------------------
+路径: home/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.asp
+----------------------------------------
+路径: home/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.aspx
+----------------------------------------
+路径: home/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.do
+----------------------------------------
+路径: home/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.html
+----------------------------------------
+路径: home/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.jsp
+----------------------------------------
+路径: home/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/home/index.php
+----------------------------------------
+路径: images
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images
+----------------------------------------
+路径: images.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.action
+----------------------------------------
+路径: images.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.asp
+----------------------------------------
+路径: images.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.aspx
+----------------------------------------
+路径: images.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.do
+----------------------------------------
+路径: images.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.html
+----------------------------------------
+路径: images.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.jsp
+----------------------------------------
+路径: images.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images.php
+----------------------------------------
+路径: images/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.action
+----------------------------------------
+路径: images/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.asp
+----------------------------------------
+路径: images/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.aspx
+----------------------------------------
+路径: images/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.do
+----------------------------------------
+路径: images/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.html
+----------------------------------------
+路径: images/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.jsp
+----------------------------------------
+路径: images/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/images/index.php
+----------------------------------------
+路径: img
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img
+----------------------------------------
+路径: img.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.action
+----------------------------------------
+路径: img.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.asp
+----------------------------------------
+路径: img.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.aspx
+----------------------------------------
+路径: img.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.do
+----------------------------------------
+路径: img.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.html
+----------------------------------------
+路径: img.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.jsp
+----------------------------------------
+路径: img.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img.php
+----------------------------------------
+路径: img/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.action
+----------------------------------------
+路径: img/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.asp
+----------------------------------------
+路径: img/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.aspx
+----------------------------------------
+路径: img/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.do
+----------------------------------------
+路径: img/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.html
+----------------------------------------
+路径: img/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.jsp
+----------------------------------------
+路径: img/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/img/index.php
+----------------------------------------
+路径: inc
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc
+----------------------------------------
+路径: inc.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.action
+----------------------------------------
+路径: inc.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.asp
+----------------------------------------
+路径: inc.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.aspx
+----------------------------------------
+路径: inc.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.do
+----------------------------------------
+路径: inc.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.html
+----------------------------------------
+路径: inc.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.jsp
+----------------------------------------
+路径: inc.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc.php
+----------------------------------------
+路径: inc/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.action
+----------------------------------------
+路径: inc/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.asp
+----------------------------------------
+路径: inc/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.aspx
+----------------------------------------
+路径: inc/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.do
+----------------------------------------
+路径: inc/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.html
+----------------------------------------
+路径: inc/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.jsp
+----------------------------------------
+路径: inc/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/inc/index.php
+----------------------------------------
+路径: include
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include
+----------------------------------------
+路径: include.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.action
+----------------------------------------
+路径: include.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.asp
+----------------------------------------
+路径: include.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.aspx
+----------------------------------------
+路径: include.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.do
+----------------------------------------
+路径: include.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.html
+----------------------------------------
+路径: include.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.jsp
+----------------------------------------
+路径: include.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include.php
+----------------------------------------
+路径: include/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.action
+----------------------------------------
+路径: include/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.asp
+----------------------------------------
+路径: include/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.aspx
+----------------------------------------
+路径: include/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.do
+----------------------------------------
+路径: include/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.html
+----------------------------------------
+路径: include/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.jsp
+----------------------------------------
+路径: include/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/include/index.php
+----------------------------------------
+路径: includes
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes
+----------------------------------------
+路径: includes.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.action
+----------------------------------------
+路径: includes.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.asp
+----------------------------------------
+路径: includes.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.aspx
+----------------------------------------
+路径: includes.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.do
+----------------------------------------
+路径: includes.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.html
+----------------------------------------
+路径: includes.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.jsp
+----------------------------------------
+路径: includes.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes.php
+----------------------------------------
+路径: includes/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.action
+----------------------------------------
+路径: includes/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.asp
+----------------------------------------
+路径: includes/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.aspx
+----------------------------------------
+路径: includes/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.do
+----------------------------------------
+路径: includes/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.html
+----------------------------------------
+路径: includes/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.jsp
+----------------------------------------
+路径: includes/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/includes/index.php
+----------------------------------------
+路径: index.htm
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/index.htm
+----------------------------------------
+路径: index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/index.html
+----------------------------------------
+路径: index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/index.php
+----------------------------------------
+路径: info.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/info.php
+----------------------------------------
+路径: install
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install
+----------------------------------------
+路径: install.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.action
+----------------------------------------
+路径: install.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.asp
+----------------------------------------
+路径: install.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.aspx
+----------------------------------------
+路径: install.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.do
+----------------------------------------
+路径: install.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.html
+----------------------------------------
+路径: install.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.jsp
+----------------------------------------
+路径: install.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.php
+----------------------------------------
+路径: install.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install.php
+----------------------------------------
+路径: install/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.action
+----------------------------------------
+路径: install/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.asp
+----------------------------------------
+路径: install/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.aspx
+----------------------------------------
+路径: install/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.do
+----------------------------------------
+路径: install/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.html
+----------------------------------------
+路径: install/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.jsp
+----------------------------------------
+路径: install/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/install/index.php
+----------------------------------------
+路径: js
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js
+----------------------------------------
+路径: js.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.action
+----------------------------------------
+路径: js.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.asp
+----------------------------------------
+路径: js.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.aspx
+----------------------------------------
+路径: js.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.do
+----------------------------------------
+路径: js.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.html
+----------------------------------------
+路径: js.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.jsp
+----------------------------------------
+路径: js.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js.php
+----------------------------------------
+路径: js/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.action
+----------------------------------------
+路径: js/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.asp
+----------------------------------------
+路径: js/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.aspx
+----------------------------------------
+路径: js/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.do
+----------------------------------------
+路径: js/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.html
+----------------------------------------
+路径: js/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.jsp
+----------------------------------------
+路径: js/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/js/index.php
+----------------------------------------
+路径: log
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log
+----------------------------------------
+路径: log.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.action
+----------------------------------------
+路径: log.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.asp
+----------------------------------------
+路径: log.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.aspx
+----------------------------------------
+路径: log.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.do
+----------------------------------------
+路径: log.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.html
+----------------------------------------
+路径: log.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.jsp
+----------------------------------------
+路径: log.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log.php
+----------------------------------------
+路径: log/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.action
+----------------------------------------
+路径: log/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.asp
+----------------------------------------
+路径: log/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.aspx
+----------------------------------------
+路径: log/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.do
+----------------------------------------
+路径: log/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.html
+----------------------------------------
+路径: log/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.jsp
+----------------------------------------
+路径: log/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/log/index.php
+----------------------------------------
+路径: login
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login
+----------------------------------------
+路径: login.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.action
+----------------------------------------
+路径: login.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.asp
+----------------------------------------
+路径: login.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.aspx
+----------------------------------------
+路径: login.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.do
+----------------------------------------
+路径: login.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.html
+----------------------------------------
+路径: login.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.jsp
+----------------------------------------
+路径: login.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.php
+----------------------------------------
+路径: login.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login.php
+----------------------------------------
+路径: login/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.action
+----------------------------------------
+路径: login/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.asp
+----------------------------------------
+路径: login/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.aspx
+----------------------------------------
+路径: login/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.do
+----------------------------------------
+路径: login/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.html
+----------------------------------------
+路径: login/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.jsp
+----------------------------------------
+路径: login/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/login/index.php
+----------------------------------------
+路径: logs
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs
+----------------------------------------
+路径: logs.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.action
+----------------------------------------
+路径: logs.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.asp
+----------------------------------------
+路径: logs.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.aspx
+----------------------------------------
+路径: logs.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.do
+----------------------------------------
+路径: logs.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.html
+----------------------------------------
+路径: logs.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.jsp
+----------------------------------------
+路径: logs.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs.php
+----------------------------------------
+路径: logs/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.action
+----------------------------------------
+路径: logs/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.asp
+----------------------------------------
+路径: logs/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.aspx
+----------------------------------------
+路径: logs/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.do
+----------------------------------------
+路径: logs/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.html
+----------------------------------------
+路径: logs/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.jsp
+----------------------------------------
+路径: logs/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/logs/index.php
+----------------------------------------
+路径: manage
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage
+----------------------------------------
+路径: manage.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.action
+----------------------------------------
+路径: manage.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.asp
+----------------------------------------
+路径: manage.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.aspx
+----------------------------------------
+路径: manage.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.do
+----------------------------------------
+路径: manage.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.html
+----------------------------------------
+路径: manage.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.jsp
+----------------------------------------
+路径: manage.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage.php
+----------------------------------------
+路径: manage/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.action
+----------------------------------------
+路径: manage/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.asp
+----------------------------------------
+路径: manage/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.aspx
+----------------------------------------
+路径: manage/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.do
+----------------------------------------
+路径: manage/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.html
+----------------------------------------
+路径: manage/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.jsp
+----------------------------------------
+路径: manage/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manage/index.php
+----------------------------------------
+路径: manager
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager
+----------------------------------------
+路径: manager.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.action
+----------------------------------------
+路径: manager.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.asp
+----------------------------------------
+路径: manager.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.aspx
+----------------------------------------
+路径: manager.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.do
+----------------------------------------
+路径: manager.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.html
+----------------------------------------
+路径: manager.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.jsp
+----------------------------------------
+路径: manager.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager.php
+----------------------------------------
+路径: manager/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.action
+----------------------------------------
+路径: manager/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.asp
+----------------------------------------
+路径: manager/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.aspx
+----------------------------------------
+路径: manager/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.do
+----------------------------------------
+路径: manager/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.html
+----------------------------------------
+路径: manager/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.jsp
+----------------------------------------
+路径: manager/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/manager/index.php
+----------------------------------------
+路径: media
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media
+----------------------------------------
+路径: media.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.action
+----------------------------------------
+路径: media.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.asp
+----------------------------------------
+路径: media.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.aspx
+----------------------------------------
+路径: media.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.do
+----------------------------------------
+路径: media.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.html
+----------------------------------------
+路径: media.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.jsp
+----------------------------------------
+路径: media.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media.php
+----------------------------------------
+路径: media/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.action
+----------------------------------------
+路径: media/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.asp
+----------------------------------------
+路径: media/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.aspx
+----------------------------------------
+路径: media/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.do
+----------------------------------------
+路径: media/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.html
+----------------------------------------
+路径: media/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.jsp
+----------------------------------------
+路径: media/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/media/index.php
+----------------------------------------
+路径: member
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member
+----------------------------------------
+路径: member.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.action
+----------------------------------------
+路径: member.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.asp
+----------------------------------------
+路径: member.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.aspx
+----------------------------------------
+路径: member.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.do
+----------------------------------------
+路径: member.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.html
+----------------------------------------
+路径: member.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.jsp
+----------------------------------------
+路径: member.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member.php
+----------------------------------------
+路径: member/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.action
+----------------------------------------
+路径: member/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.asp
+----------------------------------------
+路径: member/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.aspx
+----------------------------------------
+路径: member/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.do
+----------------------------------------
+路径: member/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.html
+----------------------------------------
+路径: member/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.jsp
+----------------------------------------
+路径: member/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/member/index.php
+----------------------------------------
+路径: members
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members
+----------------------------------------
+路径: members.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.action
+----------------------------------------
+路径: members.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.asp
+----------------------------------------
+路径: members.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.aspx
+----------------------------------------
+路径: members.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.do
+----------------------------------------
+路径: members.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.html
+----------------------------------------
+路径: members.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.jsp
+----------------------------------------
+路径: members.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members.php
+----------------------------------------
+路径: members/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.action
+----------------------------------------
+路径: members/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.asp
+----------------------------------------
+路径: members/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.aspx
+----------------------------------------
+路径: members/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.do
+----------------------------------------
+路径: members/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.html
+----------------------------------------
+路径: members/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.jsp
+----------------------------------------
+路径: members/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/members/index.php
+----------------------------------------
+路径: old
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old
+----------------------------------------
+路径: old.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.action
+----------------------------------------
+路径: old.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.asp
+----------------------------------------
+路径: old.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.aspx
+----------------------------------------
+路径: old.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.do
+----------------------------------------
+路径: old.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.html
+----------------------------------------
+路径: old.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.jsp
+----------------------------------------
+路径: old.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old.php
+----------------------------------------
+路径: old/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.action
+----------------------------------------
+路径: old/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.asp
+----------------------------------------
+路径: old/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.aspx
+----------------------------------------
+路径: old/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.do
+----------------------------------------
+路径: old/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.html
+----------------------------------------
+路径: old/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.jsp
+----------------------------------------
+路径: old/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/old/index.php
+----------------------------------------
+路径: panel
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel
+----------------------------------------
+路径: panel.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.action
+----------------------------------------
+路径: panel.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.asp
+----------------------------------------
+路径: panel.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.aspx
+----------------------------------------
+路径: panel.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.do
+----------------------------------------
+路径: panel.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.html
+----------------------------------------
+路径: panel.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.jsp
+----------------------------------------
+路径: panel.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel.php
+----------------------------------------
+路径: panel/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.action
+----------------------------------------
+路径: panel/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.asp
+----------------------------------------
+路径: panel/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.aspx
+----------------------------------------
+路径: panel/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.do
+----------------------------------------
+路径: panel/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.html
+----------------------------------------
+路径: panel/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.jsp
+----------------------------------------
+路径: panel/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/panel/index.php
+----------------------------------------
+路径: php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php
+----------------------------------------
+路径: php.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.action
+----------------------------------------
+路径: php.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.asp
+----------------------------------------
+路径: php.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.aspx
+----------------------------------------
+路径: php.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.do
+----------------------------------------
+路径: php.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.html
+----------------------------------------
+路径: php.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.jsp
+----------------------------------------
+路径: php.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php.php
+----------------------------------------
+路径: php/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.action
+----------------------------------------
+路径: php/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.asp
+----------------------------------------
+路径: php/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.aspx
+----------------------------------------
+路径: php/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.do
+----------------------------------------
+路径: php/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.html
+----------------------------------------
+路径: php/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.jsp
+----------------------------------------
+路径: php/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/php/index.php
+----------------------------------------
+路径: phpinfo.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpinfo.php
+----------------------------------------
+路径: phpmyadmin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin
+----------------------------------------
+路径: phpmyadmin.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.action
+----------------------------------------
+路径: phpmyadmin.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.asp
+----------------------------------------
+路径: phpmyadmin.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.aspx
+----------------------------------------
+路径: phpmyadmin.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.do
+----------------------------------------
+路径: phpmyadmin.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.html
+----------------------------------------
+路径: phpmyadmin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.jsp
+----------------------------------------
+路径: phpmyadmin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin.php
+----------------------------------------
+路径: phpmyadmin/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.action
+----------------------------------------
+路径: phpmyadmin/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.asp
+----------------------------------------
+路径: phpmyadmin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.aspx
+----------------------------------------
+路径: phpmyadmin/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.do
+----------------------------------------
+路径: phpmyadmin/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.html
+----------------------------------------
+路径: phpmyadmin/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.jsp
+----------------------------------------
+路径: phpmyadmin/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/phpmyadmin/index.php
+----------------------------------------
+路径: private
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private
+----------------------------------------
+路径: private.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.action
+----------------------------------------
+路径: private.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.asp
+----------------------------------------
+路径: private.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.aspx
+----------------------------------------
+路径: private.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.do
+----------------------------------------
+路径: private.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.html
+----------------------------------------
+路径: private.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.jsp
+----------------------------------------
+路径: private.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private.php
+----------------------------------------
+路径: private/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.action
+----------------------------------------
+路径: private/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.asp
+----------------------------------------
+路径: private/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.aspx
+----------------------------------------
+路径: private/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.do
+----------------------------------------
+路径: private/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.html
+----------------------------------------
+路径: private/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.jsp
+----------------------------------------
+路径: private/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/private/index.php
+----------------------------------------
+路径: readme.md
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/readme.md
+----------------------------------------
+路径: readme.txt
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/readme.txt
+----------------------------------------
+路径: robots.txt
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/robots.txt
+----------------------------------------
+路径: root
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root
+----------------------------------------
+路径: root.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.action
+----------------------------------------
+路径: root.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.asp
+----------------------------------------
+路径: root.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.aspx
+----------------------------------------
+路径: root.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.do
+----------------------------------------
+路径: root.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.html
+----------------------------------------
+路径: root.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.jsp
+----------------------------------------
+路径: root.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root.php
+----------------------------------------
+路径: root/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.action
+----------------------------------------
+路径: root/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.asp
+----------------------------------------
+路径: root/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.aspx
+----------------------------------------
+路径: root/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.do
+----------------------------------------
+路径: root/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.html
+----------------------------------------
+路径: root/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.jsp
+----------------------------------------
+路径: root/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/root/index.php
+----------------------------------------
+路径: script
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script
+----------------------------------------
+路径: script.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.action
+----------------------------------------
+路径: script.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.asp
+----------------------------------------
+路径: script.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.aspx
+----------------------------------------
+路径: script.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.do
+----------------------------------------
+路径: script.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.html
+----------------------------------------
+路径: script.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.jsp
+----------------------------------------
+路径: script.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script.php
+----------------------------------------
+路径: script/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.action
+----------------------------------------
+路径: script/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.asp
+----------------------------------------
+路径: script/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.aspx
+----------------------------------------
+路径: script/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.do
+----------------------------------------
+路径: script/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.html
+----------------------------------------
+路径: script/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.jsp
+----------------------------------------
+路径: script/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/script/index.php
+----------------------------------------
+路径: scripts
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts
+----------------------------------------
+路径: scripts.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.action
+----------------------------------------
+路径: scripts.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.asp
+----------------------------------------
+路径: scripts.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.aspx
+----------------------------------------
+路径: scripts.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.do
+----------------------------------------
+路径: scripts.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.html
+----------------------------------------
+路径: scripts.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.jsp
+----------------------------------------
+路径: scripts.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts.php
+----------------------------------------
+路径: scripts/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.action
+----------------------------------------
+路径: scripts/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.asp
+----------------------------------------
+路径: scripts/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.aspx
+----------------------------------------
+路径: scripts/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.do
+----------------------------------------
+路径: scripts/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.html
+----------------------------------------
+路径: scripts/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.jsp
+----------------------------------------
+路径: scripts/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/scripts/index.php
+----------------------------------------
+路径: secure
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure
+----------------------------------------
+路径: secure.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.action
+----------------------------------------
+路径: secure.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.asp
+----------------------------------------
+路径: secure.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.aspx
+----------------------------------------
+路径: secure.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.do
+----------------------------------------
+路径: secure.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.html
+----------------------------------------
+路径: secure.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.jsp
+----------------------------------------
+路径: secure.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure.php
+----------------------------------------
+路径: secure/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.action
+----------------------------------------
+路径: secure/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.asp
+----------------------------------------
+路径: secure/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.aspx
+----------------------------------------
+路径: secure/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.do
+----------------------------------------
+路径: secure/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.html
+----------------------------------------
+路径: secure/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.jsp
+----------------------------------------
+路径: secure/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/secure/index.php
+----------------------------------------
+路径: security
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security
+----------------------------------------
+路径: security.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.action
+----------------------------------------
+路径: security.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.asp
+----------------------------------------
+路径: security.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.aspx
+----------------------------------------
+路径: security.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.do
+----------------------------------------
+路径: security.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.html
+----------------------------------------
+路径: security.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.jsp
+----------------------------------------
+路径: security.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security.php
+----------------------------------------
+路径: security/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.action
+----------------------------------------
+路径: security/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.asp
+----------------------------------------
+路径: security/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.aspx
+----------------------------------------
+路径: security/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.do
+----------------------------------------
+路径: security/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.html
+----------------------------------------
+路径: security/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.jsp
+----------------------------------------
+路径: security/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/security/index.php
+----------------------------------------
+路径: settings.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/settings.php
+----------------------------------------
+路径: setup
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup
+----------------------------------------
+路径: setup.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.action
+----------------------------------------
+路径: setup.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.asp
+----------------------------------------
+路径: setup.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.aspx
+----------------------------------------
+路径: setup.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.do
+----------------------------------------
+路径: setup.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.html
+----------------------------------------
+路径: setup.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.jsp
+----------------------------------------
+路径: setup.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.php
+----------------------------------------
+路径: setup.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup.php
+----------------------------------------
+路径: setup/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.action
+----------------------------------------
+路径: setup/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.asp
+----------------------------------------
+路径: setup/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.aspx
+----------------------------------------
+路径: setup/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.do
+----------------------------------------
+路径: setup/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.html
+----------------------------------------
+路径: setup/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.jsp
+----------------------------------------
+路径: setup/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/setup/index.php
+----------------------------------------
+路径: site
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site
+----------------------------------------
+路径: site.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.action
+----------------------------------------
+路径: site.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.asp
+----------------------------------------
+路径: site.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.aspx
+----------------------------------------
+路径: site.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.do
+----------------------------------------
+路径: site.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.html
+----------------------------------------
+路径: site.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.jsp
+----------------------------------------
+路径: site.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site.php
+----------------------------------------
+路径: site/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.action
+----------------------------------------
+路径: site/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.asp
+----------------------------------------
+路径: site/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.aspx
+----------------------------------------
+路径: site/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.do
+----------------------------------------
+路径: site/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.html
+----------------------------------------
+路径: site/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.jsp
+----------------------------------------
+路径: site/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/site/index.php
+----------------------------------------
+路径: sitemap.xml
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sitemap.xml
+----------------------------------------
+路径: sql
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql
+----------------------------------------
+路径: sql.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.action
+----------------------------------------
+路径: sql.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.asp
+----------------------------------------
+路径: sql.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.aspx
+----------------------------------------
+路径: sql.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.do
+----------------------------------------
+路径: sql.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.html
+----------------------------------------
+路径: sql.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.jsp
+----------------------------------------
+路径: sql.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql.php
+----------------------------------------
+路径: sql/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.action
+----------------------------------------
+路径: sql/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.asp
+----------------------------------------
+路径: sql/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.aspx
+----------------------------------------
+路径: sql/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.do
+----------------------------------------
+路径: sql/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.html
+----------------------------------------
+路径: sql/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.jsp
+----------------------------------------
+路径: sql/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sql/index.php
+----------------------------------------
+路径: staging
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging
+----------------------------------------
+路径: staging.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.action
+----------------------------------------
+路径: staging.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.asp
+----------------------------------------
+路径: staging.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.aspx
+----------------------------------------
+路径: staging.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.do
+----------------------------------------
+路径: staging.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.html
+----------------------------------------
+路径: staging.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.jsp
+----------------------------------------
+路径: staging.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging.php
+----------------------------------------
+路径: staging/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.action
+----------------------------------------
+路径: staging/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.asp
+----------------------------------------
+路径: staging/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.aspx
+----------------------------------------
+路径: staging/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.do
+----------------------------------------
+路径: staging/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.html
+----------------------------------------
+路径: staging/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.jsp
+----------------------------------------
+路径: staging/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/staging/index.php
+----------------------------------------
+路径: static
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static
+----------------------------------------
+路径: static.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.action
+----------------------------------------
+路径: static.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.asp
+----------------------------------------
+路径: static.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.aspx
+----------------------------------------
+路径: static.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.do
+----------------------------------------
+路径: static.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.html
+----------------------------------------
+路径: static.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.jsp
+----------------------------------------
+路径: static.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static.php
+----------------------------------------
+路径: static/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.action
+----------------------------------------
+路径: static/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.asp
+----------------------------------------
+路径: static/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.aspx
+----------------------------------------
+路径: static/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.do
+----------------------------------------
+路径: static/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.html
+----------------------------------------
+路径: static/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.jsp
+----------------------------------------
+路径: static/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/static/index.php
+----------------------------------------
+路径: stats
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats
+----------------------------------------
+路径: stats.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.action
+----------------------------------------
+路径: stats.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.asp
+----------------------------------------
+路径: stats.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.aspx
+----------------------------------------
+路径: stats.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.do
+----------------------------------------
+路径: stats.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.html
+----------------------------------------
+路径: stats.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.jsp
+----------------------------------------
+路径: stats.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats.php
+----------------------------------------
+路径: stats/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.action
+----------------------------------------
+路径: stats/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.asp
+----------------------------------------
+路径: stats/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.aspx
+----------------------------------------
+路径: stats/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.do
+----------------------------------------
+路径: stats/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.html
+----------------------------------------
+路径: stats/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.jsp
+----------------------------------------
+路径: stats/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/stats/index.php
+----------------------------------------
+路径: status
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status
+----------------------------------------
+路径: status.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.action
+----------------------------------------
+路径: status.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.asp
+----------------------------------------
+路径: status.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.aspx
+----------------------------------------
+路径: status.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.do
+----------------------------------------
+路径: status.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.html
+----------------------------------------
+路径: status.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.jsp
+----------------------------------------
+路径: status.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status.php
+----------------------------------------
+路径: status/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.action
+----------------------------------------
+路径: status/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.asp
+----------------------------------------
+路径: status/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.aspx
+----------------------------------------
+路径: status/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.do
+----------------------------------------
+路径: status/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.html
+----------------------------------------
+路径: status/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.jsp
+----------------------------------------
+路径: status/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/status/index.php
+----------------------------------------
+路径: sys
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys
+----------------------------------------
+路径: sys.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.action
+----------------------------------------
+路径: sys.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.asp
+----------------------------------------
+路径: sys.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.aspx
+----------------------------------------
+路径: sys.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.do
+----------------------------------------
+路径: sys.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.html
+----------------------------------------
+路径: sys.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.jsp
+----------------------------------------
+路径: sys.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys.php
+----------------------------------------
+路径: sys/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.action
+----------------------------------------
+路径: sys/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.asp
+----------------------------------------
+路径: sys/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.aspx
+----------------------------------------
+路径: sys/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.do
+----------------------------------------
+路径: sys/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.html
+----------------------------------------
+路径: sys/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.jsp
+----------------------------------------
+路径: sys/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/sys/index.php
+----------------------------------------
+路径: system
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system
+----------------------------------------
+路径: system.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.action
+----------------------------------------
+路径: system.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.asp
+----------------------------------------
+路径: system.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.aspx
+----------------------------------------
+路径: system.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.do
+----------------------------------------
+路径: system.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.html
+----------------------------------------
+路径: system.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.jsp
+----------------------------------------
+路径: system.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system.php
+----------------------------------------
+路径: system/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.action
+----------------------------------------
+路径: system/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.asp
+----------------------------------------
+路径: system/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.aspx
+----------------------------------------
+路径: system/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.do
+----------------------------------------
+路径: system/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.html
+----------------------------------------
+路径: system/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.jsp
+----------------------------------------
+路径: system/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/system/index.php
+----------------------------------------
+路径: temp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp
+----------------------------------------
+路径: temp.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.action
+----------------------------------------
+路径: temp.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.asp
+----------------------------------------
+路径: temp.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.aspx
+----------------------------------------
+路径: temp.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.do
+----------------------------------------
+路径: temp.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.html
+----------------------------------------
+路径: temp.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.jsp
+----------------------------------------
+路径: temp.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp.php
+----------------------------------------
+路径: temp/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.action
+----------------------------------------
+路径: temp/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.asp
+----------------------------------------
+路径: temp/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.aspx
+----------------------------------------
+路径: temp/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.do
+----------------------------------------
+路径: temp/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.html
+----------------------------------------
+路径: temp/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.jsp
+----------------------------------------
+路径: temp/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/temp/index.php
+----------------------------------------
+路径: templates
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates
+----------------------------------------
+路径: templates.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.action
+----------------------------------------
+路径: templates.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.asp
+----------------------------------------
+路径: templates.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.aspx
+----------------------------------------
+路径: templates.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.do
+----------------------------------------
+路径: templates.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.html
+----------------------------------------
+路径: templates.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.jsp
+----------------------------------------
+路径: templates.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates.php
+----------------------------------------
+路径: templates/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.action
+----------------------------------------
+路径: templates/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.asp
+----------------------------------------
+路径: templates/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.aspx
+----------------------------------------
+路径: templates/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.do
+----------------------------------------
+路径: templates/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.html
+----------------------------------------
+路径: templates/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.jsp
+----------------------------------------
+路径: templates/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/templates/index.php
+----------------------------------------
+路径: test
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test
+----------------------------------------
+路径: test.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.action
+----------------------------------------
+路径: test.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.asp
+----------------------------------------
+路径: test.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.aspx
+----------------------------------------
+路径: test.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.do
+----------------------------------------
+路径: test.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.html
+----------------------------------------
+路径: test.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.jsp
+----------------------------------------
+路径: test.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.php
+----------------------------------------
+路径: test.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test.php
+----------------------------------------
+路径: test/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.action
+----------------------------------------
+路径: test/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.asp
+----------------------------------------
+路径: test/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.aspx
+----------------------------------------
+路径: test/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.do
+----------------------------------------
+路径: test/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.html
+----------------------------------------
+路径: test/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.jsp
+----------------------------------------
+路径: test/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/test/index.php
+----------------------------------------
+路径: themes
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes
+----------------------------------------
+路径: themes.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.action
+----------------------------------------
+路径: themes.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.asp
+----------------------------------------
+路径: themes.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.aspx
+----------------------------------------
+路径: themes.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.do
+----------------------------------------
+路径: themes.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.html
+----------------------------------------
+路径: themes.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.jsp
+----------------------------------------
+路径: themes.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes.php
+----------------------------------------
+路径: themes/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.action
+----------------------------------------
+路径: themes/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.asp
+----------------------------------------
+路径: themes/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.aspx
+----------------------------------------
+路径: themes/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.do
+----------------------------------------
+路径: themes/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.html
+----------------------------------------
+路径: themes/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.jsp
+----------------------------------------
+路径: themes/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/themes/index.php
+----------------------------------------
+路径: tmp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp
+----------------------------------------
+路径: tmp.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.action
+----------------------------------------
+路径: tmp.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.asp
+----------------------------------------
+路径: tmp.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.aspx
+----------------------------------------
+路径: tmp.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.do
+----------------------------------------
+路径: tmp.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.html
+----------------------------------------
+路径: tmp.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.jsp
+----------------------------------------
+路径: tmp.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp.php
+----------------------------------------
+路径: tmp/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.action
+----------------------------------------
+路径: tmp/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.asp
+----------------------------------------
+路径: tmp/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.aspx
+----------------------------------------
+路径: tmp/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.do
+----------------------------------------
+路径: tmp/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.html
+----------------------------------------
+路径: tmp/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.jsp
+----------------------------------------
+路径: tmp/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/tmp/index.php
+----------------------------------------
+路径: upload
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload
+----------------------------------------
+路径: upload.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.action
+----------------------------------------
+路径: upload.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.asp
+----------------------------------------
+路径: upload.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.aspx
+----------------------------------------
+路径: upload.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.do
+----------------------------------------
+路径: upload.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.html
+----------------------------------------
+路径: upload.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.jsp
+----------------------------------------
+路径: upload.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload.php
+----------------------------------------
+路径: upload/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.action
+----------------------------------------
+路径: upload/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.asp
+----------------------------------------
+路径: upload/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.aspx
+----------------------------------------
+路径: upload/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.do
+----------------------------------------
+路径: upload/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.html
+----------------------------------------
+路径: upload/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.jsp
+----------------------------------------
+路径: upload/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/upload/index.php
+----------------------------------------
+路径: uploads
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads
+----------------------------------------
+路径: uploads.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.action
+----------------------------------------
+路径: uploads.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.asp
+----------------------------------------
+路径: uploads.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.aspx
+----------------------------------------
+路径: uploads.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.do
+----------------------------------------
+路径: uploads.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.html
+----------------------------------------
+路径: uploads.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.jsp
+----------------------------------------
+路径: uploads.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads.php
+----------------------------------------
+路径: uploads/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.action
+----------------------------------------
+路径: uploads/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.asp
+----------------------------------------
+路径: uploads/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.aspx
+----------------------------------------
+路径: uploads/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.do
+----------------------------------------
+路径: uploads/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.html
+----------------------------------------
+路径: uploads/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.jsp
+----------------------------------------
+路径: uploads/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/uploads/index.php
+----------------------------------------
+路径: user
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user
+----------------------------------------
+路径: user.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.action
+----------------------------------------
+路径: user.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.asp
+----------------------------------------
+路径: user.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.aspx
+----------------------------------------
+路径: user.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.do
+----------------------------------------
+路径: user.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.html
+----------------------------------------
+路径: user.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.jsp
+----------------------------------------
+路径: user.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.php
+----------------------------------------
+路径: user.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user.php
+----------------------------------------
+路径: user/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.action
+----------------------------------------
+路径: user/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.asp
+----------------------------------------
+路径: user/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.aspx
+----------------------------------------
+路径: user/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.do
+----------------------------------------
+路径: user/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.html
+----------------------------------------
+路径: user/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.jsp
+----------------------------------------
+路径: user/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/user/index.php
+----------------------------------------
+路径: users
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users
+----------------------------------------
+路径: users.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.action
+----------------------------------------
+路径: users.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.asp
+----------------------------------------
+路径: users.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.aspx
+----------------------------------------
+路径: users.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.do
+----------------------------------------
+路径: users.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.html
+----------------------------------------
+路径: users.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.jsp
+----------------------------------------
+路径: users.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.php
+----------------------------------------
+路径: users.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users.php
+----------------------------------------
+路径: users/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.action
+----------------------------------------
+路径: users/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.asp
+----------------------------------------
+路径: users/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.aspx
+----------------------------------------
+路径: users/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.do
+----------------------------------------
+路径: users/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.html
+----------------------------------------
+路径: users/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.jsp
+----------------------------------------
+路径: users/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/users/index.php
+----------------------------------------
+路径: vendor
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor
+----------------------------------------
+路径: vendor.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.action
+----------------------------------------
+路径: vendor.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.asp
+----------------------------------------
+路径: vendor.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.aspx
+----------------------------------------
+路径: vendor.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.do
+----------------------------------------
+路径: vendor.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.html
+----------------------------------------
+路径: vendor.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.jsp
+----------------------------------------
+路径: vendor.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor.php
+----------------------------------------
+路径: vendor/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.action
+----------------------------------------
+路径: vendor/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.asp
+----------------------------------------
+路径: vendor/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.aspx
+----------------------------------------
+路径: vendor/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.do
+----------------------------------------
+路径: vendor/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.html
+----------------------------------------
+路径: vendor/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.jsp
+----------------------------------------
+路径: vendor/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/vendor/index.php
+----------------------------------------
+路径: web
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web
+----------------------------------------
+路径: web.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.action
+----------------------------------------
+路径: web.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.asp
+----------------------------------------
+路径: web.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.aspx
+----------------------------------------
+路径: web.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.do
+----------------------------------------
+路径: web.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.html
+----------------------------------------
+路径: web.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.jsp
+----------------------------------------
+路径: web.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web.php
+----------------------------------------
+路径: web/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.action
+----------------------------------------
+路径: web/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.asp
+----------------------------------------
+路径: web/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.aspx
+----------------------------------------
+路径: web/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.do
+----------------------------------------
+路径: web/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.html
+----------------------------------------
+路径: web/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.jsp
+----------------------------------------
+路径: web/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/web/index.php
+----------------------------------------
+路径: website
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website
+----------------------------------------
+路径: website.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.action
+----------------------------------------
+路径: website.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.asp
+----------------------------------------
+路径: website.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.aspx
+----------------------------------------
+路径: website.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.do
+----------------------------------------
+路径: website.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.html
+----------------------------------------
+路径: website.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.jsp
+----------------------------------------
+路径: website.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website.php
+----------------------------------------
+路径: website/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.action
+----------------------------------------
+路径: website/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.asp
+----------------------------------------
+路径: website/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.aspx
+----------------------------------------
+路径: website/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.do
+----------------------------------------
+路径: website/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.html
+----------------------------------------
+路径: website/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.jsp
+----------------------------------------
+路径: website/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/website/index.php
+----------------------------------------
+路径: wp-admin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin
+----------------------------------------
+路径: wp-admin.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.action
+----------------------------------------
+路径: wp-admin.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.asp
+----------------------------------------
+路径: wp-admin.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.aspx
+----------------------------------------
+路径: wp-admin.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.do
+----------------------------------------
+路径: wp-admin.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.html
+----------------------------------------
+路径: wp-admin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.jsp
+----------------------------------------
+路径: wp-admin.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin.php
+----------------------------------------
+路径: wp-admin/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.action
+----------------------------------------
+路径: wp-admin/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.asp
+----------------------------------------
+路径: wp-admin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.aspx
+----------------------------------------
+路径: wp-admin/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.do
+----------------------------------------
+路径: wp-admin/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.html
+----------------------------------------
+路径: wp-admin/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.jsp
+----------------------------------------
+路径: wp-admin/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-admin/index.php
+----------------------------------------
+路径: wp-config.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-config.php
+----------------------------------------
+路径: wp-content
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content
+----------------------------------------
+路径: wp-content.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.action
+----------------------------------------
+路径: wp-content.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.asp
+----------------------------------------
+路径: wp-content.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.aspx
+----------------------------------------
+路径: wp-content.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.do
+----------------------------------------
+路径: wp-content.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.html
+----------------------------------------
+路径: wp-content.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.jsp
+----------------------------------------
+路径: wp-content.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content.php
+----------------------------------------
+路径: wp-content/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.action
+----------------------------------------
+路径: wp-content/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.asp
+----------------------------------------
+路径: wp-content/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.aspx
+----------------------------------------
+路径: wp-content/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.do
+----------------------------------------
+路径: wp-content/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.html
+----------------------------------------
+路径: wp-content/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.jsp
+----------------------------------------
+路径: wp-content/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-content/index.php
+----------------------------------------
+路径: wp-includes
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes
+----------------------------------------
+路径: wp-includes.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.action
+----------------------------------------
+路径: wp-includes.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.asp
+----------------------------------------
+路径: wp-includes.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.aspx
+----------------------------------------
+路径: wp-includes.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.do
+----------------------------------------
+路径: wp-includes.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.html
+----------------------------------------
+路径: wp-includes.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.jsp
+----------------------------------------
+路径: wp-includes.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes.php
+----------------------------------------
+路径: wp-includes/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.action
+----------------------------------------
+路径: wp-includes/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.asp
+----------------------------------------
+路径: wp-includes/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.aspx
+----------------------------------------
+路径: wp-includes/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.do
+----------------------------------------
+路径: wp-includes/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.html
+----------------------------------------
+路径: wp-includes/index.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.jsp
+----------------------------------------
+路径: wp-includes/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-includes/index.php
+----------------------------------------
+路径: wp-login.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://test.haier.com/cn/wp-login.php
+----------------------------------------

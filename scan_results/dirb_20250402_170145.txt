@@ -1,0 +1,149 @@
+目录扫描结果 - https://www.qdu.edu.cn/
+扫描时间: 2025-04-02 17:01:45
+------------------------------------------------------------
+
+路径: index.htm
+状态: 200 (可访问)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/index.htm
+----------------------------------------
+路径: system
+状态: 200 (可访问)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/system
+----------------------------------------
+路径: system/index.jsp
+状态: 200 (可访问)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/system/index.jsp
+----------------------------------------
+路径: .env
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/.env
+----------------------------------------
+路径: .git/HEAD
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/.git/HEAD
+----------------------------------------
+路径: .htaccess
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/.htaccess
+----------------------------------------
+路径: app.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/app.php
+----------------------------------------
+路径: bak.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/bak.html
+----------------------------------------
+路径: bak/bin
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/bak/bin
+----------------------------------------
+路径: cgi-bin.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/cgi-bin.jsp
+----------------------------------------
+路径: data/db
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/data/db
+----------------------------------------
+路径: dev.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/dev.asp
+----------------------------------------
+路径: download.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/download.do
+----------------------------------------
+路径: home/index.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/home/index.action
+----------------------------------------
+路径: include.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/include.asp
+----------------------------------------
+路径: js/index.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/js/index.php
+----------------------------------------
+路径: logs.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/logs.php
+----------------------------------------
+路径: manager.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/manager.action
+----------------------------------------
+路径: panel.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/panel.aspx
+----------------------------------------
+路径: phpinfo.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/phpinfo.php
+----------------------------------------
+路径: private.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/private.do
+----------------------------------------
+路径: secure/index.do
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/secure/index.do
+----------------------------------------
+路径: sql.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/sql.action
+----------------------------------------
+路径: sys/index.asp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/sys/index.asp
+----------------------------------------
+路径: templates.jsp
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/templates.jsp
+----------------------------------------
+路径: tmp/index.html
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/tmp/index.html
+----------------------------------------
+路径: user.action
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/user.action
+----------------------------------------
+路径: wp-admin/index.aspx
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/wp-admin/index.aspx
+----------------------------------------
+路径: wp-config.php
+状态: 403 (访问禁止)
+大小: 0 bytes
+完整URL: https://www.qdu.edu.cn/wp-config.php
+----------------------------------------
