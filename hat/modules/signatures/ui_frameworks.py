@@ -81,5 +81,33 @@ UI_FRAMEWORKS = {
             r'data-bs-(?:toggle|target|dismiss)',
             r'bootstrap/dist',
         ]
+    },
+    'Animate.css': {
+        'patterns': [
+            r'(?:^|/)animate(?:\.min)?\.css$',                  # 主文件
+            # 动画类名 - 入场动画
+            r'(?:^|\s)animate__(?:bounce|flash|pulse|rubberBand|shakeX|shakeY|headShake|swing|tada|wobble|jello|heartBeat)(?:\s|$)',
+            # 淡入动画
+            r'(?:^|\s)animate__fade(?:In|InDown|InDownBig|InLeft|InLeftBig|InRight|InRightBig|InUp|InUpBig)(?:\s|$)',
+            # 淡出动画
+            r'(?:^|\s)animate__fade(?:Out|OutDown|OutDownBig|OutLeft|OutLeftBig|OutRight|OutRightBig|OutUp|OutUpBig)(?:\s|$)',
+            # 滑动动画
+            r'(?:^|\s)animate__slide(?:InDown|InLeft|InRight|InUp|OutDown|OutLeft|OutRight|OutUp)(?:\s|$)',
+            # 缩放动画
+            r'(?:^|\s)animate__(?:zoom|flip)(?:In|InDown|InLeft|InRight|InUp|Out|OutDown|OutLeft|OutRight|OutUp)(?:\s|$)',
+            # 特殊动画
+            r'(?:^|\s)animate__(?:lightSpeedIn|lightSpeedOut|rotateIn|rotateOut|hinge|jackInTheBox|rollIn|rollOut)(?:\s|$)',
+            # 基础类和修饰符
+            r'(?:^|\s)animate__animated(?:\s|$)',               # 基础类
+            r'(?:^|\s)animate__(?:infinite|delay-[1-5]s|slow|slower|fast|faster)(?:\s|$)', # 修饰符
+            # CDN引用
+            r'(?:^|[\'"])https?://cdnjs\.cloudflare\.com/ajax/libs/animate\.css/[^\'"]*/animate\.(?:min\.)?css(?:[\'"]|$)',
+            r'(?:^|[\'"])https?://cdn\.jsdelivr\.net/npm/animate\.css@[^\'"]*/animate\.(?:min\.)?css(?:[\'"]|$)',
+            # npm包引用
+            r'(?:^|[\'"])animate\.css(?:[\'"]|$)',
+            # 导入语句
+            r'(?:^|[^\w.])import\s+[\'"]animate\.css[\'"]',
+            r'(?:^|[^\w.])require\([\'"]animate\.css[\'"]\)',
+        ]
     }
 } 

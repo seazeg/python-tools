@@ -13,12 +13,12 @@ JS_FRAMEWORKS = {
             # React Hooks - 确保是函数调用
             r'(?:^|[^\w.])use(?:State|Effect|Context|Ref|Memo|Callback|Reducer|ImperativeHandle|LayoutEffect|DebugValue|DeferredValue|Transition|Id)\s*\(',
             # React相关包
-            r'(?:^|[^\w-])(?:@react-|react-router|react-redux|react-query|react-hook-form)',
+            r'(?:^|[\'"])(?:@react-|react-router|react-redux|react-query|react-hook-form|react-dom)(?:[\'"]|$)',
             # React导入语句
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]react(?:/[^\'"]+)?[\'"]',
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]@react',
+            r'(?:^|[^\w.])import\s+[{}\s\w]+\s+from\s+[\'"]react(?:/[^\'"]+)?[\'"]',
+            r'(?:^|[^\w.])import\s+[{}\s\w]+\s+from\s+[\'"]@react',
             # React配置文件
-            r'(?:^|/)\.react(?:rc|\.config)\.[jt]s',
+            r'(?:^|/)\.react(?:rc|\.config)\.[jt]s$',
         ]
     },
     'Vue.js': {
@@ -32,32 +32,30 @@ JS_FRAMEWORKS = {
             r'(?:^|\s+)v-bind:[\w-]+="[^"]*"',
             r'(?:^|\s+)v-on:[\w-]+="[^"]*"',
             # Vue事件和属性绑定简写
-            r'(?:^|\s+)@(?:click|change|input|submit|keyup|keydown|focus|blur)="[^"]*"',
             r'(?:^|\s+):(?:class|style|src|href|alt|title|placeholder|value|type|disabled|required)="[^"]*"',
             # Vue相关包
-            r'(?:^|[^\w-])(?:@vue/|vue-router|vuex|@vitejs/plugin-vue)',
+            r'(?:^|[\'"])(?:@vue/|vue-router|vuex|@vitejs/plugin-vue)(?:[\'"]|$)',
             # Vue组件和API
             r'(?:^|[^\w.])(?:defineComponent|onMounted|onUnmounted|onUpdated|ref|reactive|computed|watch)\s*\(',
             # Vue文件和模板
             r'<template>[\s\S]*?</template>',
             r'\.vue$',
             # Vue导入语句
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]vue(?:/[^\'"]+)?[\'"]',
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]@vue',
+            r'(?:^|[^\w.])import\s+[{}\s\w]+\s+from\s+[\'"]vue(?:/[^\'"]+)?[\'"]',
+            r'(?:^|[^\w.])import\s+[{}\s\w]+\s+from\s+[\'"]@vue',
             # Vue配置文件
-            r'(?:^|/)vue\.config\.[jt]s',
+            r'(?:^|/)vue\.config\.[jt]s$',
         ]
     },
     'Angular': {
         'patterns': [
-            r'angular(?:\.min)?\.js',
-            r'@angular/core',
-            r'@Component|@Injectable|@NgModule',
-            r'ngOnInit|ngOnDestroy|ngAfterViewInit',
-            r'@angular/(?:common|platform-browser|forms)',
-            r'ng-(?:controller|app|model|bind|repeat|if|show|hide)',
-            r'angular-route(?:\.min)?\.js',
-            r'zone\.js|rxjs',
+            r'(?:^|/)angular(?:\.min)?\.js$',                    # Angular主文件
+            r'(?:^|[\'"])@angular/(?:core|common|platform-browser|forms)(?:[\'"]|$)', # Angular包
+            r'(?:^|[^\w.])@(?:Component|Injectable|NgModule)\s*\(', # 装饰器
+            r'(?:^|[^\w.])(?:ngOnInit|ngOnDestroy|ngAfterViewInit)\b', # 生命周期
+            r'(?:^|\s)ng-(?:controller|app|model|bind|repeat|if|show|hide)(?:\s|$)', # 指令
+            r'(?:^|/)angular-route(?:\.min)?\.js$',             # 路由
+            r'(?:^|[\'"])(?:zone\.js|rxjs)(?:[\'"]|$)',        # 依赖
         ]
     }
 } 
