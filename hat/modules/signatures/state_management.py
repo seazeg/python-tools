@@ -61,7 +61,6 @@ STATE_MANAGEMENT = {
         'patterns': [
             r'recoil(?:\.min)?\.js',                            # 文件名匹配
             r'(?:^|[^\w.])atom\s*\(',                           # 创建atom
-            r'(?:^|[^\w.])selector\s*\(',                       # 创建selector
             r'(?:^|[^\w.])useRecoilState\s*\(',                 # 状态hook
             r'(?:^|[^\w.])useRecoilValue\s*\(',                 # 值hook
             r'(?:^|[^\w.])useSetRecoilState\s*\(',              # 设置hook
@@ -82,8 +81,6 @@ STATE_MANAGEMENT = {
     'Zustand': {
         'patterns': [
             r'zustand(?:\.min)?\.js',                           # 文件名匹配
-            r'(?:^|[^\w.])create\s*\(\s*\([^\)]+\)\s*=>\s*\({', # 创建store
-            r'(?:^|[^\w.])useStore\s*\(',                       # 使用store
             r'zustand/middleware',                              # 中间件
         ]
     }
