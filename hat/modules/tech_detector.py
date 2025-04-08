@@ -307,6 +307,12 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
     headers = response_data['headers']
     meta_tags = extract_meta_tags(content)
     
+    # 首先分析HTTP响应头，检测Web服务器和CDN
+    header_tech = analyze_response_headers(headers)
+    for category, techs in header_tech.items():
+        detected_tech[category].extend(techs)
+    
+    # 然后检测JavaScript内容中的技术特征
     js_features = await detect_js_content(content, response_data)
     
     # 合并JavaScript特征到检测结果
@@ -315,8 +321,12 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
 
     # 再进行基础特征检测
     for category, technologies in TECH_SIGNATURES.items():
+        # 跳过已经通过响应头分析过的类别
+        if category in ['Web服务器', 'CDN']:
+            continue
+            
         for tech_name, signatures in technologies.items():
-            # 检查HTTP头
+            # 检查HTTP头 (对于非Web服务器和CDN类别)
             if 'headers' in signatures:
                 # 处理新的嵌套headers格式
                 if isinstance(signatures['headers'], dict):
@@ -436,6 +446,7 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
         elif '@angular' in dep_name:
             detected_tech['JavaScript框架'].append('Angular')
 
+    # 移除重复项
     return {k: list(set(v)) for k, v in detected_tech.items() if v}
 
 def display_results(results: Dict[str, List[str]]) -> None:
@@ -515,3 +526,106 @@ async def analyze_tech_stack(url: str) -> None:
         console.print(f"\n[green]共检测到 {total_techs} 项技术，涉及 {len(results)} 个类别[/]")
     else:
         console.print("[yellow]未检测到已知的技术特征[/]")
+
+def analyze_response_headers(headers: Dict[str, str]) -> Dict[str, List[str]]:
+    """通过分析HTTP响应头来检测Web服务器和CDN提供商"""
+    detected_tech = {
+        'Web服务器': [],
+        'CDN': []
+    }
+    
+    # 记录所有头部信息用于调试
+    console.print("\n[yellow]分析HTTP响应头...[/]")
+    for header_name, header_value in headers.items():
+        console.print(f"  [dim]{header_name}: {header_value}[/]")
+    
+    # 检测Web服务器
+    server_header = headers.get('server', '').lower()
+    if server_header:
+        console.print(f"\n[cyan]检测到Server头: {server_header}[/]")
+        
+    # 使用web_servers.py中的enhance_server_detection函数
+    from .signatures.web_servers import enhance_server_detection
+    detected_servers = enhance_server_detection(headers, '')  # 内容参数为空，因为我们只分析头部
+    if detected_servers:
+        detected_tech['Web服务器'].extend(detected_servers)
+        console.print(f"  [green]✓ 检测到Web服务器: {', '.join(detected_servers)}[/]")
+    
+    # 检测CDN提供商
+    for cdn_name, signatures in TECH_SIGNATURES.get('CDN', {}).items():
+        if 'headers' in signatures:
+            # 处理新的嵌套headers格式
+            if isinstance(signatures['headers'], dict):
+                for header_name, patterns in signatures['headers'].items():
+                    header_value = headers.get(header_name, '').lower()
+                    if header_value:
+                        for pattern in patterns:
+                            if re.search(pattern, header_value, re.I):
+                                detected_tech['CDN'].append(cdn_name)
+                                console.print(f"  [green]✓ 检测到CDN: {cdn_name} (通过 {header_name} 头)[/]")
+                                break
+            # 处理旧的headers格式
+            elif isinstance(signatures['headers'], list):
+                for header in signatures['headers']:
+                    header_value = headers.get(header, '').lower()
+                    if header_value and header_value.strip():
+                        detected_tech['CDN'].append(cdn_name)
+                        console.print(f"  [green]✓ 检测到CDN: {cdn_name} (通过 {header} 头)[/]")
+                        break
+    
+    # 检查特定的CDN头部
+    cdn_specific_headers = {
+        'x-cdn': True,                      # 通用CDN标识
+        'x-cdn-provider': True,             # CDN提供商
+        'x-fastly-request-id': 'Fastly',    # Fastly
+        'x-amz-cf-id': 'AWS CloudFront',    # CloudFront
+        'x-cdn-name': True,                 # CDN名称
+        'x-edge-location': True,            # 边缘位置
+        'x-cache': True,                    # 缓存状态
+        'cf-ray': 'Cloudflare',             # Cloudflare
+        'x-qiniu-zone': '七牛云CDN',         # 七牛云
+        'x-swift-cachetime': '阿里云CDN',    # 阿里云
+        'x-daa-tunnel': '腾讯云CDN',         # 腾讯云
+        'x-nf-request-id': 'Netlify',       # Netlify
+    }
+    
+    for header, cdn in cdn_specific_headers.items():
+        if header in headers and headers[header].strip():
+            if cdn is True:  # 通用CDN标识，需要从头部值中提取
+                value = headers[header].strip()
+                if value.lower() not in ['none', 'null', '']:
+                    detected_tech['CDN'].append(f"{value} (从 {header} 头检测)")
+                    console.print(f"  [green]✓ 检测到CDN: {value} (通过 {header} 头)[/]")
+            else:  # 特定CDN
+                detected_tech['CDN'].append(cdn)
+                console.print(f"  [green]✓ 检测到CDN: {cdn} (通过 {header} 头)[/]")
+    
+    # 检查Via头部，可能包含代理或CDN信息
+    via_header = headers.get('via', '')
+    if via_header:
+        console.print(f"\n[cyan]检测到Via头: {via_header}[/]")
+        # 常见CDN在Via头中的标识
+        via_patterns = {
+            r'(?i)cloudflare': 'Cloudflare',
+            r'(?i)fastly': 'Fastly',
+            r'(?i)akamai': 'Akamai',
+            r'(?i)varnish': 'Varnish',
+            r'(?i)squid': 'Squid',
+            r'(?i)nginx': 'Nginx (作为代理)',
+            r'(?i)apache': 'Apache (作为代理)',
+            r'(?i)cdn': '未知CDN',
+        }
+        
+        for pattern, name in via_patterns.items():
+            if re.search(pattern, via_header, re.I):
+                if name.startswith('未知'):
+                    detected_tech['CDN'].append(f"{name} (从Via头检测)")
+                else:
+                    detected_tech['CDN'].append(name)
+                console.print(f"  [green]✓ 从Via头检测到: {name}[/]")
+    
+    # 移除重复项
+    for category in detected_tech:
+        detected_tech[category] = list(set(detected_tech[category]))
+    
+    return detected_tech

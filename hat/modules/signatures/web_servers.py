@@ -1,4 +1,5 @@
 """Web服务器特征"""
+import re  # 添加这一行导入re模块
 
 WEB_SERVERS = {
     'Apache': {
