@@ -10,6 +10,7 @@ from rich.console import Console
 from rich.table import Table
 import asyncio
 from urllib.parse import urlparse
+from requests.structures import CaseInsensitiveDict
 
 # 尝试导入brotli，如果不可用则跳过
 try:
@@ -527,12 +528,14 @@ async def analyze_tech_stack(url: str) -> None:
     else:
         console.print("[yellow]未检测到已知的技术特征[/]")
 
-def analyze_response_headers(headers: Dict[str, str]) -> Dict[str, List[str]]:
+def analyze_response_headers(original_headers: Dict[str, str]) -> Dict[str, List[str]]:
     """通过分析HTTP响应头来检测Web服务器和CDN提供商"""
     detected_tech = {
         'Web服务器': [],
         'CDN': []
     }
+
+    headers = CaseInsensitiveDict(original_headers);
     
     # 记录所有头部信息用于调试
     console.print("\n[yellow]分析HTTP响应头...[/]")
