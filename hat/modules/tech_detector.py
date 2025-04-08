@@ -10,6 +10,9 @@ from rich.console import Console
 from rich.table import Table
 import asyncio
 
+# 导入特征签名 (使用相对导入)
+from .signatures import TECH_SIGNATURES
+
 console = Console()
 
 # 定义统一的技术特征
