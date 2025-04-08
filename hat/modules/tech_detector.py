@@ -237,6 +237,18 @@ TECH_SIGNATURES = {
                 r'swiper-slide',
                 r'swiper-wrapper',
             ]
+        },
+        'crypto-js': {
+            'patterns': [
+                r'(?:^|/)crypto-js(?:\.min)?\.js$',                  # 文件名匹配
+                r'CryptoJS\.(?:AES|DES|TripleDES|Rabbit|RC4)',      # 加密算法
+                r'(?:^|[^\w.])CryptoJS\.(?:enc|format|lib|mode|pad)', # 工具类
+                r'(?:^|[^\w.])CryptoJS\.(?:MD5|SHA[1-3]|RIPEMD160|HMAC)\(', # 哈希函数
+                r'(?:^|[^\w.])require\([\'"]crypto-js(?:/[^\'"]+)?[\'"]\)',  # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]crypto-js(?:/[^\'"]+)?[\'"]', # ES6导入
+                r'@types/crypto-js',                                 # TypeScript类型
+                r'/crypto-js@\d',                                    # 版本标识
+            ]
         }
     },
     '状态管理': {
@@ -439,6 +451,72 @@ TECH_SIGNATURES = {
                 r'(?:^|[^\w.])sensors\.init\s*\(',                     # 初始化
             ]
         }
+    },
+    'CDN': {
+        'Cloudflare': {
+            'patterns': [
+                r'cloudflare\.com/cdn-cgi/',                        # CDN路径
+                r'cloudflare-static/',                              # 静态资源
+                r'__cf_email__',                                    # 邮箱保护
+                r'cf-(?:ray|request-id|cache-status)',              # CF头部
+                r'cloudflare\.com/ajax/libs',                       # CDNJS
+                r'cdnjs\.cloudflare\.com',                         # CDNJS域名
+                r'cloudflare\.com/web-analytics',                   # 分析服务
+                r'cloudflare-beacon\.com',                         # 信标服务
+            ],
+            'headers': ['cf-ray', 'cf-cache-status', 'cf-connecting-ip']
+        },
+        'Akamai': {
+            'patterns': [
+                r'\.akamai\.net/',                                 # Akamai域名
+                r'\.akamaized\.net/',                             # 优化域名
+                r'akamai-(?:static|dynamic)',                      # 资源标识
+                r'akamai\.com/clear/[a-f0-9]+',                   # 缓存清理
+            ],
+            'headers': ['x-akamai-transformed', 'akamai-origin-hop']
+        },
+        'Fastly': {
+            'patterns': [
+                r'\.fastly\.net/',                                # Fastly域名
+                r'fastly-(?:cdn|ssl|debug)',                      # 服务标识
+                r'fastly\.com/products/',                         # 产品路径
+            ],
+            'headers': ['fastly-debug-digest', 'x-served-by', 'x-cache-hits']
+        },
+        'AWS CloudFront': {
+            'patterns': [
+                r'\.cloudfront\.net/',                            # CloudFront域名
+                r'aws-cloudfront/',                               # AWS标识
+                r'x-amz-cf-',                                     # CF头部前缀
+            ],
+            'headers': ['x-amz-cf-id', 'x-amz-cf-pop']
+        },
+        '阿里云CDN': {
+            'patterns': [
+                r'\.alicdn\.com/',                               # 阿里CDN域名
+                r'\.aliyuncs\.com/',                            # 阿里云域名
+                r'aliyun-(?:cdn|oss)',                          # 服务标识
+            ],
+            'headers': ['ali-swift-global-savetime', 'x-swift-cachetime']
+        },
+        '腾讯云CDN': {
+            'patterns': [
+                r'\.qcloud\.com/',                              # 腾讯云域名
+                r'\.cdntip\.com/',                             # CDN域名
+                r'\.tcloudscdn\.com/',                         # 新CDN域名
+                r'tencent-cloud-cdn',                          # 服务标识
+            ],
+            'headers': ['x-daa-tunnel', 'x-cache-lookup']
+        },
+        '七牛云CDN': {
+            'patterns': [
+                r'\.qiniucdn\.com/',                           # 七牛CDN域名
+                r'\.qiniudns\.com/',                          # DNS域名
+                r'\.qbox\.me/',                               # 存储域名
+                r'qiniu-(?:cdn|rtc)',                         # 服务标识
+            ],
+            'headers': ['x-qiniu-zone', 'x-reqid']
+        }
     }
 }
 
@@ -565,35 +643,55 @@ def detect_js_resources(content: str) -> List[str]:
     return list(set(js_resources))
 
 async def detect_js_content(content: str) -> Dict[str, List[str]]:
-    """通过分析JavaScript内容检测技术特征"""
+    """检测JavaScript内容中的技术特征"""
     js_features = {category: [] for category in TECH_SIGNATURES.keys()}
+    scripts = []
     
     try:
         soup = BeautifulSoup(content, 'html.parser')
-        scripts = []
         
-        # 收集脚本内容
+        # 收集外部脚本
         for script in soup.find_all('script', src=True):
             src = script['src']
+            
+            # 格式化脚本URL
             if src.startswith('//'):
                 src = 'https:' + src
             elif not src.startswith(('http://', 'https://')):
-                src = f"/script/{src}" if not src.startswith('/') else src
+                # 尝试不同的URL组合
+                urls_to_try = [
+                    f"https:{src}" if src.startswith('//') else None,
+                    f"https://www.samsung.com.cn{src if src.startswith('/') else '/' + src}",
+                    f"http://www.samsung.com.cn{src if src.startswith('/') else '/' + src}",
+                    f"https://samsung.com.cn{src if src.startswith('/') else '/' + src}",
+                    f"http://samsung.com.cn{src if src.startswith('/') else '/' + src}"
+                ]
+                urls_to_try = [url for url in urls_to_try if url is not None]
             
             console.print(f"\n[yellow]检测到外部脚本:[/]")
             console.print(f"  原始URL: [dim]{script['src']}[/]")
-            console.print(f"  格式化URL: [dim]{src}[/]")
             
-            try:
-                async with aiohttp.ClientSession() as session:
-                    async with session.get(src, allow_redirects=True) as response:
-                        if response.status == 200:
-                            script_content = await response.text()
-                            scripts.append((f'外部脚本:{src}', script_content))
-                        else:
-                            scripts.append((f'外部脚本:{src}', src))
-            except Exception as e:
-                console.print(f"  [red]访问脚本出错: {str(e)}[/]")
+            success = False
+            if src.startswith(('http://', 'https://')):
+                urls_to_try = [src]
+            
+            for url in urls_to_try:
+                try:
+                    console.print(f"  尝试访问: [dim]{url}[/]")
+                    async with aiohttp.ClientSession() as session:
+                        async with session.get(url, allow_redirects=True, timeout=10) as response:
+                            if response.status == 200:
+                                script_content = await response.text()
+                                scripts.append((f'外部脚本:{url}', script_content))
+                                console.print(f"  [green]✓ 成功获取脚本内容[/]")
+                                success = True
+                                break
+                except Exception as e:
+                    console.print(f"  [yellow]尝试失败: {str(e)}[/]")
+                    continue
+            
+            if not success:
+                console.print(f"  [red]所有URL尝试均失败，将使用原始URL继续分析[/]")
                 scripts.append((f'外部脚本:{src}', src))
         
         # 收集内联脚本和页面内容
@@ -831,5 +929,5 @@ async def analyze_tech_stack(url: str) -> None:
 
 if __name__ == "__main__":
     # 测试代码
-    test_url = "https://www.mi.com"
+    test_url = "https://www.samsung.com.cn/"
     asyncio.run(analyze_tech_stack(test_url))
