@@ -12,7 +12,7 @@ import asyncio
 
 console = Console()
 
-# 定义技术特征
+# 定义统一的技术特征
 TECH_SIGNATURES = {
     'Web服务器': {
         'Apache': {'headers': ['server', 'x-powered-by'], 'pattern': r'apache'},
@@ -26,69 +26,338 @@ TECH_SIGNATURES = {
         'Express': {
             'headers': ['x-powered-by'],
             'pattern': r'express',
-            'content': r'node_modules|express'
+            'patterns': [
+                r'express(?:\.min)?\.js',
+                r'node_modules/express',
+                r'require\([\'"]express[\'"]\)',
+                r'app\.(?:get|post|put|delete|use|listen)',
+            ]
         },
         'Nuxt.js': {
-            'content': r'nuxt|__NUXT_|_nuxt/',
-            'meta': {'generator': r'nuxt'}
+            'patterns': [
+                r'/_nuxt/',
+                r'/__nuxt/',
+                r'nuxt(?:\.min)?\.js',
+                r'window\.__NUXT__',
+                r'<div id="__nuxt">',
+                r'@nuxt/|nuxt-',
+            ]
         },
         'Next.js': {
-            'content': r'next/|__NEXT_|_next/',
-            'headers': ['x-powered-by'],
-            'pattern': r'next\.js'
-        },
-        'Spring Boot': {
-            'headers': ['x-application-context'],
-            'pattern': r'spring-boot'
-        },
-        'Ruby on Rails': {
-            'headers': ['x-powered-by', 'server'],
-            'pattern': r'rails|ruby'
-        },
+            'patterns': [
+                r'/_next/',
+                r'/__next/',
+                r'next(?:\.min)?\.js',
+                r'window\.__NEXT_DATA__',
+                r'<div id="__next">',
+                r'@next/|next-',
+            ]
+        }
     },
     'JavaScript框架': {
         'React': {
-            'content': r'react\.production\.min\.js|react-dom|__REACT_|_react'
+            'patterns': [
+                r'react(?:\.production)?(?:\.min)?\.js',
+                r'react-dom(?:\.production)?(?:\.min)?\.js',
+                r'window\.React|ReactDOM\.render',
+                r'(?:^|\s)React\.createElement',
+                r'(?:^|\s)React\.Component',
+                r'_jsx|_jsxs|_jsxDEV',
+                r'useState|useEffect|useContext|useRef|useMemo|useCallback',
+                r'@react-|react-router|react-redux',
+            ]
         },
         'Vue.js': {
-            'content': r'vue\.js|vue\.min\.js|__vue__|_vue'
+            'patterns': [
+                r'vue(?:\.runtime)?(?:\.esm)?(?:\.min)?\.js',
+                r'window\.Vue|Vue\.createApp',
+                r'new\s+Vue\(',
+                r'v-(?:if|for|model|bind|on|show|html|text|slot)',
+                r'@vue/|vue-router|vuex',
+                r'defineComponent|onMounted',
+                r'<template>[\s\S]*</template>',
+                r'\.vue$|vue-loader',
+            ]
         },
         'Angular': {
-            'content': r'angular\.js|angular\.min\.js|ng-|angular-route'
-        },
-        'Svelte': {
-            'content': r'svelte-|__SVELTE_'
-        },
-    },
-    '数据库': {
-        'MySQL': {'headers': ['x-powered-by'], 'pattern': r'mysql'},
-        'PostgreSQL': {'headers': ['x-powered-by'], 'pattern': r'postgresql'},
-        'MongoDB': {'headers': ['x-powered-by'], 'pattern': r'mongodb'},
-        'Redis': {'headers': ['x-powered-by'], 'pattern': r'redis'},
-    },
-    'CDN服务': {
-        'Cloudflare': {'headers': ['cf-ray', 'server'], 'pattern': r'cloudflare'},
-        'Akamai': {'headers': ['server'], 'pattern': r'akamai'},
-        'Fastly': {'headers': ['fastly-debug-digest'], 'pattern': r'fastly'},
-        'Vercel': {'headers': ['x-vercel-id', 'server'], 'pattern': r'vercel'},
-        'Netlify': {'headers': ['x-nf-request-id', 'server'], 'pattern': r'netlify'},
+            'patterns': [
+                r'angular(?:\.min)?\.js',
+                r'@angular/core',
+                r'@Component|@Injectable|@NgModule',
+                r'ngOnInit|ngOnDestroy|ngAfterViewInit',
+                r'@angular/(?:common|platform-browser|forms)',
+                r'ng-(?:controller|app|model|bind|repeat|if|show|hide)',
+                r'angular-route(?:\.min)?\.js',
+                r'zone\.js|rxjs',
+            ]
+        }
     },
     '构建工具': {
-        'Webpack': {'content': r'webpack|__webpack_'},
-        'Vite': {'content': r'vite|__vite_'},
-        'Rollup': {'content': r'rollup|__rollup_'},
+        'Webpack': {
+            'patterns': [
+                r'(?:window\.|var\s+)__webpack_(?:require|modules|jsonp)',
+                r'webpack(?:\.runtime|\.bundle)?\.js',
+                r'webpackChunk|webpackJsonp',
+                r'webpack_require\(.+?\)',
+                r'webpack-dev-server',
+                r'webpack-hot-middleware',
+                r'/webpack(?:-[^/]+)?\.js(?:on)?$',
+                r'webpack\.config\.[jt]s',
+            ]
+        },
+        'Vite': {
+            'patterns': [
+                r'/@vite/client',
+                r'/vite/dist/',
+                r'vite\.config\.[jt]s',
+                r'import\.meta\.(?:hot|env\.MODE)',
+                r'__vite_(?:hmr|ssr)',
+                r'vite-plugin-[a-z-]+',
+                r'\.vite/',
+                r'@vitejs/plugin-',
+            ]
+        },
+        'Rollup': {
+            'patterns': [
+                r'rollup(?:\.(?:config|browser))\.js',
+                r'__ROLLUP_(?:ASSET|CHUNK)_[A-Z_]+__',
+                r'rollup-plugin-[a-z-]+',
+                r'\.rollup\.js$',
+                r'@rollup/[a-z-]+',
+                r'\.rolluprc(?:\.[a-z]+)?$',
+                r'import\.meta\.ROLLUP_',
+            ]
+        }
+    },
+    'JavaScript库': {
+        'jQuery': {
+            'patterns': [
+                r'jquery(?:\.min)?\.js',
+                r'jquery-\d+\.\d+\.\d+',
+                r'window\.jQuery',
+                r'\$\(document\)',
+                r'jquery(?:ui|mobile|validate|form|lightbox|fancybox|slick|datepicker)',
+            ]
+        },
+        'Underscore.js': {
+            'patterns': [
+                r'(?:^|/)underscore(?:\.min)?\.js',                    # 文件名匹配
+                r'(?:^|[^\w.])_\.(?:VERSION|noConflict)\b',           # 特有API
+                r'(?:^|[^\w.])_\.templateSettings\b',                  # 模板设置
+                # 集合操作方法 - 确保是_对象的方法调用
+                r'(?:^|[^\w.])_\.(?:each|map|reduce|find|filter|where|findWhere|reject|all|any|include|pluck|max|min|sortBy|groupBy|indexBy|countBy|shuffle|sample|toArray|size|partition)\(',
+                # 数组操作方法
+                r'(?:^|[^\w.])_\.(?:first|initial|last|rest|compact|flatten|without|union|intersection|difference|uniq|zip|unzip|object|chunk|indexOf|lastIndexOf|sortedIndex|findIndex|findLastIndex)\(',
+                r'(?:^|[^\w.])require\([\'"]underscore[\'"]\)',       # CommonJS引入
+                r'import\s+[{_}\s]+from\s+[\'"]underscore[\'"]',      # ES6引入
+                r'underscore/modules/',                                # 模块化引用
+                r'@types/underscore'                                   # TypeScript类型
+            ]
+        },
+        'Lodash': {
+            'patterns': [
+                r'(?:^|/)lodash(?:\.min)?\.js',                       # 文件名匹配
+                r'lodash-es/',                                        # ES模块
+                r'@lodash/',                                          # npm包
+                r'(?:^|[^\w.])_\.(?:VERSION|runInContext)\b',         # 特有API
+                r'(?:^|[^\w.])_\.templateSettings\b',                 # 模板设置
+                # 对象操作方法 - 确保是_对象的方法调用
+                r'(?:^|[^\w.])_\.(?:get|set|has|hasIn|keys|values|entries|toPairs|fromPairs|invoke|create|clone|cloneDeep)\(',
+                # 字符串操作方法
+                r'(?:^|[^\w.])_\.(?:camelCase|kebabCase|snakeCase|startCase|capitalize|deburr|endsWith|escape|escapeRegExp|pad|padStart|padEnd|parseInt|repeat|replace|split|startsWith|template|trim|trimStart|trimEnd|truncate|unescape|upperCase|upperFirst)\(',
+                # 实用函数
+                r'(?:^|[^\w.])_\.(?:defaultTo|range|times|uniqueId|constant|identity|matches|method|noop|nthArg|over|overEvery|overSome|property|propertyOf|stubArray|stubFalse|stubObject|stubString|stubTrue)\(',
+                r'(?:^|[^\w.])require\([\'"]lodash[\'"]\)',          # CommonJS引入
+                r'import\s+[{_}\s]+from\s+[\'"]lodash[\'"]',         # ES6引入
+                r'import\s+[{_}\s]+from\s+[\'"]lodash/\w+[\'"]',     # 子模块引入
+                r'lodash/fp',                                         # 函数式编程模块
+                r'lodash/core',                                       # 核心模块
+                r'@types/lodash'                                      # TypeScript类型
+            ]
+        },
+        'core-js': {
+            'patterns': [
+                r'core-js(?:\.min)?\.js',
+                r'core-js/stable',
+                r'core-js/modules/',
+                r'core-js/features/',
+                r'core-js/proposals/',
+                r'core-js/web/',
+                r'core-js/library',
+                r'__core-js_shared__',
+                r'core-js-pure',
+                r'core-js-compat',
+                r'/core-js@\d',
+                r'@babel/runtime-corejs\d',
+            ]
+        },
+        'FingerprintJS': {
+            'patterns': [
+                r'fingerprint(?:\.min)?\.js',
+                r'@fingerprintjs/fingerprintjs',
+                r'FingerprintJS',
+                r'Fingerprint2',
+            ]
+        },
+        'Swiper': {
+            'patterns': [
+                r'swiper(?:\.min)?\.js',
+                r'/swiper/',
+                r'swiper-bundle',
+                r'swiper-container',
+                r'swiper-slide',
+            ]
+        }
     },
     '状态管理': {
-        'Redux': {'content': r'redux|__REDUX_'},
-        'Vuex': {'content': r'vuex|__VUEX_'},
-        'MobX': {'content': r'mobx|__MOBX_'},
+        'Redux': {
+            'patterns': [
+                r'(?:^|/)redux(?:\.min)?\.js',                        # 文件名匹配
+                r'@reduxjs/toolkit',                                  # Redux工具包
+                r'(?:^|[^\w.])(?:create|configure)Store\s*\(',        # Store创建
+                r'(?:^|[^\w.])use(?:Selector|Dispatch)\s*\(',        # Hooks API
+                r'(?:^|[^\w.])connect\s*\(\s*(?:\([^)]*\)|[^)])*\)', # connect高阶组件
+                r'(?:^|[^\w.])mapStateToProps\s*[=:]\s*',            # 映射函数
+                r'(?:^|[^\w.])createSlice\s*\(\s*{',                 # Redux Toolkit
+                r'(?:^|[^\w.])createReducer\s*\(\s*',                # Reducer创建
+                r'(?:^|[^\w.])combineReducers\s*\(\s*{',            # Reducer组合
+                r'(?:^|[^\w.])applyMiddleware\s*\(',                # 中间件应用
+                r'redux-(?:thunk|saga|observable)(?:/|$)',          # Redux中间件
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]@?redux[\'"]',   # Redux导入
+            ]
+        },
+        'Vuex': {
+            'patterns': [
+                r'(?:^|/)vuex(?:\.min)?\.js',                       # 文件名匹配
+                r'(?:^|[^\w.])new\s+Vuex\.Store\s*\(',             # Store实例化
+                r'(?:^|[^\w.])map(?:State|Getters|Actions|Mutations)\s*\(',  # 辅助函数
+                # Store配置对象
+                r'(?:^|[^\w.])(?:commit|dispatch)\s*\(\s*[\'"][^\'"]+[\'"]\s*(?:,|\))',
+                r'(?:^|[^\w.])useStore\s*\(\s*\)',                  # 组合式API
+                r'(?:^|[^\w.])createStore\s*\(\s*\{',              # Store创建
+                r'@/store/index\.(?:js|ts)',                        # 文件路径
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]vuex[\'"]',     # Vuex导入
+            ]
+        },
+        'Pinia': {
+            'patterns': [
+                r'(?:^|/)pinia(?:\.min)?\.js',                      # 文件名匹配
+                r'(?:^|[^\w.])createPinia\s*\(\s*\)',              # Pinia创建
+                r'(?:^|[^\w.])defineStore\s*\(\s*[\'"]',           # Store定义
+                r'(?:^|[^\w.])usePinia\s*\(\s*\)',                 # Pinia使用
+                r'(?:^|[^\w.])storeToRefs\s*\(\s*\w+\s*\)',       # Store引用
+                r'@pinia/nuxt',                                     # Nuxt集成
+                r'@/stores/\w+\.(?:js|ts)',                        # Store文件
+                r'pinia/dist',                                      # 构建文件
+                # Store定义结构
+                r'defineStore\s*\(\s*[\'"][^\'"]+[\'"]\s*,\s*\{\s*(?:state|actions|getters)\s*:',
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]pinia[\'"]',    # Pinia导入
+            ]
+        },
+        'MobX': {
+            'patterns': [
+                r'(?:^|/)mobx(?:\.min)?\.js',                      # 文件名匹配
+                r'(?:^|[^\w.])@(?:observable|computed|action)\b',  # 装饰器
+                r'(?:^|[^\w.])make(?:Observable|AutoObservable)\s*\(',  # Observable创建
+                r'(?:^|[^\w.])observer\s*\(\s*(?:class|function)',  # 观察者包装
+                r'(?:^|[^\w.])runInAction\s*\(\s*\(?',             # Action执行
+                r'mobx-(?:react|vue)(?:/|$)',                      # 框架集成
+                r'(?:^|[^\w.])useObserver\s*\(\s*\)',             # Hook使用
+                r'(?:^|[^\w.])is(?:Observable|Action)\s*\(',      # 类型检查
+                r'(?:^|[^\w.])configure\s*\(\s*\{\s*enforceActions',  # 配置
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]mobx[\'"]',    # MobX导入
+            ]
+        }
     },
     'UI框架': {
-        'Ant Design': {'content': r'antd|ant-design'},
-        'Material-UI': {'content': r'@material-ui|@mui/'},
-        'Tailwind CSS': {'content': r'tailwind|tailwindcss'},
-        'Bootstrap': {'content': r'bootstrap\.css|bootstrap\.min\.css'},
-        'Element UI': {'content': r'element-ui|element-plus'},
+        'Ant Design': {
+            'patterns': [
+                r'antd(?:\.min)?\.js',
+                r'@ant-design/icons',
+                r'@antd/',
+                r'ConfigProvider',
+                r'(?:^|[^-])(ant-(?:btn|input|form|layout|menu|modal|table|select|checkbox|radio|switch|slider|date|time|calendar|tooltip|popover|drawer|message|notification|spin|icon|tabs|steps|progress|upload|avatar|badge|card|list|tree|tag|alert|skeleton|space|divider|grid|row|col))',
+                r'anticon(?:-[a-z]+)?',
+                r'ant-design-vue',
+                r'antd/lib',
+                r'antd/es',
+            ]
+        },
+        'Element UI': {
+            'patterns': [
+                r'element-ui(?:\.min)?\.js',
+                r'element-plus',
+                r'(?:^|\s)el-(?:button|input|form|dialog|menu|table|select|radio|checkbox|switch|slider|date-picker|time-picker|upload|progress|badge|tag|alert|message|notification|tabs|card)(?:\s|>|$)',
+                r'ElementPlus',
+                r'@element-plus/',
+                r'/element-ui/',
+                r'(?:^|\s)(?:ElMessage|ElNotification|ElMessageBox)\s*[,}]',
+                r'installElementPlus',
+            ]
+        },
+        'Naive UI': {
+            'patterns': [
+                r'naive-ui(?:\.min)?\.js',
+                r'@naive-ui/',
+                r'(?:^|\s)n-(?:button|input|form|modal|menu|table|select|radio|checkbox|switch|slider|date-picker|time-picker|upload|progress|badge|tag|alert|message|notification|tabs|card)(?:\s|>|$)',
+                r'(?:^|\s)(?:useMessage|useDialog|useNotification)\s*\(',
+                r'(?:^|\s)createDiscreteApi\s*\(',
+                r'/naive-ui/',
+                r'(?:^|\s)(?:NButton|NInput|NForm|NModal)\s*[,}]',
+                r'naive-ui/es',
+            ]
+        },
+        'Vant': {
+            'patterns': [
+                r'vant(?:\.min)?\.js',
+                r'@vant/use',
+                r'@vant/weapp',
+                r'(?:^|\s)van-(?:button|field|cell|popup|dialog|toast|notify|tabbar|nav-bar|image|swipe|list|grid|form|radio|checkbox|switch|uploader|picker|datetime-picker|rate|slider|search|steps|tabs|collapse|action-sheet|sidebar|skeleton|tag|badge|divider)(?:\s|>|$)',
+                r'Vant\.use\(',
+                r'/vant/',
+                r'vant/lib',
+                r'vant/es',
+                r'(?:^|\s)(?:showToast|showDialog|showNotify)\s*\(',
+            ]
+        },
+        'Material-UI': {
+            'patterns': [
+                r'@material-ui/core',
+                r'@mui/material',
+                r'@mui/icons-material',
+                r'makeStyles|withStyles|styled\(',
+                r'ThemeProvider|createTheme',
+                r'mui-[a-z-]+',
+                r'Mui[A-Z][a-zA-Z]+',
+                r'/material-ui/',
+                r'@emotion/react',
+                r'@emotion/styled',
+            ]
+        },
+        'Tailwind CSS': {
+            'patterns': [
+                r'tailwind(?:\.min)?\.css',
+                r'@tailwindcss/forms',
+                r'@tailwindcss/typography',
+                r'@tailwindcss/aspect-ratio',
+                r'tailwind\.config\.js',
+                r'class="[^"]*(?:text-|bg-|border-|flex|grid|p-|m-|w-|h-)[a-zA-Z0-9-]+',
+                r'@apply\s+[^;]+;',
+                r'theme\([\'"][^\'"]+[\'"]\)',
+            ]
+        },
+        'Bootstrap': {
+            'patterns': [
+                r'bootstrap(?:\.min)?\.(?:css|js)',
+                r'@popperjs/core',
+                r'navbar-(?:brand|nav|toggler)',
+                r'btn-(?:primary|secondary|success|danger|warning|info|light|dark)',
+                r'modal-(?:dialog|content|header|body|footer)',
+                r'class="[^"]*(?:container|row|col-|nav|navbar|card|modal|form|btn|alert|badge|progress)',
+                r'data-bs-(?:toggle|target|dismiss)',
+                r'bootstrap/dist',
+            ]
+        }
     }
 }
 
@@ -216,147 +485,40 @@ def detect_js_resources(content: str) -> List[str]:
 
 async def detect_js_content(content: str) -> Dict[str, List[str]]:
     """通过分析JavaScript内容检测技术特征"""
-    js_features = {
-        'Web框架': [],
-        'JavaScript框架': [],
-        '状态管理': [],
-        'UI框架': [],
-        '构建工具': []
-    }
+    js_features = {category: [] for category in TECH_SIGNATURES.keys()}
     
-    # 简化的特征检测模式
-    tech_patterns = {
-        'JavaScript框架': {
-            'React': [
-                r'react\.development\.js',
-                r'react\.production\.min\.js',
-                r'react-dom',
-                r'/react/',
-                r'window\.React',
-                r'ReactDOM',
-            ],
-            'Vue.js': [
-                r'vue\.js',
-                r'vue\.min\.js',
-                r'vue\.runtime\.js',
-                r'vue@',
-                r'window\.Vue',
-                r'/vue/',
-            ],
-            'Angular': [
-                r'angular\.js',
-                r'angular\.min\.js',
-                r'/angular/',
-                r'ng-app',
-                r'ng-controller',
-            ]
-        },
-        '状态管理': {
-            'Redux': [
-                r'redux\.js',
-                r'redux\.min\.js',
-                r'/redux/',
-                r'redux-toolkit',
-            ],
-            'Vuex': [
-                r'vuex\.js',
-                r'vuex\.min\.js',
-                r'/vuex/',
-                r'Vuex\.Store',
-            ],
-            'MobX': [
-                r'mobx\.js',
-                r'mobx\.min\.js',
-                r'/mobx/',
-                r'mobx-react',
-            ]
-        },
-        'UI框架': {
-            'Ant Design': [
-                r'antd\.js',
-                r'antd\.min\.js',
-                r'/antd/',
-                r'ant-design',
-                r'(?:^|[^-])(ant-(?:btn|input|form|layout|menu|modal|table|select|checkbox|radio|switch|slider|date|time|calendar|tooltip|popover|drawer|message|notification|spin|icon|tabs|steps|progress|upload|avatar|badge|card|list|tree|tag|alert|skeleton|space|divider|grid|row|col))',
-                r'anticon(?:-[a-z]+)?',
-                r'@ant-design/icons',
-                r'@antd/',
-            ],
-            'Element UI': [
-                r'element-ui',
-                r'element-plus',
-                r'/element/',
-                r'el-button',
-                r'el-input',
-            ],
-            'Material-UI': [
-                r'@material-ui',
-                r'@mui/',
-                r'material-ui',
-                r'/mui/',
-            ]
-        },
-        '构建工具': {
-            'Webpack': [
-                r'webpack',
-                r'__webpack_require__',
-                r'webpackJsonp',
-            ],
-            'Vite': [
-                r'vite',
-                r'/@vite/',
-                r'import\.meta\.hot',
-            ],
-            'Rollup': [
-                r'rollup',
-                r'__ROLLUP__',
-                r'/rollup/',
-            ]
-        }
-    }
-
-    # 提取所有script标签和它们的src属性
     try:
         soup = BeautifulSoup(content, 'html.parser')
         scripts = []
         
-        # 收集所有script标签的src
+        # 收集脚本内容
         for script in soup.find_all('script', src=True):
             src = script['src']
-            # 格式化资源URL
             if src.startswith('//'):
                 src = 'https:' + src
             elif not src.startswith(('http://', 'https://')):
                 src = f"/script/{src}" if not src.startswith('/') else src
             
-            # 打印原始和格式化后的URL，用于调试
             console.print(f"\n[yellow]检测到外部脚本:[/]")
             console.print(f"  原始URL: [dim]{script['src']}[/]")
             console.print(f"  格式化URL: [dim]{src}[/]")
             
-            # 检查URL是否可访问
             try:
                 async with aiohttp.ClientSession() as session:
                     async with session.get(src, allow_redirects=True) as response:
                         if response.status == 200:
-                            console.print(f"  [green]✓ 可以访问[/]")
-                            if response.history:
-                                console.print(f"  [yellow]发生重定向: {' -> '.join(str(r.url) for r in response.history)}[/]")
                             script_content = await response.text()
                             scripts.append((f'外部脚本:{src}', script_content))
                         else:
-                            console.print(f"  [red]访问失败: HTTP {response.status}[/]")
                             scripts.append((f'外部脚本:{src}', src))
             except Exception as e:
                 console.print(f"  [red]访问脚本出错: {str(e)}[/]")
                 scripts.append((f'外部脚本:{src}', src))
         
-        # 收集所有内联脚本内容
+        # 收集内联脚本和页面内容
         for i, script in enumerate(soup.find_all('script', src=False)):
             if script.string:
                 scripts.append((f'内联脚本-{i+1}', script.string))
-                
-        # 将页面内容也加入检查范围
         scripts.append(('页面内容', content))
         
     except Exception as e:
@@ -365,26 +527,27 @@ async def detect_js_content(content: str) -> Dict[str, List[str]]:
 
     console.print("\n  [cyan]分析JavaScript特征...[/]")
     
-    # 对每个类别进行检测
-    for category, technologies in tech_patterns.items():
+    # 使用统一的TECH_SIGNATURES进行检测
+    for category, technologies in TECH_SIGNATURES.items():
         console.print(f"\n    - 检测{category}...")
-        for tech_name, patterns in technologies.items():
-            found_match = False
-            for script_name, script_content in scripts:
-                for pattern in patterns:
-                    try:
-                        match = re.search(pattern, script_content, re.I)
-                        if match:
-                            js_features[category].append(tech_name)
-                            console.print(f"      [green]✓ 在 {script_name} 中检测到 {tech_name}[/]")
-                            console.print(f"        模式: {pattern}")
-                            console.print(f"        匹配: {match.group(0)}")
-                            found_match = True
-                            break
-                    except Exception as e:
-                        console.print(f"      [red]正则匹配出错 ({pattern}): {str(e)}[/]")
-                if found_match:
-                    break  # 如果已经检测到这个技术，就跳过剩余的脚本检查
+        for tech_name, tech_info in technologies.items():
+            if 'patterns' in tech_info:  # 只处理有patterns的技术
+                found_match = False
+                for script_name, script_content in scripts:
+                    for pattern in tech_info['patterns']:
+                        try:
+                            match = re.search(pattern, script_content, re.I)
+                            if match:
+                                js_features[category].append(tech_name)
+                                console.print(f"      [green]✓ 在 {script_name} 中检测到 {tech_name}[/]")
+                                console.print(f"        模式: {pattern}")
+                                console.print(f"        匹配: {match.group(0)}")
+                                found_match = True
+                                break
+                        except Exception as e:
+                            console.print(f"      [red]正则匹配出错 ({pattern}): {str(e)}[/]")
+                    if found_match:
+                        break
 
     return {k: list(set(v)) for k, v in js_features.items() if v}
 
@@ -439,7 +602,16 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
             'antd': 'Ant Design',
             'element-ui': 'Element UI',
             'material-ui': 'Material-UI',
-            'mui': 'Material-UI'
+            'mui': 'Material-UI',
+            'jquery': 'jQuery',
+            'underscore': 'Underscore.js',
+            'lodash': 'Lodash',
+            'fingerprintjs': 'FingerprintJS',
+            'swiper': 'Swiper',
+            'core-js': 'core-js',
+            'pinia': 'Pinia',
+            'naive-ui': 'Naive UI',
+            'vant': 'Vant'
         }
         
         for resource in js_resources:
