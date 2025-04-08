@@ -76,7 +76,6 @@ STATE_MANAGEMENT = {
             r'(?:^|[^\w.])useAtom\s*\(',                        # 使用atom
             r'(?:^|[^\w.])useAtomValue\s*\(',                   # 读取值
             r'(?:^|[^\w.])useSetAtom\s*\(',                     # 设置值
-            r'(?:^|[^\w.])Provider\s+initialValues',            # Provider
             r'atomWithStorage|atomWithReducer',                  # 特殊atom
         ]
     },
@@ -86,7 +85,6 @@ STATE_MANAGEMENT = {
             r'(?:^|[^\w.])create\s*\(\s*\([^\)]+\)\s*=>\s*\({', # 创建store
             r'(?:^|[^\w.])useStore\s*\(',                       # 使用store
             r'zustand/middleware',                              # 中间件
-            r'persist|devtools|subscribe|shallow',              # 特性API
         ]
     }
 } 

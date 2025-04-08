@@ -138,5 +138,25 @@ JS_LIBRARIES = {
             r'moment-range',
             r'moment-duration-format',
         ]
+    },
+    'Boomerang': {
+        'patterns': [
+            r'(?:^|/)boomerang(?:\.min)?\.js$',                # 文件名匹配
+            r'BOOMR(?:\.init|\.[a-z]+)',                       # 全局对象
+            r'boomerang/plugins/',                             # 插件目录
+            r'(?:^|[^\w.])BOOMR_start\b',                     # 启动变量
+            r'(?:^|[^\w.])BOOMR_lstart\b',                    # 加载时间
+            r'(?:^|[^\w.])BOOMR\.addVar\s*\(',                # 添加变量
+            r'(?:^|[^\w.])BOOMR\.subscribe\s*\(',             # 事件订阅
+            r'boomerang-(?:plugin|loader)',                    # 相关文件
+            r'boomr/boomerang',                               # npm包
+            r'import\s+[{}\s\w]+\s+from\s+[\'"]boomerang[\'"]', # ES6导入
+            r'require\([\'"]boomerang[\'"]\)',                # CommonJS引入
+            # 性能监控相关
+            r'beacon\.(?:min\.)?js',                          # 信标文件
+            r'BOOMR\.plugins\.RT\.startTimer\s*\(',           # 计时器
+            r'BOOMR\.responseEnd\s*=',                        # 响应时间
+            r'BOOMR\.t_(?:start|end|done)',                   # 时间戳
+        ]
     }
 } 

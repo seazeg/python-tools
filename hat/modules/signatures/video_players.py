@@ -5,7 +5,6 @@ VIDEO_PLAYERS = {
         'patterns': [
             r'(?:^|/)video(?:-js)?(?:\.min)?\.js$',              # 文件名匹配
             r'videojs(?:\.min)?\.css',                           # CSS文件
-            r'(?:^|[^\w.])videojs\s*\(',                         # 实例化
             r'video-js|vjs-(?:big-play-button|control|text-track)', # CSS类
             r'data-setup=[\'"]\{[^\}]*?\}[\'"]',                # 配置属性
             r'(?:^|[^\w.])require\([\'"]video\.js[\'"]\)',      # CommonJS引入
@@ -77,6 +76,21 @@ VIDEO_PLAYERS = {
             r'xgplayer\.v\d+\.(?:min\.)?js',                  # 版本文件
             r'(?:^|[^\w.])require\([\'"]xgplayer[\'"]\)',     # CommonJS引入
             r'import\s+[{}\s\w]+\s+from\s+[\'"]xgplayer[\'"]', # ES6导入
+        ]
+    },
+    'Brightcove': {
+        'patterns': [
+            r'(?:^|/)brightcove(?:-player)?(?:\.min)?\.js$',    # 文件名匹配
+            r'players\.brightcove\.(?:net|com)',                # CDN域名
+            r'videojs-bc-player',                               # 播放器类名
+            r'data-video-id=[\'"][0-9]+[\'"]',                 # 视频ID属性
+            r'data-account=[\'"][0-9]+[\'"]',                  # 账户ID属性
+            r'data-player=[\'"][a-zA-Z0-9_-]+[\'"]',          # 播放器ID属性
+            r'data-embed=[\'"]default[\'"]',                   # 嵌入类型
+            r'bc(?:\.min)?\.js',                               # 核心文件
+            r'brightcove-(?:player|videojs)',                  # 相关文件
+            r'videojs\.getPlayer\([\'"]brightcove',           # API调用
+            r'brightcove\.createExperiences?\(\)',            # 旧版API
         ]
     }
 } 
