@@ -277,7 +277,10 @@ async def detect_js_content(content: str) -> Dict[str, List[str]]:
                 r'antd\.min\.js',
                 r'/antd/',
                 r'ant-design',
-                r'ant-',
+                r'(?:^|[^-])(ant-(?:btn|input|form|layout|menu|modal|table|select|checkbox|radio|switch|slider|date|time|calendar|tooltip|popover|drawer|message|notification|spin|icon|tabs|steps|progress|upload|avatar|badge|card|list|tree|tag|alert|skeleton|space|divider|grid|row|col))',
+                r'anticon(?:-[a-z]+)?',
+                r'@ant-design/icons',
+                r'@antd/',
             ],
             'Element UI': [
                 r'element-ui',
