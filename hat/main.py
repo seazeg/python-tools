@@ -12,6 +12,7 @@ from modules.subdomain_scanner import smart_subdomains
 from modules.dns_info import dns_info
 from modules.lan_scanner import lan_scan, get_local_network
 from modules.dir_scanner import smart_dirb
+from modules.tech_detector import analyze_tech_stack
 
 app = typer.Typer(help="黑客工具集 (Hacker's Arsenal of Tools)")
 console = Console()
@@ -26,9 +27,10 @@ async def menu():
         console.print("3. DNS信息收集")
         console.print("4. 局域网扫描")
         console.print("5. 智能目录扫描")
+        console.print("6. 技术栈分析")
         console.print("0. 退出")
         
-        choice = IntPrompt.ask("\n请选择功能", choices=["0", "1", "2", "3", "4", "5"])
+        choice = IntPrompt.ask("\n请选择功能", choices=["0", "1", "2", "3", "4", "5", "6"])
         
         try:
             if choice == 0:
@@ -51,6 +53,9 @@ async def menu():
             elif choice == 5:
                 url = Prompt.ask("请输入目标URL")
                 await smart_dirb(url=url)
+            elif choice == 6:
+                url = Prompt.ask("请输入目标URL")
+                await analyze_tech_stack(url=url)
         except Exception as e:
             console.print(f"\n[red]执行出错: {str(e)}[/]")
             console.print("[yellow]按任意键继续...[/]")
@@ -94,6 +99,13 @@ async def dir_scan(
 ):
     """智能目录扫描"""
     await smart_dirb(url=url)
+
+@app.command()
+async def tech_scan(
+    url: str = typer.Argument(..., help="目标URL")
+):
+    """分析网站技术栈"""
+    await analyze_tech_stack(url=url)
 
 def main():
     """程序入口点"""
