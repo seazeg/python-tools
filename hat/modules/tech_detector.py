@@ -272,6 +272,57 @@ TECH_SIGNATURES = {
                 r'@types/crypto-js',                                 # TypeScript类型
                 r'/crypto-js@\d',                                    # 版本标识
             ]
+        },
+        'Clipboard.js': {
+            'patterns': [
+                r'(?:^|/)clipboard(?:\.min)?\.js$',                  # 文件名匹配
+                r'(?:^|[^\w.])new\s+ClipboardJS\s*\(',              # 实例化
+                r'(?:^|[^\w.])clipboard\.js(?:/|$)',                # 包引用
+                r'data-clipboard-(?:text|target|action)',           # 数据属性
+                r'(?:^|[^\w.])ClipboardJS\.isSupported\s*\(',      # 方法调用
+                r'(?:^|[^\w.])require\([\'"]clipboard[\'"]\)',      # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]clipboard[\'"]', # ES6导入
+                r'@types/clipboard',                                # TypeScript类型
+            ]
+        },
+        'Axios': {
+            'patterns': [
+                r'(?:^|/)axios(?:\.min)?\.js$',                     # 文件名匹配
+                # Axios方法调用
+                r'(?:^|[^\w.])axios\.(?:get|post|put|delete|patch|head|options)\s*\(',
+                r'(?:^|[^\w.])axios\.(?:request|create)\s*\(',      # 实例方法
+                r'(?:^|[^\w.])axios\.(?:interceptors|defaults)',    # 配置属性
+                # Axios实例和配置
+                r'(?:^|[^\w.])axios\.create\s*\(\s*\{[^}]*baseURL',
+                r'(?:^|[^\w.])axios\.defaults\.(?:headers|timeout|baseURL)',
+                # 导入语句
+                r'(?:^|[^\w.])require\([\'"]axios[\'"]\)',         # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]axios[\'"]',    # ES6导入
+                r'@types/axios',                                    # TypeScript类型
+                # 响应和拦截器
+                r'(?:^|[^\w.])axios(?:Response|Error|Cancel)',
+                r'(?:^|[^\w.])CancelToken\.source\s*\(',
+            ]
+        },
+        'Moment.js': {
+            'patterns': [
+                r'(?:^|/)moment(?:\.min)?\.js$',                    # 文件名匹配
+                r'(?:^|/)moment-with-locales(?:\.min)?\.js$',      # 带本地化文件
+                # Moment方法调用
+                r'(?:^|[^\w.])moment\s*\([^\)]*\)\.(?:format|fromNow|calendar|diff|valueOf|unix|utc|local|tz)\s*\(',
+                # Moment配置和本地化
+                r'(?:^|[^\w.])moment\.(?:locale|duration|tz|unix)\s*\(',
+                r'(?:^|[^\w.])moment\.(?:updateLocale|defineLocale|locales)\s*\(',
+                # 导入语句
+                r'(?:^|[^\w.])require\([\'"]moment(?:/[^\'"]+)?[\'"]\)',  # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]moment(?:/[^\'"]+)?[\'"]', # ES6导入
+                r'@types/moment',                                   # TypeScript类型
+                # 插件和扩展
+                r'moment-timezone',
+                r'moment/locale/',
+                r'moment-range',
+                r'moment-duration-format',
+            ]
         }
     },
     '状态管理': {
@@ -491,12 +542,27 @@ TECH_SIGNATURES = {
         },
         'Akamai': {
             'patterns': [
-                r'\.akamai\.net/',                                 # Akamai域名
-                r'\.akamaized\.net/',                             # 优化域名
-                r'akamai-(?:static|dynamic)',                      # 资源标识
-                r'akamai\.com/clear/[a-f0-9]+',                   # 缓存清理
+                r'\.akamai(?:\.net|\.com|\.co|\.cn|edge\.net)/',    # Akamai域名族
+                r'\.akamaized\.net/',                               # 优化域名
+                r'\.akamaihd\.net/',                               # 媒体域名
+                r'\.edgesuite\.net/',                              # 传统域名
+                r'\.edgekey\.net/',                                # SSL域名
+                r'akamai-(?:static|dynamic|streaming)',             # 资源标识
+                r'akamai\.com/clear/[a-f0-9]+',                    # 缓存清理
+                r'akamai\.com/(?:web|media|image)/',               # 服务路径
             ],
-            'headers': ['x-akamai-transformed', 'akamai-origin-hop']
+            'headers': [
+                'x-akamai-transformed',                            # 转换标记
+                'akamai-origin-hop',                               # 源站跳转
+                'x-akamai-request-id',                             # 请求ID
+                'x-akamai-cache-',                                 # 缓存信息
+                'akamai-x-cache-on',                               # 缓存状态
+                'akamai-x-get-cache-key',                          # 缓存键
+                'akamai-x-check-cacheable',                        # 可缓存检查
+                'akamai-x-feo-trace',                             # 前端优化跟踪
+                'x-akamai-ssl-client-sid',                        # SSL会话ID
+                'x-akamai-edgescape'                              # 地理位置信息
+            ]
         },
         'Fastly': {
             'patterns': [
@@ -952,5 +1018,5 @@ async def analyze_tech_stack(url: str) -> None:
 
 if __name__ == "__main__":
     # 测试代码
-    test_url = "https://www.samsung.com.cn/"
+    test_url = "https://tophub.today/"
     asyncio.run(analyze_tech_stack(test_url))
