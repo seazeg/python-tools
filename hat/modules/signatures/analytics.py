@@ -24,5 +24,37 @@ ANALYTICS = {
             r'tongji\.baidu\.com',                                   # 统计域名
             r'(?:^|[^\w.])window\._hmt\s*=\s*window\._hmt',         # 全局变量
         ]
+    },
+    'Google Tag Manager': {
+        'patterns': [
+            r'googletagmanager\.com/gtm\.js\?id=GTM-[A-Z0-9]+',     # GTM文件
+            r'(?:^|[^\w.])dataLayer\s*=\s*\[\s*\{',                 # 数据层初始化
+            r'(?:^|[^\w.])dataLayer\.push\s*\(',                    # 数据推送
+            r'<iframe[^>]+googletagmanager\.com/ns\.html\?id=GTM-', # GTM iframe
+            r'<!-- Google Tag Manager -->',                          # GTM注释
+            r'gtm\.start\s*=\s*new\s+Date',                         # GTM时间戳
+            r'gtm\.js\?id=GTM-[A-Z0-9]+',                          # GTM ID
+        ]
+    },
+    'CNZZ': {
+        'patterns': [
+            r'(?:^|/)cnzz\.com/(?:z_stat\.php|stat\.php)',         # CNZZ文件
+            r'(?:^|[^\w.])cnzz_protocol',                          # CNZZ协议
+            r'(?:^|[^\w.])var\s+cnzz_s_tag\s*=',                  # CNZZ变量
+            r'https?://[^/]*cnzz\.(?:com|net)/',                   # CNZZ域名
+            r'id="cnzz_stat_icon_\d+"',                           # CNZZ图标
+            r'src="[^"]*cnzz\.com/[^"]+?\?id=\d+"',              # CNZZ脚本
+        ]
+    },
+    'Sensors Analytics': {
+        'patterns': [
+            r'(?:^|[^\w.])sensorsdata\.min\.js',                   # 神策文件
+            r'(?:^|[^\w.])sensors\.track\s*\(',                    # 事件跟踪
+            r'(?:^|[^\w.])sensorsdata_js_sdk',                     # SDK标识
+            r'(?:^|[^\w.])sa\.track\s*\(',                         # 简写API
+            r'(?:^|[^\w.])sensors\.quick\s*\(',                    # 快速API
+            r'sensorsdata\.cn/sa\.js',                             # 服务域名
+            r'(?:^|[^\w.])sensors\.init\s*\(',                     # 初始化
+        ]
     }
 } 

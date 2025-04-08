@@ -9,6 +9,8 @@ from .video_players import VIDEO_PLAYERS
 from .chart_tools import CHART_TOOLS
 from .cdn_providers import CDN_PROVIDERS
 from .analytics import ANALYTICS
+from .ui_frameworks import UI_FRAMEWORKS
+from .state_management import STATE_MANAGEMENT
 
 # 合并所有特征签名
 TECH_SIGNATURES = {
@@ -20,5 +22,7 @@ TECH_SIGNATURES = {
     '视频播放器': VIDEO_PLAYERS,
     '图表工具': CHART_TOOLS,
     'CDN': CDN_PROVIDERS,
-    '分析': ANALYTICS
+    '分析': ANALYTICS,
+    'UI框架': UI_FRAMEWORKS,
+    '状态管理': STATE_MANAGEMENT
 } 

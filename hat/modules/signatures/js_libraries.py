@@ -3,14 +3,77 @@
 JS_LIBRARIES = {
     'jQuery': {
         'patterns': [
-            r'(?:^|/)jquery(?:\.min)?\.js$',                    # 文件名匹配
-            r'(?:^|[^\w.])(?:window\.)?jQuery(?:\.fn|\$)',      # 全局对象
-            r'(?:^|[^\w.])(?:\$|jQuery)\s*\(',                  # 函数调用
-            r'jquery(?:-\d+\.\d+\.\d+)?(?:\.min)?\.js',        # 版本文件
-            r'jquery-ui(?:\.min)?\.js',                        # UI库
-            r'jquery\.(?:ajax|get|post)\s*\(',                 # Ajax方法
-            r'(?:^|[^\w.])require\([\'"]jquery[\'"]\)',        # CommonJS引入
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]jquery[\'"]',   # ES6导入
+            r'jquery(?:\.min)?\.js',
+            r'jquery-\d+\.\d+\.\d+',
+            r'window\.jQuery',
+            r'\$\(document\)',
+            r'jquery(?:ui|mobile|validate|form|lightbox|fancybox|slick|datepicker)',
+        ]
+    },
+    'Underscore.js': {
+        'patterns': [
+            r'(?:^|/)underscore(?:\.min)?\.js',                    # 文件名匹配
+            r'(?:^|[^\w.])_\.(?:VERSION|noConflict)\b',           # 特有API
+            r'(?:^|[^\w.])_\.templateSettings\b',                  # 模板设置
+            r'(?:^|[^\w.])require\([\'"]underscore[\'"]\)',       # CommonJS引入
+            r'import\s+[{_}\s]+from\s+[\'"]underscore[\'"]',      # ES6引入
+            r'underscore/modules/',                                # 模块化引用
+            r'@types/underscore'                                   # TypeScript类型
+        ]
+    },
+    'Lodash': {
+        'patterns': [
+            r'(?:^|/)lodash(?:\.min)?\.js',                       # 文件名匹配
+            r'lodash-es/',                                        # ES模块
+            r'@lodash/',                                          # npm包
+            r'(?:^|[^\w.])_\.(?:VERSION|runInContext)\b',         # 特有API
+            r'(?:^|[^\w.])_\.templateSettings\b',                 # 模板设置
+            # 对象操作方法 - 确保是_对象的方法调用
+            r'(?:^|[^\w.])_\.(?:get|set|has|hasIn|keys|values|entries|toPairs|fromPairs|invoke|create|clone|cloneDeep)\(',
+            # 字符串操作方法
+            r'(?:^|[^\w.])_\.(?:camelCase|kebabCase|snakeCase|startCase|capitalize|deburr|endsWith|escape|escapeRegExp|pad|padStart|padEnd|parseInt|repeat|replace|split|startsWith|template|trim|trimStart|trimEnd|truncate|unescape|upperCase|upperFirst)\(',
+            # 实用函数
+            r'(?:^|[^\w.])_\.(?:defaultTo|range|times|uniqueId|constant|identity|matches|method|noop|nthArg|over|overEvery|overSome|property|propertyOf|stubArray|stubFalse|stubObject|stubString|stubTrue)\(',
+            r'(?:^|[^\w.])require\([\'"]lodash[\'"]\)',          # CommonJS引入
+            r'import\s+[{_}\s]+from\s+[\'"]lodash[\'"]',         # ES6引入
+            r'import\s+[{_}\s]+from\s+[\'"]lodash/\w+[\'"]',     # 子模块引入
+            r'lodash/fp',                                         # 函数式编程模块
+            r'lodash/core',                                       # 核心模块
+            r'@types/lodash'                                      # TypeScript类型
+        ]
+    },
+    'core-js': {
+        'patterns': [
+            r'core-js(?:\.min)?\.js',
+            r'core-js/stable',
+            r'core-js/modules/',
+            r'core-js/features/',
+            r'core-js/proposals/',
+            r'core-js/web/',
+            r'core-js/library',
+            r'__core-js_shared__',
+            r'core-js-pure',
+            r'core-js-compat',
+            r'/core-js@\d',
+            r'@babel/runtime-corejs\d',
+        ]
+    },
+    'FingerprintJS': {
+        'patterns': [
+            r'fingerprint(?:\.min)?\.js',
+            r'@fingerprintjs/fingerprintjs',
+            r'FingerprintJS',
+            r'Fingerprint2',
+        ]
+    },
+    'Swiper': {
+        'patterns': [
+            r'swiper(?:\.min)?\.js',
+            r'/swiper/',
+            r'swiper-bundle',
+            r'swiper-container',
+            r'swiper-slide',
+            r'swiper-wrapper',
         ]
     },
     'crypto-js': {
@@ -23,6 +86,18 @@ JS_LIBRARIES = {
             r'import\s+[{}\s\w]+\s+from\s+[\'"]crypto-js(?:/[^\'"]+)?[\'"]', # ES6导入
             r'@types/crypto-js',                                 # TypeScript类型
             r'/crypto-js@\d',                                    # 版本标识
+        ]
+    },
+    'Clipboard.js': {
+        'patterns': [
+            r'(?:^|/)clipboard(?:\.min)?\.js$',                  # 文件名匹配
+            r'(?:^|[^\w.])new\s+ClipboardJS\s*\(',              # 实例化
+            r'(?:^|[^\w.])clipboard\.js(?:/|$)',                # 包引用
+            r'data-clipboard-(?:text|target|action)',           # 数据属性
+            r'(?:^|[^\w.])ClipboardJS\.isSupported\s*\(',      # 方法调用
+            r'(?:^|[^\w.])require\([\'"]clipboard[\'"]\)',      # CommonJS引入
+            r'import\s+[{}\s\w]+\s+from\s+[\'"]clipboard[\'"]', # ES6导入
+            r'@types/clipboard',                                # TypeScript类型
         ]
     },
     'Axios': {
@@ -62,17 +137,6 @@ JS_LIBRARIES = {
             r'moment/locale/',
             r'moment-range',
             r'moment-duration-format',
-        ]
-    },
-    'Lodash': {
-        'patterns': [
-            r'(?:^|/)lodash(?:\.min)?\.js$',                    # 文件名匹配
-            r'(?:^|[^\w.])_\.(?:map|filter|reduce|find|each)',  # 核心方法
-            r'(?:^|[^\w.])require\([\'"]lodash[\'"]\)',        # CommonJS引入
-            r'import\s+[{}\s\w]+\s+from\s+[\'"]lodash[\'"]',   # ES6导入
-            r'@types/lodash',                                  # TypeScript类型
-            r'lodash/(?:fp|core)',                             # 子模块
-            r'lodash-es',                                      # ES模块版本
         ]
     }
 } 

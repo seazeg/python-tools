@@ -71,4 +71,4 @@ CHART_TOOLS = {
             r'three-[a-z-]+(?:-loader|\.js)',              # 扩展和加载器
         ]
     }
-} 
+}

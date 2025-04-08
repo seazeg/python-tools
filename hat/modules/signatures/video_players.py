@@ -67,5 +67,16 @@ VIDEO_PLAYERS = {
             r'cloud\.tencent\.com/[^"\']+tcplayer',           # CDN路径
             r'TCPlayer\.defaults',                             # 配置API
         ]
+    },
+    'XGPlayer': {
+        'patterns': [
+            r'(?:^|/)xgplayer(?:-(?:lite|mp4))?(?:\.min)?\.js$', # 文件名匹配
+            r'(?:^|[^\w.])new\s+Player\s*\(',                   # 实例化
+            r'xgplayer(?:-(?:skin|controls|progress))',        # CSS类
+            r'data-xg-(?:player|video)',                       # 数据属性
+            r'xgplayer\.v\d+\.(?:min\.)?js',                  # 版本文件
+            r'(?:^|[^\w.])require\([\'"]xgplayer[\'"]\)',     # CommonJS引入
+            r'import\s+[{}\s\w]+\s+from\s+[\'"]xgplayer[\'"]', # ES6导入
+        ]
     }
 } 

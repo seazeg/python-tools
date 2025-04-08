@@ -1,6 +1,19 @@
 """CDN提供商特征"""
 
 CDN_PROVIDERS = {
+    'Cloudflare': {
+        'patterns': [
+            r'cloudflare\.com/cdn-cgi/',                        # CDN路径
+            r'cloudflare-static/',                              # 静态资源
+            r'__cf_email__',                                    # 邮箱保护
+            r'cf-(?:ray|request-id|cache-status)',              # CF头部
+            r'cloudflare\.com/ajax/libs',                       # CDNJS
+            r'cdnjs\.cloudflare\.com',                         # CDNJS域名
+            r'cloudflare\.com/web-analytics',                   # 分析服务
+            r'cloudflare-beacon\.com',                         # 信标服务
+        ],
+        'headers': ['cf-ray', 'cf-cache-status', 'cf-connecting-ip']
+    },
     'Akamai': {
         'patterns': [
             r'\.akamai(?:\.net|\.com|\.co|\.cn|edge\.net)/',    # Akamai域名族
@@ -25,20 +38,46 @@ CDN_PROVIDERS = {
             'x-akamai-edgescape'                              # 地理位置信息
         ]
     },
-    'Cloudflare': {
+    'Fastly': {
         'patterns': [
-            r'\.cloudflare\.com/',
-            r'cdnjs\.cloudflare\.com/',
-            r'cloudflare-static/',
-            r'cloudflare-ipfs\.com/',
+            r'\.fastly\.net/',                                # Fastly域名
+            r'fastly-(?:cdn|ssl|debug)',                      # 服务标识
+            r'fastly\.com/products/',                         # 产品路径
         ],
-        'headers': [
-            'cf-ray',
-            'cf-cache-status',
-            'cf-request-id',
-            'cf-connecting-ip',
-            'cf-ipcountry',
-            'cf-visitor',
-        ]
+        'headers': ['fastly-debug-digest', 'x-served-by', 'x-cache-hits']
+    },
+    'AWS CloudFront': {
+        'patterns': [
+            r'\.cloudfront\.net/',                            # CloudFront域名
+            r'aws-cloudfront/',                               # AWS标识
+            r'x-amz-cf-',                                     # CF头部前缀
+        ],
+        'headers': ['x-amz-cf-id', 'x-amz-cf-pop']
+    },
+    '阿里云CDN': {
+        'patterns': [
+            r'\.alicdn\.com/',                               # 阿里CDN域名
+            r'\.aliyuncs\.com/',                            # 阿里云域名
+            r'aliyun-(?:cdn|oss)',                          # 服务标识
+        ],
+        'headers': ['ali-swift-global-savetime', 'x-swift-cachetime']
+    },
+    '腾讯云CDN': {
+        'patterns': [
+            r'\.qcloud\.com/',                              # 腾讯云域名
+            r'\.cdntip\.com/',                             # CDN域名
+            r'\.tcloudscdn\.com/',                         # 新CDN域名
+            r'tencent-cloud-cdn',                          # 服务标识
+        ],
+        'headers': ['x-daa-tunnel', 'x-cache-lookup']
+    },
+    '七牛云CDN': {
+        'patterns': [
+            r'\.qiniucdn\.com/',                           # 七牛CDN域名
+            r'\.qiniudns\.com/',                          # DNS域名
+            r'\.qbox\.me/',                               # 存储域名
+            r'qiniu-(?:cdn|rtc)',                         # 服务标识
+        ],
+        'headers': ['x-qiniu-zone', 'x-reqid']
     }
 } 
