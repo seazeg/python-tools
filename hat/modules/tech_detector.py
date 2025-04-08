@@ -135,6 +135,31 @@ TECH_SIGNATURES = {
                 r'\.rolluprc(?:\.[a-z]+)?$',
                 r'import\.meta\.ROLLUP_',
             ]
+        },
+        'Babel': {
+            'patterns': [
+                r'(?:^|/)babel(?:\.min)?\.js$',                     # 文件名匹配
+                r'@babel/(?:core|runtime|preset-env|plugin-)',      # Babel包
+                r'\.babelrc(?:\.js|\.json)?$',                     # 配置文件
+                r'babel\.config\.(?:js|json|cjs|mjs)$',           # 新版配置
+                # Babel运行时特征
+                r'(?:^|[^\w.])_(?:createClass|classCallCheck|defineProperty|objectSpread|extends|inherits|getPrototypeOf|possibleConstructorReturn|assertThisInitialized|setPrototypeOf)\s*\(',
+                # Babel转换后的代码特征
+                r'(?:^|[^\w.])require\([\'"]@babel/runtime/[^\'"]+[\'"]\)',
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]@babel/runtime/',
+                # Babel插件和预设
+                r'(?:^|[^\w.])(?:presets|plugins)\s*:\s*\[\s*[\'"]@babel/',
+                r'babel-plugin-[a-z-]+',                           # 社区插件
+                r'babel-preset-[a-z-]+',                           # 预设包
+                # Babel配置选项
+                r'(?:^|[^\w.])(?:targets|modules|loose|spec|useBuiltIns|corejs|decorators|classProperties)\s*:\s*(?:true|false|[\'"]\w+[\'"]|\{)',
+                # Babel CLI和工具
+                r'babel-node',
+                r'babel-loader',
+                r'@babel/cli',
+                # Babel注释指令
+                r'@babel/(?:ignore|plugin|preset)',
+            ]
         }
     },
     'JavaScript库': {
@@ -319,7 +344,6 @@ TECH_SIGNATURES = {
                 r'/vant/',
                 r'vant/lib',
                 r'vant/es',
-                r'(?:^|\s)(?:showToast|showDialog|showNotify)\s*\(',
             ]
         },
         'Material-UI': {
@@ -353,10 +377,66 @@ TECH_SIGNATURES = {
                 r'bootstrap(?:\.min)?\.(?:css|js)',
                 r'@popperjs/core',
                 r'navbar-(?:brand|nav|toggler)',
-                r'btn-(?:primary|secondary|success|danger|warning|info|light|dark)',
-                r'modal-(?:dialog|content|header|body|footer)',
                 r'data-bs-(?:toggle|target|dismiss)',
                 r'bootstrap/dist',
+            ]
+        }
+    },
+    '分析': {
+        'Google Analytics': {
+            'patterns': [
+                r'(?:^|/)google-analytics\.com/(?:analytics\.js|ga\.js)',  # GA文件
+                r'(?:^|[^\w.])ga\s*\(\s*[\'"]create[\'"]\s*,\s*[\'"]UA-\d{4,}-\d+[\'"]\s*\)', # UA格式
+                r'(?:^|[^\w.])gtag\s*\(\s*[\'"]config[\'"]\s*,\s*[\'"]G-[A-Z0-9]+[\'"]\s*\)', # GA4格式
+                r'www\.google-analytics\.com/analytics',                   # GA域名
+                r'googletagmanager\.com/gtag/js\?id=(?:UA|G|AW|DC)-',    # GTM
+                r'google-analytics\.com/collect',                         # 数据收集
+                r'window\.ga\s*=\s*window\.ga',                          # GA初始化
+                r'gtag\s*\(\s*[\'"]js[\'"]\s*,\s*new\s+Date\(\)\s*\)',  # GTM初始化
+                r'analytics\.js|gtag/js|googletagmanager',               # 脚本引用
+            ]
+        },
+        'Baidu Analytics': {
+            'patterns': [
+                r'hm\.baidu\.com/hm\.js\?[a-f0-9]{32}',                 # 百度统计文件
+                r'hm\.baidu\.com/hm\.gif',                              # 数据收集
+                r'(?:^|[^\w.])_hmt\.push\s*\(',                         # 百度统计方法
+                r'(?:^|[^\w.])var\s+_hmt\s*=\s*_hmt\s*\|\|\s*\[\s*\]', # 初始化
+                r'(?:^|[^\w.])_hmt\.id\s*=\s*[\'"][a-f0-9]{32}[\'"]',  # 配置ID
+                r'tongji\.baidu\.com',                                   # 统计域名
+                r'(?:^|[^\w.])window\._hmt\s*=\s*window\._hmt',         # 全局变量
+            ]
+        },
+        'Google Tag Manager': {
+            'patterns': [
+                r'googletagmanager\.com/gtm\.js\?id=GTM-[A-Z0-9]+',     # GTM文件
+                r'(?:^|[^\w.])dataLayer\s*=\s*\[\s*\{',                 # 数据层初始化
+                r'(?:^|[^\w.])dataLayer\.push\s*\(',                    # 数据推送
+                r'<iframe[^>]+googletagmanager\.com/ns\.html\?id=GTM-', # GTM iframe
+                r'<!-- Google Tag Manager -->',                          # GTM注释
+                r'gtm\.start\s*=\s*new\s+Date',                         # GTM时间戳
+                r'gtm\.js\?id=GTM-[A-Z0-9]+',                          # GTM ID
+            ]
+        },
+        'CNZZ': {
+            'patterns': [
+                r'(?:^|/)cnzz\.com/(?:z_stat\.php|stat\.php)',         # CNZZ文件
+                r'(?:^|[^\w.])cnzz_protocol',                          # CNZZ协议
+                r'(?:^|[^\w.])var\s+cnzz_s_tag\s*=',                  # CNZZ变量
+                r'https?://[^/]*cnzz\.(?:com|net)/',                   # CNZZ域名
+                r'id="cnzz_stat_icon_\d+"',                           # CNZZ图标
+                r'src="[^"]*cnzz\.com/[^"]+?\?id=\d+"',              # CNZZ脚本
+            ]
+        },
+        'Sensors Analytics': {
+            'patterns': [
+                r'(?:^|[^\w.])sensorsdata\.min\.js',                   # 神策文件
+                r'(?:^|[^\w.])sensors\.track\s*\(',                    # 事件跟踪
+                r'(?:^|[^\w.])sensorsdata_js_sdk',                     # SDK标识
+                r'(?:^|[^\w.])sa\.track\s*\(',                         # 简写API
+                r'(?:^|[^\w.])sensors\.quick\s*\(',                    # 快速API
+                r'sensorsdata\.cn/sa\.js',                             # 服务域名
+                r'(?:^|[^\w.])sensors\.init\s*\(',                     # 初始化
             ]
         }
     }
@@ -751,5 +831,5 @@ async def analyze_tech_stack(url: str) -> None:
 
 if __name__ == "__main__":
     # 测试代码
-    test_url = "https://www.mgtv.com/"
+    test_url = "https://www.mi.com"
     asyncio.run(analyze_tech_stack(test_url))
