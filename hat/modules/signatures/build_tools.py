@@ -15,14 +15,25 @@ BUILD_TOOLS = {
     },
     'Vite': {
         'patterns': [
-            r'/@vite/client',
-            r'/vite/dist/',
-            r'vite\.config\.[jt]s',
-            r'import\.meta\.(?:hot|env\.MODE)',
-            r'__vite_(?:hmr|ssr)',
-            r'vite-plugin-[a-z-]+',
-            r'\.vite/',
-            r'@vitejs/plugin-',
+            r'/@vite/client',                                  # Vite 客户端导入
+            r'/vite/dist/',                                    # Vite 分发目录
+            r'vite\.config\.[jt]s',                            # Vite 配置文件
+            r'import\.meta\.(?:hot|env\.MODE|url|glob)',       # Vite 特有的导入元属性
+            r'__vite_(?:hmr|ssr|base|asset)',                  # Vite 生成的变量
+            r'vite-plugin-[a-z-]+',                            # Vite 插件
+            r'\.vite/',                                         # Vite 缓存目录
+            r'@vitejs/plugin-',                                # Vite 官方插件
+            r'/_vite_hmr',                                     # HMR 端点
+            r'from\s+[\'"]/@fs/',                              # Vite 文件系统路径
+            r'assets/[a-zA-Z0-9]+\.[a-zA-Z0-9]+\.(?:js|css)', # Vite 哈希资源
+            r'/@id/',                                          # Vite 模块解析
+            r'/@react-refresh',                                # React 刷新支持
+            r'data-vite-dev-id',                               # Vite 开发标识符
+            r'vite-hmr',                                       # HMR 相关类或属性
+            r'vite-error-overlay',                             # 错误覆盖层
+            r'import\s+[{}\s\w]+\s+from\s+[\'"]vite[\'"]',    # Vite 导入
+            r'require\([\'"]vite[\'"]\)',                      # Vite CommonJS 导入
+            r'<script\s+type=[\'"]module[\'"]\s+src=[\'"]/src/[^\'"]+'  # Vite 开发模式脚本
         ]
     },
     'Rollup': {

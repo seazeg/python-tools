@@ -128,10 +128,20 @@ def detect_js_resources(content: str) -> List[str]:
             js_resources.append(script['src'])
             
         # 检测<link>标签中的JavaScript资源
-        for link in soup.find_all('link', rel=True):
-            rel = link.get('rel', [''])[0].lower() if isinstance(link.get('rel'), list) else link.get('rel', '').lower()
+        for link in soup.find_all('link'):
+            # 安全地获取rel属性
+            rel_attr = link.get('rel')
+            if rel_attr is None:
+                continue
+                
+            # 处理rel可能是列表或字符串的情况
+            rel = rel_attr[0].lower() if isinstance(rel_attr, list) and rel_attr else str(rel_attr).lower()
             href = link.get('href', '')
-            if rel in ['preload', 'prefetch', 'modulepreload'] and href:
+            
+            if not href:
+                continue
+                
+            if rel in ['preload', 'prefetch', 'modulepreload']:
                 # 检查as属性是否为script或者href是否以.js结尾
                 as_attr = link.get('as', '').lower()
                 if as_attr == 'script' or href.lower().endswith('.js'):
@@ -142,9 +152,9 @@ def detect_js_resources(content: str) -> List[str]:
         
         # 检测内联事件处理器中的JavaScript URL
         event_attrs = ['onclick', 'onload', 'onmouseover', 'onmouseout', 'onchange', 'onsubmit']
-        for tag in soup.find_all(attrs=lambda attrs: any(attr in attrs for attr in event_attrs)):
+        for tag in soup.find_all(attrs=lambda attrs: attrs is not None and any(attr in attrs for attr in event_attrs)):
             for attr in event_attrs:
-                if attr in tag.attrs:
+                if attr in tag.attrs and tag[attr]:
                     # 从事件处理器中提取可能的JavaScript URL
                     js_urls = re.findall(r'(https?://[^\'"]+\.js)', tag[attr])
                     js_resources.extend(js_urls)
@@ -158,7 +168,8 @@ def detect_js_resources(content: str) -> List[str]:
         for paths in require_paths:
             try:
                 paths_dict = json.loads(paths)
-                js_resources.extend(paths_dict.values())
+                if paths_dict and isinstance(paths_dict, dict):
+                    js_resources.extend(paths_dict.values())
             except:
                 pass
         
@@ -180,13 +191,20 @@ def detect_js_resources(content: str) -> List[str]:
                 
     except Exception as e:
         console.print(f'[yellow]解析JavaScript资源时出错: {str(e)}[/]')
+        return []  # 出错时返回空列表而不是None
     
     # 过滤并返回唯一的资源列表
-    return list(set(js_resources))
+    return list(set(filter(None, js_resources)))  # 过滤掉None值
 
 async def detect_js_content(content: str, response_data: Dict) -> Dict[str, List[str]]:
     """检测JavaScript内容中的技术特征"""
-    js_features = {category: [] for category in TECH_SIGNATURES.keys()}
+    # 只关注JavaScript相关的技术类别
+    js_related_categories = [
+        'Web框架','JavaScript框架', 'JavaScript库', '构建工具', 'UI框架', 
+        '状态管理', '图表工具', '视频播放器','分析'
+    ]
+    
+    js_features = {category: [] for category in TECH_SIGNATURES.keys() if category in js_related_categories}
     scripts = []
     
     try:
@@ -255,8 +273,11 @@ async def detect_js_content(content: str, response_data: Dict) -> Dict[str, List
 
     console.print("\n  [cyan]分析JavaScript特征...[/]")
     
-    # 使用统一的TECH_SIGNATURES进行检测
+    # 使用统一的TECH_SIGNATURES进行检测，但只检测JavaScript相关类别
     for category, technologies in TECH_SIGNATURES.items():
+        if category not in js_related_categories:
+            continue
+            
         console.print(f"\n    - 检测{category}...")
         for tech_name, tech_info in technologies.items():
             if 'patterns' in tech_info:  # 只处理有patterns的技术
@@ -297,16 +318,34 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
         for tech_name, signatures in technologies.items():
             # 检查HTTP头
             if 'headers' in signatures:
-                for header in signatures['headers']:
-                    header_value = headers.get(header, '').lower()
-                    if header_value and re.search(signatures['pattern'], header_value, re.I):
-                        detected_tech[category].append(tech_name)
-                        break
+                # 处理新的嵌套headers格式
+                if isinstance(signatures['headers'], dict):
+                    for header_name, patterns in signatures['headers'].items():
+                        header_value = headers.get(header_name, '').lower()
+                        if header_value:
+                            for pattern in patterns:
+                                if re.search(pattern, header_value, re.I):
+                                    detected_tech[category].append(tech_name)
+                                    break
+                # 处理旧的headers格式
+                elif isinstance(signatures['headers'], list):
+                    for header in signatures['headers']:
+                        header_value = headers.get(header, '').lower()
+                        if header_value and 'pattern' in signatures and re.search(signatures['pattern'], header_value, re.I):
+                            detected_tech[category].append(tech_name)
+                            break
 
             # 检查页面内容
-            if 'content' in signatures:
+            if 'content' in signatures and isinstance(signatures['content'], str):
                 if re.search(signatures['content'], content, re.I):
                     detected_tech[category].append(tech_name)
+            
+            # 检查内容模式
+            if 'patterns' in signatures:
+                for pattern in signatures['patterns']:
+                    if re.search(pattern, content, re.I):
+                        detected_tech[category].append(tech_name)
+                        break
 
             # 检查meta标签
             if 'meta' in signatures:
