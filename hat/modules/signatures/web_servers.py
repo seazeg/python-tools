@@ -27,7 +27,6 @@ WEB_SERVERS = {
             'server': [
                 r'(?i)nginx/?[\d.]*',                        # 标准Server头
                 r'(?i)openresty/?[\d.]*',                    # OpenResty变种
-                r'(?i)tengine/?[\d.]*',                      # 淘宝Tengine变种
             ],
             'x-fastcgi-cache': [r'.*'],                     # FastCGI缓存
             'x-proxy-cache': [r'.*'],                       # 代理缓存
@@ -100,6 +99,30 @@ WEB_SERVERS = {
             r'(?i)Caddyfile',                         # 配置文件
             r'(?i)/etc/caddy/',                       # 配置路径
         ]
+    },
+    'Tengine': {
+        'headers': {
+            'server': [
+                r'(?i)tengine/?[\d.]*',                    # 标准Server头
+                r'(?i)tengine/[\d.]+',                     # 精确版本
+            ],
+            'x-powered-by': [
+                r'(?i)tengine',                           # 扩展信息
+                r'(?i)alibaba',                           # 阿里巴巴标识
+            ],
+            'via': [
+                r'(?i)tengine',                           # 代理信息
+            ],
+            'x-tengine-error': [r'.*'],                  # Tengine错误信息
+            'eagleeye-traceid': [r'.*'],                 # 阿里云追踪ID
+            'x-tengine-version': [r'[\d.]+'],            # Tengine版本
+        },
+        'patterns': [
+            r'(?i)/tengine/',                            # 安装路径
+            r'(?i)\.tengine\.conf$',                     # 配置文件
+            r'(?i)tengine\.taobao\.com',                 # 官方域名
+            r'(?i)powered[\s-]by[\s-]tengine',           # 页面标识
+        ]
     }
 }
 
@@ -121,6 +144,16 @@ ERROR_PAGES = {
         r'<hr width=100% size=1 color=silver>',
     ]
 }
+
+# 添加 Tengine 的错误页面特征
+ERROR_PAGES.update({
+    'Tengine': [
+        r'<title>Welcome to tengine!</title>',
+        r'<hr><center>tengine/[\d.]+</center>',
+        r'<title>404 Not Found</title>\s*<center>tengine/[\d.]+',
+        r'<center>tengine/[\d.]+ \([^)]+\)</center>',
+    ]
+})
 
 def enhance_server_detection(headers: dict, content: str) -> list:
     """增强的服务器检测"""

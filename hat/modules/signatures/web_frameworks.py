@@ -35,7 +35,6 @@ WEB_FRAMEWORKS = {
             r'(?:^|[\'"])next-(?:link|router|head|script|image|auth|seo|sitemap|mdx|transpile-modules)(?:[\'"]|$)', # Next组件和工具
             r'(?:^|[^\w.])import\s+[{}\s\w]+\s+from\s+[\'"]next/', # Next导入
             r'(?:^|[^\w.])config\s*=\s*{\s*[\'"]next[\'"]',    # Next配置
-            r'(?:^|[^\w.])(?:getStaticProps|getServerSideProps|getInitialProps)\s*\(', # Next数据获取
         ]
     },
     'Django': {
