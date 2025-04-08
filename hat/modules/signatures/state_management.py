@@ -47,6 +47,7 @@ STATE_MANAGEMENT = {
     },
     'MobX': {
         'patterns': [
+            r'(?:^|/)(mobx|__mobxGlobals)\s*',
             r'(?:^|/)mobx(?:\.min)?\.js',                      # 文件名匹配
             r'(?:^|[^\w.])make(?:Observable|AutoObservable)\s*\(',  # Observable创建
             r'(?:^|[^\w.])observer\s*\(\s*(?:class|function)',  # 观察者包装

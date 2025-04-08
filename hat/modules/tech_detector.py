@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Set, Tuple
 import aiohttp
 import json
 from pathlib import Path
@@ -19,7 +19,16 @@ except ImportError:
     HAS_BROTLI = False
 
 # 导入特征签名 (使用相对导入)
-from .signatures import TECH_SIGNATURES
+from .signatures import (
+    TECH_SIGNATURES,
+    JS_FRAMEWORKS,
+    WEB_FRAMEWORKS,
+    UI_FRAMEWORKS,
+    STATE_MANAGEMENT,
+    WEB_SERVERS,
+    CDN_PROVIDERS,
+    ANALYTICS
+)
 
 console = Console()
 async def fetch_url_data(url: str) -> Optional[Dict]:
@@ -370,6 +379,231 @@ def display_results(results: Dict[str, List[str]]) -> None:
             table.add_row(category, ", ".join(techs))
     
     console.print(table)
+
+async def analyze_tech_stack(url: str) -> Dict[str, Set[str]]:
+    """分析网站技术栈"""
+    tech_stack = {
+        'js_frameworks': set(),
+        'web_frameworks': set(),
+        'ui_frameworks': set(), 
+        'state_management': set(),
+        'web_servers': set(),
+        'cdn_providers': set(),
+        'analytics': set(),
+        'languages': set(),
+        'databases': set(),
+        'security': set()
+    }
+
+    async with aiohttp.ClientSession() as session:
+        try:
+            async with session.get(url) as response:
+                # 获取响应内容
+                content = await response.text()
+                headers = dict(response.headers)
+                
+                # 1. 检测Web服务器
+                tech_stack['web_servers'].update(
+                    enhance_server_detection(headers, content)
+                )
+                
+                # 2. 检测编程语言
+                tech_stack['languages'].update(
+                    detect_languages(headers, content)
+                )
+                
+                # 3. 检测数据库
+                tech_stack['databases'].update(
+                    detect_databases(content, headers)
+                )
+                
+                # 4. 检测安全特征
+                tech_stack['security'].update(
+                    detect_security_features(headers)
+                )
+                
+                # 5. 检测CDN
+                tech_stack['cdn_providers'].update(
+                    detect_cdn_providers(headers, content)
+                )
+                
+                # 6. 检测分析工具
+                tech_stack['analytics'].update(
+                    detect_analytics_tools(content)
+                )
+                
+                # 7. 检测前端框架(保持原有逻辑)
+                soup = BeautifulSoup(content, 'html.parser')
+                scripts = extract_scripts(soup)
+                
+                for framework, patterns in JS_FRAMEWORKS.items():
+                    if any(re.search(pattern, content) for pattern in patterns.get('patterns', [])):
+                        tech_stack['js_frameworks'].add(framework)
+                
+                for framework, patterns in WEB_FRAMEWORKS.items():
+                    if any(re.search(pattern, content) for pattern in patterns.get('patterns', [])):
+                        tech_stack['web_frameworks'].add(framework)
+                        
+                for framework, patterns in UI_FRAMEWORKS.items():
+                    if any(re.search(pattern, content) for pattern in patterns.get('patterns', [])):
+                        tech_stack['ui_frameworks'].add(framework)
+                        
+                for framework, patterns in STATE_MANAGEMENT.items():
+                    if any(re.search(pattern, content) for pattern in patterns.get('patterns', [])):
+                        tech_stack['state_management'].add(framework)
+
+        except Exception as e:
+            print(f"Error analyzing {url}: {str(e)}")
+            
+    return tech_stack
+
+def detect_languages(headers: Dict, content: str) -> Set[str]:
+    """检测编程语言"""
+    languages = set()
+    
+    # PHP
+    if any([
+        'X-Powered-By' in headers and 'php' in headers['X-Powered-By'].lower(),
+        re.search(r'\.php[3-7]?$', content),
+        'PHPSESSID' in headers.get('Set-Cookie', ''),
+    ]):
+        languages.add('PHP')
+        
+    # Python
+    if any([
+        'X-Powered-By' in headers and 'python' in headers['X-Powered-By'].lower(),
+        'wsgi' in headers.get('Server', '').lower(),
+        'django' in content.lower(),
+        'flask' in content.lower(),
+        'fastapi' in content.lower(),
+    ]):
+        languages.add('Python')
+        
+    # Java
+    if any([
+        'X-Powered-By' in headers and 'jsp' in headers['X-Powered-By'].lower(),
+        'jsessionid' in headers.get('Set-Cookie', '').lower(),
+        re.search(r'\.jsp$', content),
+        'spring' in content.lower(),
+    ]):
+        languages.add('Java')
+        
+    # Node.js
+    if any([
+        'X-Powered-By' in headers and 'nodejs' in headers['X-Powered-By'].lower(),
+        'express' in content.lower(),
+        'node_modules' in content,
+    ]):
+        languages.add('Node.js')
+        
+    return languages
+
+def detect_databases(content: str, headers: Dict) -> Set[str]:
+    """检测数据库技术"""
+    databases = set()
+    
+    # MySQL
+    if any([
+        'mysql' in content.lower(),
+        'mysqli' in content.lower(),
+        'pdo_mysql' in content.lower(),
+    ]):
+        databases.add('MySQL')
+        
+    # PostgreSQL
+    if any([
+        'postgresql' in content.lower(),
+        'pgsql' in content.lower(),
+        'postgres' in content.lower(),
+    ]):
+        databases.add('PostgreSQL')
+        
+    # MongoDB
+    if any([
+        'mongodb' in content.lower(),
+        'mongoose' in content.lower(),
+    ]):
+        databases.add('MongoDB')
+        
+    # Redis
+    if any([
+        'redis' in content.lower(),
+        'X-Redis-Version' in headers,
+    ]):
+        databases.add('Redis')
+        
+    return databases
+
+def detect_security_features(headers: Dict) -> Set[str]:
+    """检测安全特征"""
+    security = set()
+    
+    # HTTPS/SSL
+    if headers.get('Strict-Transport-Security'):
+        security.add('HSTS')
+        
+    # XSS Protection
+    if headers.get('X-XSS-Protection'):
+        security.add('XSS Protection')
+        
+    # Content Security Policy
+    if headers.get('Content-Security-Policy'):
+        security.add('CSP')
+        
+    # CORS
+    if headers.get('Access-Control-Allow-Origin'):
+        security.add('CORS')
+        
+    # Frame Options
+    if headers.get('X-Frame-Options'):
+        security.add('Frame Protection')
+        
+    return security
+
+def detect_cdn_providers(headers: Dict, content: str) -> Set[str]:
+    """检测CDN提供商"""
+    cdn_providers = set()
+    
+    for provider, signatures in CDN_PROVIDERS.items():
+        # 检查头部特征
+        for header, patterns in signatures.get('headers', {}).items():
+            header_value = headers.get(header, '')
+            if header_value and any(re.search(pattern, header_value, re.I) for pattern in patterns):
+                cdn_providers.add(provider)
+                break
+                
+        # 检查内容特征
+        for pattern in signatures.get('patterns', []):
+            if re.search(pattern, content, re.I):
+                cdn_providers.add(provider)
+                break
+                
+    return cdn_providers
+
+def detect_analytics_tools(content: str) -> Set[str]:
+    """检测分析工具"""
+    analytics = set()
+    
+    for tool, patterns in ANALYTICS.items():
+        if any(re.search(pattern, content, re.I) for pattern in patterns.get('patterns', [])):
+            analytics.add(tool)
+            
+    return analytics
+
+def extract_scripts(soup: BeautifulSoup) -> List[str]:
+    """提取页面中的脚本内容"""
+    scripts = []
+    
+    # 内联脚本
+    for script in soup.find_all('script'):
+        if script.string:
+            scripts.append(script.string)
+            
+    # 外部脚本
+    for script in soup.find_all('script', src=True):
+        scripts.append(script['src'])
+        
+    return scripts
 
 async def analyze_tech_stack(url: str) -> None:
     """分析网站技术栈的主函数"""

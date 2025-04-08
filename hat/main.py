@@ -6,7 +6,7 @@ from modules.tech_detector import analyze_tech_stack
 
 def main():
     """主函数"""
-    test_url = "https://www.sanyiniao.com/"
+    test_url = "https://www.vmall.com/"
     asyncio.run(analyze_tech_stack(test_url))
 
 if __name__ == "__main__":
