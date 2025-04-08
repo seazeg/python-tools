@@ -606,6 +606,158 @@ TECH_SIGNATURES = {
             ],
             'headers': ['x-qiniu-zone', 'x-reqid']
         }
+    },
+    '视频播放器': {
+        'Video.js': {
+            'patterns': [
+                r'(?:^|/)video(?:-js)?(?:\.min)?\.js$',              # 文件名匹配
+                r'videojs(?:\.min)?\.css',                           # CSS文件
+                r'(?:^|[^\w.])videojs\s*\(',                         # 实例化
+                r'video-js|vjs-(?:big-play-button|control|text-track)', # CSS类
+                r'data-setup=[\'"]\{[^\}]*?\}[\'"]',                # 配置属性
+                r'(?:^|[^\w.])require\([\'"]video\.js[\'"]\)',      # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]video\.js[\'"]', # ES6导入
+                r'@videojs/[a-z-]+',                                # 插件包
+            ]
+        },
+        'Plyr': {
+            'patterns': [
+                r'(?:^|/)plyr(?:\.min)?\.js$',                      # 文件名匹配
+                r'plyr(?:\.min)?\.css',                             # CSS文件
+                r'(?:^|[^\w.])new\s+Plyr\s*\(',                     # 实例化
+                r'plyr(?:__controls|__menu|__progress|__volume)',   # CSS类
+                r'data-plyr-(?:provider|embed-id)',                 # 数据属性
+                r'(?:^|[^\w.])require\([\'"]plyr[\'"]\)',          # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]plyr[\'"]',     # ES6导入
+            ]
+        },
+        'DPlayer': {
+            'patterns': [
+                r'(?:^|/)DPlayer(?:\.min)?\.js$',                   # 文件名匹配
+                r'DPlayer(?:\.min)?\.css',                          # CSS文件
+                r'(?:^|[^\w.])new\s+DPlayer\s*\(',                  # 实例化
+                r'dplayer(?:-mobile)?(?:-[a-z-]+)?',               # CSS类
+                r'data-dplayer-(?:video|danmaku|subtitle)',        # 数据属性
+                r'(?:^|[^\w.])require\([\'"]dplayer[\'"]\)',       # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]dplayer[\'"]',  # ES6导入
+            ]
+        },
+        'ArtPlayer': {
+            'patterns': [
+                r'(?:^|/)artplayer(?:\.min)?\.js$',                # 文件名匹配
+                r'artplayer(?:\.min)?\.css',                       # CSS文件
+                r'(?:^|[^\w.])new\s+Artplayer\s*\(',               # 实例化
+                r'art-video-player',                               # CSS类
+                r'data-art-(?:video|subtitle|thumbnail)',          # 数据属性
+                r'(?:^|[^\w.])require\([\'"]artplayer[\'"]\)',    # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]artplayer[\'"]', # ES6导入
+            ]
+        },
+        'Aliplayer': {
+            'patterns': [
+                r'(?:^|/)aliplayer(?:-(?:h5|flash))?(?:\.min)?\.js$', # 文件名匹配
+                r'aliplayer(?:\.min)?\.css',                        # CSS文件
+                r'(?:^|[^\w.])new\s+Aliplayer\s*\(',                # 实例化
+                r'prism-player',                                    # CSS类
+                r'data-player-(?:type|video|config)',              # 数据属性
+                r'alicdn\.com/[^"\']+aliplayer',                   # CDN路径
+                r'Aliplayer\.events',                              # 事件API
+            ]
+        },
+        'TCPlayer': {
+            'patterns': [
+                r'(?:^|/)tcplayer(?:-(?:lite|web))?(?:\.min)?\.js$', # 文件名匹配
+                r'(?:^|[^\w.])new\s+TCPlayer\s*\(',                 # 实例化
+                r'vcp-player',                                      # CSS类
+                r'data-tc-(?:player|video)',                       # 数据属性
+                r'tcplayer\.v\d+\.(?:min\.)?js',                   # 版本文件
+                r'cloud\.tencent\.com/[^"\']+tcplayer',           # CDN路径
+                r'TCPlayer\.defaults',                             # 配置API
+            ]
+        },
+        'XGPlayer': {
+            'patterns': [
+                r'(?:^|/)xgplayer(?:-(?:lite|mp4))?(?:\.min)?\.js$', # 文件名匹配
+                r'(?:^|[^\w.])new\s+Player\s*\(',                   # 实例化
+                r'xgplayer(?:-(?:skin|controls|progress))',        # CSS类
+                r'data-xg-(?:player|video)',                       # 数据属性
+                r'xgplayer\.v\d+\.(?:min\.)?js',                  # 版本文件
+                r'(?:^|[^\w.])require\([\'"]xgplayer[\'"]\)',     # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]xgplayer[\'"]', # ES6导入
+            ]
+        }
+    },
+    '图表工具': {
+        'ECharts': {
+            'patterns': [
+                r'(?:^|/)echarts(?:\.min)?\.js$',                   # 文件名匹配
+                r'(?:^|[^\w.])echarts(?:\.init|\.connect)\s*\(',    # 初始化方法
+                r'echarts/(?:lib|dist|src)/',                       # 目录结构
+                r'@echarts/',                                       # npm包
+                r'echarts-(?:gl|liquidfill|wordcloud)',            # 扩展插件
+                r'zrender(?:\.min)?\.js',                          # 渲染引擎
+                r'(?:^|[^\w.])require\([\'"]echarts[\'"]\)',       # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]echarts[\'"]',  # ES6导入
+                r'echartsInstance\.(?:setOption|resize|dispose)',   # 实例方法
+            ]
+        },
+        'Chart.js': {
+            'patterns': [
+                r'(?:^|/)chart(?:\.min)?\.js$',                    # 文件名匹配
+                r'(?:^|[^\w.])new\s+Chart\s*\(',                   # 实例化
+                r'Chart\.(?:defaults|register|version)',           # 全局API
+                r'chartjs-plugin-[a-z-]+',                        # 插件
+                r'(?:^|[^\w.])require\([\'"]chart\.js[\'"]\)',    # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]chart\.js[\'"]', # ES6导入
+                r'@types/chart\.js',                              # TypeScript类型
+                r'data-type=[\'"](?:line|bar|radar|doughnut|pie|polarArea|bubble|scatter)[\'"]', # 图表类型
+            ]
+        },
+        'Highcharts': {
+            'patterns': [
+                r'(?:^|/)highcharts(?:\.min)?\.js$',              # 文件名匹配
+                r'(?:^|[^\w.])Highcharts\.(?:chart|stockChart|mapChart)\s*\(',  # 初始化
+                r'highcharts/(?:modules|themes)/',                # 模块和主题
+                r'highcharts-(?:more|3d|stock|maps)',            # 扩展包
+                r'(?:^|[^\w.])require\([\'"]highcharts[\'"]\)',  # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]highcharts[\'"]', # ES6导入
+                r'@types/highcharts',                            # TypeScript类型
+                r'Highcharts\.(?:setOptions|getOptions)',        # 配置方法
+            ]
+        },
+        'D3.js': {
+            'patterns': [
+                r'(?:^|/)d3(?:\.min)?\.js$',                      # 文件名匹配
+                r'd3\.(?:select|selectAll|append|attr|style)',    # DOM操作
+                r'd3\.(?:scale|axis|svg|transition|zoom)',        # 核心功能
+                r'd3-(?:array|axis|brush|chord|color|contour|force|geo|hierarchy|interpolate|path|polygon|quadtree|scale|selection|shape|time|timer|transition|zoom)', # 模块
+                r'(?:^|[^\w.])require\([\'"]d3[\'"]\)',          # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]d3[\'"]',     # ES6导入
+                r'@types/d3',                                    # TypeScript类型
+            ]
+        },
+        'AntV': {
+            'patterns': [
+                r'(?:^|/)(?:g2|g6|f2|l7|x6)(?:\.min)?\.js$',     # 文件名匹配
+                r'@antv/(?:g2|g6|f2|l7|x6)',                     # npm包
+                r'(?:^|[^\w.])(?:G2|G6|F2|L7|X6)\.(?:Chart|Graph|Canvas)\s*\(', # 实例化
+                r'antv-(?:g2|g6|f2|l7|x6)',                      # 相关包
+                r'(?:^|[^\w.])require\([\'"]@antv/[^\'"]+[\'"]\)', # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]@antv/[^\'"]+[\'"]', # ES6导入
+            ]
+        },
+        'Three.js': {
+            'patterns': [
+                r'(?:^|/)three(?:\.min)?\.js$',                   # 文件名匹配
+                r'THREE\.(?:Scene|Camera|WebGLRenderer)',         # 核心类
+                r'THREE\.(?:Mesh|Geometry|Material)',            # 3D对象
+                r'three/(?:examples|build|src)/',                # 目录结构
+                r'(?:^|[^\w.])require\([\'"]three[\'"]\)',      # CommonJS引入
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]three[\'"]', # ES6导入
+                r'@types/three',                                # TypeScript类型
+                r'three-[a-z-]+(?:-loader|\.js)',              # 扩展和加载器
+            ]
+        }
     }
 }
 
