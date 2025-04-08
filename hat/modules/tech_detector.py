@@ -1170,5 +1170,5 @@ async def analyze_tech_stack(url: str) -> None:
 
 if __name__ == "__main__":
     # 测试代码
-    test_url = "https://tophub.today/"
+    test_url = "https://echarts.apache.org/examples/zh/index.html"
     asyncio.run(analyze_tech_stack(test_url))
