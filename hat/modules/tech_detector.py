@@ -9,6 +9,14 @@ from bs4 import BeautifulSoup
 from rich.console import Console
 from rich.table import Table
 import asyncio
+from urllib.parse import urlparse
+
+# 尝试导入brotli，如果不可用则跳过
+try:
+    import brotli
+    HAS_BROTLI = True
+except ImportError:
+    HAS_BROTLI = False
 
 # 导入特征签名 (使用相对导入)
 from .signatures import TECH_SIGNATURES
@@ -24,7 +32,7 @@ async def fetch_url_data(url: str) -> Optional[Dict]:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Encoding': f'gzip, deflate{", br" if HAS_BROTLI else ""}',  # 根据brotli支持情况添加br
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         'Sec-Fetch-Dest': 'document',
@@ -59,7 +67,8 @@ async def fetch_url_data(url: str) -> Optional[Dict]:
                     'headers': headers,
                     'content': content,
                     'status': response.status,
-                    'host': str(response.url.host)  # 添加主机名
+                    'host': str(response.url.host),  # 主机名
+                    'url': str(response.url),  # 完整URL
                 }
     except aiohttp.ClientError as e:
         console.print(f'[red]网络请求错误: {str(e)}[/]')
@@ -136,7 +145,7 @@ def detect_js_resources(content: str) -> List[str]:
     
     return list(set(js_resources))
 
-async def detect_js_content(content: str) -> Dict[str, List[str]]:
+async def detect_js_content(content: str, response_data: Dict) -> Dict[str, List[str]]:
     """检测JavaScript内容中的技术特征"""
     js_features = {category: [] for category in TECH_SIGNATURES.keys()}
     scripts = []
@@ -152,15 +161,21 @@ async def detect_js_content(content: str) -> Dict[str, List[str]]:
             if src.startswith('//'):
                 src = 'https:' + src
             elif not src.startswith(('http://', 'https://')):
-                # 尝试不同的URL组合
-                urls_to_try = [
-                    f"https:{src}" if src.startswith('//') else None,
-                    f"https://www.samsung.com.cn{src if src.startswith('/') else '/' + src}",
-                    f"http://www.samsung.com.cn{src if src.startswith('/') else '/' + src}",
-                    f"https://samsung.com.cn{src if src.startswith('/') else '/' + src}",
-                    f"http://samsung.com.cn{src if src.startswith('/') else '/' + src}"
-                ]
-                urls_to_try = [url for url in urls_to_try if url is not None]
+                # 从当前URL中获取域名和协议
+                current_url = response_data.get('url', '')
+                if current_url:
+                    parsed_url = urlparse(current_url)
+                    domain = parsed_url.netloc
+                    scheme = parsed_url.scheme or 'https'
+                    
+                    # 尝试不同的URL组合
+                    urls_to_try = [
+                        f"{scheme}:{src}" if src.startswith('//') else None,
+                        f"{scheme}://{domain}{src if src.startswith('/') else '/' + src}",
+                    ]
+                    urls_to_try = [url for url in urls_to_try if url is not None]
+                else:
+                    urls_to_try = []
             
             console.print(f"\n[yellow]检测到外部脚本:[/]")
             console.print(f"  原始URL: [dim]{script['src']}[/]")
@@ -227,14 +242,14 @@ async def detect_js_content(content: str) -> Dict[str, List[str]]:
 async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
     """检测网站使用的技术"""
     detected_tech = {category: [] for category in TECH_SIGNATURES.keys()}
-    
-    headers = response_data['headers']
     content = response_data['content']
+    headers = response_data['headers']
     meta_tags = extract_meta_tags(content)
-
-    # 先进行JavaScript内容分析
-    js_techs = await detect_js_content(content)
-    for category, techs in js_techs.items():
+    
+    js_features = await detect_js_content(content, response_data)
+    
+    # 合并JavaScript特征到检测结果
+    for category, techs in js_features.items():
         detected_tech[category].extend(techs)
 
     # 再进行基础特征检测

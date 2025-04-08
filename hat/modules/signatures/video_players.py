@@ -28,10 +28,12 @@ VIDEO_PLAYERS = {
             r'(?:^|/)DPlayer(?:\.min)?\.js$',                   # 文件名匹配
             r'DPlayer(?:\.min)?\.css',                          # CSS文件
             r'(?:^|[^\w.])new\s+DPlayer\s*\(',                  # 实例化
-            r'dplayer(?:-mobile)?(?:-[a-z-]+)?',               # CSS类
+            r'(?:^|\s)dplayer(?:-mobile)?(?:-(?:danmaku|controller|bezel|loading|icon|menu|notice|setting|subtitle|volume|quality|progress|mask|contextmenu|comment|logo|live))?(?:\s|$)', # CSS类
             r'data-dplayer-(?:video|danmaku|subtitle)',        # 数据属性
             r'(?:^|[^\w.])require\([\'"]dplayer[\'"]\)',       # CommonJS引入
             r'import\s+[{}\s\w]+\s+from\s+[\'"]dplayer[\'"]',  # ES6导入
+            r'dplayer/dist',                                    # 目录结构
+            r'@dplayer/[a-z-]+',                               # npm包
         ]
     },
     'ArtPlayer': {

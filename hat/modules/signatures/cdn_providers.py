@@ -79,5 +79,26 @@ CDN_PROVIDERS = {
             r'qiniu-(?:cdn|rtc)',                         # 服务标识
         ],
         'headers': ['x-qiniu-zone', 'x-reqid']
+    },
+    'Netlify': {
+        'patterns': [
+            r'\.netlify\.(?:com|app)/',                    # Netlify域名
+            r'netlify-(?:cdn|builds)',                     # 资源标识
+            r'netlify\.com/(?:sites|api)',                # API路径
+            r'netlify-plugin-[a-z-]+',                    # Netlify插件
+            r'netlify\.toml',                             # 配置文件
+            r'_redirects|_headers',                        # Netlify配置文件
+            r'deploy-preview-\d+--[a-z0-9-]+\.netlify\.app', # 预览环境
+            r'app\.netlify\.com/sites/[a-z0-9-]+',        # 管理界面
+        ],
+        'headers': [
+            'x-nf-request-id',                            # 请求ID
+            'x-netlify',                                  # Netlify标识
+            'x-nf-pop',                                   # POP位置
+            'x-nf-count',                                 # 请求计数
+            'x-nf-cache-status',                         # 缓存状态
+            'x-nf-edge-cache',                           # 边缘缓存
+            'x-nf-serve-time',                           # 服务时间
+        ]
     }
 } 
