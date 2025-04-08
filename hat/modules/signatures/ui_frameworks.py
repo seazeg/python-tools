@@ -71,8 +71,6 @@ UI_FRAMEWORKS = {
             r'@tailwindcss/typography',
             r'@tailwindcss/aspect-ratio',
             r'tailwind\.config\.js',
-            r'@apply\s+[^;]+;',
-            r'theme\([\'"][^\'"]+[\'"]\)',
         ]
     },
     'Bootstrap': {
