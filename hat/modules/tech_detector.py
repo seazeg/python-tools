@@ -35,22 +35,30 @@ TECH_SIGNATURES = {
         },
         'Nuxt.js': {
             'patterns': [
-                r'/_nuxt/',
-                r'/__nuxt/',
-                r'nuxt(?:\.min)?\.js',
-                r'window\.__NUXT__',
-                r'<div id="__nuxt">',
-                r'@nuxt/|nuxt-',
+                r'(?:^|/)_nuxt/',                                    # Nuxt资源目录
+                r'(?:^|/)__nuxt/',                                   # Nuxt生成目录
+                r'(?:^|/)nuxt(?:\.min)?\.js$',                      # Nuxt主文件
+                r'window\.__NUXT__',                                # Nuxt状态
+                r'<div\s+id="__nuxt"(?:\s|>)',                     # Nuxt根元素
+                r'(?:^|[^\w-])@nuxt/[a-z-]+',                      # Nuxt官方包
+                r'(?:^|[^\w-])nuxt-(?:link|child|layout|view|loading|error|progress|build|start|generate)', # Nuxt组件和命令
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]@nuxt/',        # Nuxt导入
+                r'extends:\s*[\'"]@nuxt/',                         # Nuxt配置继承
+                r'modules:\s*\[\s*[\'"]@nuxt/',                    # Nuxt模块配置
             ]
         },
         'Next.js': {
             'patterns': [
-                r'/_next/',
-                r'/__next/',
-                r'next(?:\.min)?\.js',
-                r'window\.__NEXT_DATA__',
-                r'<div id="__next">',
-                r'@next/|next-',
+                r'(?:^|/)_next/',                                   # Next资源目录
+                r'(?:^|/)__next/',                                  # Next生成目录
+                r'(?:^|/)next(?:\.min)?\.js$',                     # Next主文件
+                r'window\.__NEXT_DATA__',                          # Next状态
+                r'<div\s+id="__next"(?:\s|>)',                    # Next根元素
+                r'(?:^|[^\w-])@next/[a-z-]+',                     # Next官方包
+                r'(?:^|[^\w-])next-(?:link|router|head|script|image|auth|seo|sitemap|mdx|transpile-modules)', # Next组件和工具
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]next/',        # Next导入
+                r'config\s*=\s*{\s*[\'"]next[\'"]',               # Next配置
+                r'getStaticProps|getServerSideProps|getInitialProps', # Next数据获取
             ]
         }
     },
@@ -144,10 +152,6 @@ TECH_SIGNATURES = {
                 r'(?:^|/)underscore(?:\.min)?\.js',                    # 文件名匹配
                 r'(?:^|[^\w.])_\.(?:VERSION|noConflict)\b',           # 特有API
                 r'(?:^|[^\w.])_\.templateSettings\b',                  # 模板设置
-                # 集合操作方法 - 确保是_对象的方法调用
-                r'(?:^|[^\w.])_\.(?:each|map|reduce|find|filter|where|findWhere|reject|all|any|include|pluck|max|min|sortBy|groupBy|indexBy|countBy|shuffle|sample|toArray|size|partition)\(',
-                # 数组操作方法
-                r'(?:^|[^\w.])_\.(?:first|initial|last|rest|compact|flatten|without|union|intersection|difference|uniq|zip|unzip|object|chunk|indexOf|lastIndexOf|sortedIndex|findIndex|findLastIndex)\(',
                 r'(?:^|[^\w.])require\([\'"]underscore[\'"]\)',       # CommonJS引入
                 r'import\s+[{_}\s]+from\s+[\'"]underscore[\'"]',      # ES6引入
                 r'underscore/modules/',                                # 模块化引用
@@ -206,6 +210,7 @@ TECH_SIGNATURES = {
                 r'swiper-bundle',
                 r'swiper-container',
                 r'swiper-slide',
+                r'swiper-wrapper',
             ]
         }
     },
@@ -257,12 +262,10 @@ TECH_SIGNATURES = {
         'MobX': {
             'patterns': [
                 r'(?:^|/)mobx(?:\.min)?\.js',                      # 文件名匹配
-                r'(?:^|[^\w.])@(?:observable|computed|action)\b',  # 装饰器
                 r'(?:^|[^\w.])make(?:Observable|AutoObservable)\s*\(',  # Observable创建
                 r'(?:^|[^\w.])observer\s*\(\s*(?:class|function)',  # 观察者包装
                 r'(?:^|[^\w.])runInAction\s*\(\s*\(?',             # Action执行
                 r'mobx-(?:react|vue)(?:/|$)',                      # 框架集成
-                r'(?:^|[^\w.])useObserver\s*\(\s*\)',             # Hook使用
                 r'(?:^|[^\w.])is(?:Observable|Action)\s*\(',      # 类型检查
                 r'(?:^|[^\w.])configure\s*\(\s*\{\s*enforceActions',  # 配置
                 r'import\s+[{}\s\w]+\s+from\s+[\'"]mobx[\'"]',    # MobX导入
@@ -275,7 +278,6 @@ TECH_SIGNATURES = {
                 r'antd(?:\.min)?\.js',
                 r'@ant-design/icons',
                 r'@antd/',
-                r'ConfigProvider',
                 r'(?:^|[^-])(ant-(?:btn|input|form|layout|menu|modal|table|select|checkbox|radio|switch|slider|date|time|calendar|tooltip|popover|drawer|message|notification|spin|icon|tabs|steps|progress|upload|avatar|badge|card|list|tree|tag|alert|skeleton|space|divider|grid|row|col))',
                 r'anticon(?:-[a-z]+)?',
                 r'ant-design-vue',
@@ -330,7 +332,6 @@ TECH_SIGNATURES = {
                 r'(?:^|[^\w.])(?:Mui|Material)(?:Theme)?Provider',  # 主题提供者
                 r'(?:^|[^\w.])create(?:Mui|Material)Theme\s*\(',    # 主题创建
                 r'mui-[a-z](?:[a-z-]*[a-z])?',                     # CSS类名
-                r'Mui[A-Z][a-zA-Z]+(?:Props|Classes)?',            # 组件名和类型
                 r'/material-ui/',                                   # 资源路径
                 r'@emotion/(?:react|styled)',                       # 依赖包
                 r'import\s+[{}\s\w]+\s+from\s+[\'"]@mui/[^\'"]+'   # MUI导入
@@ -343,7 +344,6 @@ TECH_SIGNATURES = {
                 r'@tailwindcss/typography',
                 r'@tailwindcss/aspect-ratio',
                 r'tailwind\.config\.js',
-                r'class="[^"]*(?:text-|bg-|border-|flex|grid|p-|m-|w-|h-)[a-zA-Z0-9-]+',
                 r'@apply\s+[^;]+;',
                 r'theme\([\'"][^\'"]+[\'"]\)',
             ]
@@ -355,7 +355,6 @@ TECH_SIGNATURES = {
                 r'navbar-(?:brand|nav|toggler)',
                 r'btn-(?:primary|secondary|success|danger|warning|info|light|dark)',
                 r'modal-(?:dialog|content|header|body|footer)',
-                r'class="[^"]*(?:container|row|col-|nav|navbar|card|modal|form|btn|alert|badge|progress)',
                 r'data-bs-(?:toggle|target|dismiss)',
                 r'bootstrap/dist',
             ]
