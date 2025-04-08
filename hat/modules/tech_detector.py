@@ -447,6 +447,12 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
         elif '@angular' in dep_name:
             detected_tech['JavaScript框架'].append('Angular')
 
+    # 检测CDN
+    from .signatures.cdn_providers import enhance_cdn_detection
+    cdn_providers = enhance_cdn_detection(headers, content, js_resources)
+    if cdn_providers:
+        detected_tech['CDN'].extend(cdn_providers)
+
     # 移除重复项
     return {k: list(set(v)) for k, v in detected_tech.items() if v}
 

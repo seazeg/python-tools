@@ -2,109 +2,103 @@
 
 CDN_PROVIDERS = {
     'Cloudflare': {
+        'headers': {
+            'server': [r'(?i)cloudflare'],
+            'cf-ray': [r'.*'],
+            'cf-cache-status': [r'.*'],
+            '__cfduid': [r'.*'],
+            'x-fetch-attempts': [r'.*']
+        },
         'patterns': [
-            r'^https?://[^/]*cloudflare\.com/',                # CDN域名
-            r'^https?://[^/]*cdnjs\.cloudflare\.com/',        # CDNJS域名
-            r'^https?://[^/]*cloudflare-dns\.com/',           # DNS域名
-            r'^https?://[^/]*workers\.dev/',                  # Workers域名
-        ],
-        'headers': [
-            'cf-ray',                                         # 请求ID
-            'cf-cache-status',                                # 缓存状态
-            'cf-connecting-ip',                               # 客户端IP
-            'cf-worker',                                      # Worker标识
-            'cf-visitor',                                     # 访客信息
-            'cf-ipcountry',                                   # IP国家/地区
+            r'(?i)cloudflare\.com/cdn-cgi/',
+            r'(?i)cdnjs\.cloudflare\.com',
+            r'(?i)\.cloudflare\.net/',
+            r'(?i)\.cloudflare\.com/',
+            r'(?i)cloudflare-nginx',
+            r'(?i)\/cdn-cgi\/'
         ]
     },
     'Akamai': {
+        'headers': {
+            'x-akamai-transformed': [r'.*'],
+            'akamai-origin-hop': [r'.*'],
+            'x-akamai-ssl-client-sid': [r'.*']
+        },
         'patterns': [
-            r'^https?://[^/]*\.akamai(?:\.net|\.com|\.co|\.cn|edge\.net)/', # Akamai域名族
-            r'^https?://[^/]*\.akamaized\.net/',              # 优化域名
-            r'^https?://[^/]*\.akamaihd\.net/',               # 媒体域名
-            r'^https?://[^/]*\.edgesuite\.net/',              # 传统域名
-            r'^https?://[^/]*\.edgekey\.net/',                # SSL域名
-        ],
-        'headers': [
-            'x-akamai-transformed',                           # 转换标记
-            'akamai-origin-hop',                              # 源站跳转
-            'x-akamai-request-id',                            # 请求ID
-            'x-akamai-cache-',                                # 缓存信息
-            'akamai-x-cache-on',                              # 缓存状态
-            'akamai-x-get-cache-key',                         # 缓存键
-            'akamai-x-check-cacheable',                       # 可缓存检查
-            'akamai-x-feo-trace',                             # 前端优化跟踪
-            'x-akamai-ssl-client-sid',                        # SSL会话ID
-            'x-akamai-edgescape'                              # 地理位置信息
+            r'(?i)\.akamaihd\.net',
+            r'(?i)\.akamai\.net',
+            r'(?i)\.akamaized\.net',
+            r'(?i)\.edgesuite\.net'
         ]
     },
     'Fastly': {
+        'headers': {
+            'fastly-debug-digest': [r'.*'],
+            'x-fastly-request-id': [r'.*'],
+            'x-served-by': [r'(?i)cache-.*-fastly']
+        },
         'patterns': [
-            r'^https?://[^/]*\.fastly\.net/',                 # Fastly域名
-            r'^https?://[^/]*\.fastly-edge\.com/',            # 边缘域名
-            r'^https?://[^/]*\.fastlylb\.net/',               # 负载均衡域名
-        ],
-        'headers': [
-            'fastly-debug-digest',                            # 调试摘要
-            'x-served-by',                                    # 服务节点
-            'x-cache-hits',                                   # 缓存命中
-            'x-timer',                                        # 计时信息
-            'x-fastly-request-id'                             # 请求ID
+            r'(?i)\.fastly\.net',
+            r'(?i)\.fastlylb\.net',
+            r'(?i)\.fastly-edge\.com'
         ]
     },
     'AWS CloudFront': {
+        'headers': {
+            'x-amz-cf-id': [r'.*'],
+            'x-amz-cf-pop': [r'.*'],
+            'via': [r'(?i)cloudfront']
+        },
         'patterns': [
-            r'^https?://[^/]*\.cloudfront\.net/',             # CloudFront域名
-            r'^https?://[^/]*\.amazonaws\.com/',              # AWS域名
-        ],
-        'headers': [
-            'x-amz-cf-id',                                    # CloudFront ID
-            'x-amz-cf-pop',                                   # 接入点
-            'x-amz-id-2',                                     # 请求ID
-            'x-amz-request-id',                               # 请求ID
-            'via'                                             # 代理信息
+            r'(?i)\.cloudfront\.net',
+            r'(?i)\.amazonaws\.com',
+            r'(?i)aws-cloudfront',
+            r'(?i)\.awsstatic\.com'
         ]
     },
     '阿里云CDN': {
+        'headers': {
+            'server': [r'(?i)tengine', r'(?i)aliyun'],
+            'via': [r'(?i)ali(?:yun)?cdn'],
+            'x-swift-cachetime': [r'.*'],
+            'ali-swift-global-savetime': [r'.*'],
+            'x-oss-cdn-auth': [r'.*']
+        },
         'patterns': [
-            r'^https?://[^/]*\.alicdn\.com/',                 # 阿里CDN域名
-            r'^https?://[^/]*\.aliyuncs\.com/',               # 阿里云域名
-            r'^https?://[^/]*\.aliyun-inc\.com/',             # 内部域名
-        ],
-        'headers': [
-            'ali-swift-global-savetime',                      # 全局保存时间
-            'x-swift-cachetime',                              # 缓存时间
-            'x-oss-request-id',                               # OSS请求ID
-            'x-oss-cdn-auth',                                 # CDN认证
-            'via'                                             # 代理信息
+            r'(?i)\.alicdn\.com',
+            r'(?i)\.aliyuncs\.com',
+            r'(?i)\.aliyun-inc\.com',
+            r'(?i)\.alikunlun\.com',
+            r'(?i)\.aliyuncdn\.com'
         ]
     },
     '腾讯云CDN': {
+        'headers': {
+            'server': [r'(?i)tencent', r'(?i)qcloud'],
+            'x-daa-tunnel': [r'.*'],
+            'x-cache-lookup': [r'.*'],
+            'x-tc-cache': [r'.*']
+        },
         'patterns': [
-            r'^https?://[^/]*\.qcloud\.com/',                 # 腾讯云域名
-            r'^https?://[^/]*\.cdntip\.com/',                 # CDN域名
-            r'^https?://[^/]*\.tcloudscdn\.com/',             # 新CDN域名
-            r'^https?://[^/]*\.myqcloud\.com/',               # 对象存储域名
-        ],
-        'headers': [
-            'x-daa-tunnel',                                   # 隧道信息
-            'x-cache-lookup',                                 # 缓存查询
-            'x-tencent-acceleration',                         # 加速信息
-            'via'                                             # 代理信息
+            r'(?i)\.qcloud\.com',
+            r'(?i)\.myqcloud\.com',
+            r'(?i)\.tencent-cloud\.net',
+            r'(?i)\.qcloudcdn\.com',
+            r'(?i)\.tencentcdn\.net'
         ]
     },
     '七牛云CDN': {
+        'headers': {
+            'x-qiniu-zone': [r'.*'],
+            'x-qnm-cache': [r'.*'],
+            'x-qiniu': [r'.*']
+        },
         'patterns': [
-            r'^https?://[^/]*\.qiniucdn\.com/',               # 七牛CDN域名
-            r'^https?://[^/]*\.qiniudns\.com/',               # DNS域名
-            r'^https?://[^/]*\.qbox\.me/',                    # 存储域名
-            r'^https?://[^/]*\.qiniu\.com/',                  # 主域名
-        ],
-        'headers': [
-            'x-qiniu-zone',                                   # 区域信息
-            'x-reqid',                                        # 请求ID
-            'x-qnm-cache',                                    # 缓存信息
-            'via'                                             # 代理信息
+            r'(?i)\.qiniucdn\.com',
+            r'(?i)\.qiniudns\.com',
+            r'(?i)\.qiniup\.com',
+            r'(?i)\.qbox\.me',
+            r'(?i)\.clouddn\.com'
         ]
     },
     'Netlify': {
@@ -124,4 +118,38 @@ CDN_PROVIDERS = {
             'via'                                             # 代理信息
         ]
     }
-} 
+}
+
+def enhance_cdn_detection(headers: dict, content: str, js_resources: list) -> list:
+    """增强的CDN检测"""
+    detected_cdns = []
+    
+    # 检查响应头
+    for cdn_name, signatures in CDN_PROVIDERS.items():
+        # 检查头部特征
+        if 'headers' in signatures:
+            for header, patterns in signatures['headers'].items():
+                header_value = headers.get(header, '').lower()
+                if header_value:
+                    for pattern in patterns:
+                        if re.search(pattern, header_value, re.I):
+                            detected_cdns.append(cdn_name)
+                            break
+        
+        # 检查内容模式
+        if 'patterns' in signatures:
+            # 检查页面内容
+            for pattern in signatures['patterns']:
+                if re.search(pattern, content, re.I):
+                    detected_cdns.append(cdn_name)
+                    break
+                    
+            # 检查JavaScript资源URL
+            for resource in js_resources:
+                for pattern in signatures['patterns']:
+                    if re.search(pattern, resource, re.I):
+                        detected_cdns.append(cdn_name)
+                        break
+
+    # 移除重复项
+    return list(set(detected_cdns)) 
