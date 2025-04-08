@@ -322,16 +322,18 @@ TECH_SIGNATURES = {
         },
         'Material-UI': {
             'patterns': [
-                r'@material-ui/core',
-                r'@mui/material',
-                r'@mui/icons-material',
-                r'makeStyles|withStyles|styled\(',
-                r'ThemeProvider|createTheme',
-                r'mui-[a-z-]+',
-                r'Mui[A-Z][a-zA-Z]+',
-                r'/material-ui/',
-                r'@emotion/react',
-                r'@emotion/styled',
+                r'@material-ui/core',                                # 旧版本包名
+                r'@mui/material',                                    # 新版本包名
+                r'@mui/icons-material',                             # 图标包
+                r'(?:^|[^\w.])(?:make|create|with)Styles\s*\(',    # 样式API
+                r'(?:^|[^\w.])styled\s*\(\s*(?:[A-Z][a-zA-Z]*|[\'"]\w+[\'"]\s*\))', # styled API
+                r'(?:^|[^\w.])(?:Mui|Material)(?:Theme)?Provider',  # 主题提供者
+                r'(?:^|[^\w.])create(?:Mui|Material)Theme\s*\(',    # 主题创建
+                r'mui-[a-z](?:[a-z-]*[a-z])?',                     # CSS类名
+                r'Mui[A-Z][a-zA-Z]+(?:Props|Classes)?',            # 组件名和类型
+                r'/material-ui/',                                   # 资源路径
+                r'@emotion/(?:react|styled)',                       # 依赖包
+                r'import\s+[{}\s\w]+\s+from\s+[\'"]@mui/[^\'"]+'   # MUI导入
             ]
         },
         'Tailwind CSS': {
@@ -750,5 +752,5 @@ async def analyze_tech_stack(url: str) -> None:
 
 if __name__ == "__main__":
     # 测试代码
-    test_url = "https://www.vmall.com/"
+    test_url = "https://www.mgtv.com/"
     asyncio.run(analyze_tech_stack(test_url))
