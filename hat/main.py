@@ -115,7 +115,7 @@ async def execute_function(mode, args):
             await dns_info(domain)
             
         elif mode == 6:  # 局域网扫描
-            network = args.network or Prompt.ask("请输入目标网段", default="192.168.1.0/24")
+            network = args.network or Prompt.ask("请输入目标网段", default="192.168.31.0/24")
             console.print(f"[bold blue]正在扫描网段 {network}...[/]")
             await lan_scan(network)
             
