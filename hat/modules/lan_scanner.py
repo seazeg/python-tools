@@ -396,6 +396,31 @@ async def display_results(hosts: List[dict], topology: dict):
 
 async def generate_html_report(report_file: Path, network: str, hosts: List[dict], topology: dict):
     """生成HTML格式的扫描报告"""
+    # 生成主机表格行
+    host_rows = []
+    for host in hosts:
+        ports_str = '<br>'.join(f"{p['port']}/{p['service']} ({p['version']})" for p in host['open_ports'])
+        vulns_str = '<br>'.join(f"{v['name']}: {v['details']}" for p in host['open_ports'] for v in p['vulnerabilities'])
+        
+        host_row = f"""
+            <tr>
+                <td>{host['ip']}</td>
+                <td>{host['mac']}</td>
+                <td>{host['hostname']}</td>
+                <td>{host['device_type']}</td>
+                <td>{host['os']}</td>
+                <td>{ports_str}</td>
+                <td class="vulnerability">{vulns_str}</td>
+            </tr>
+        """
+        host_rows.append(host_row)
+    
+    # 生成设备类型分布列表
+    device_type_items = ''.join(
+        f'<li>{device_type}: {len(ips)}台设备</li>' 
+        for device_type, ips in topology['device_types'].items()
+    )
+    
     html_content = f"""
     <html>
     <head>
@@ -417,7 +442,7 @@ async def generate_html_report(report_file: Path, network: str, hosts: List[dict
         <p>网关: {topology['gateway']}</p>
         <h3>设备类型分布:</h3>
         <ul>
-            {''.join(f'<li>{device_type}: {len(ips)}台设备</li>' for device_type, ips in topology['device_types'].items())}
+            {device_type_items}
         </ul>
         
         <h2>主机详情</h2>
@@ -431,17 +456,7 @@ async def generate_html_report(report_file: Path, network: str, hosts: List[dict
                 <th>开放端口</th>
                 <th>漏洞信息</th>
             </tr>
-            {''.join(f"""
-            <tr>
-                <td>{host['ip']}</td>
-                <td>{host['mac']}</td>
-                <td>{host['hostname']}</td>
-                <td>{host['device_type']}</td>
-                <td>{host['os']}</td>
-                <td>{'<br>'.join(f"{p['port']}/{p['service']} ({p['version']})" for p in host['open_ports'])}</td>
-                <td class="vulnerability">{'<br>'.join(f"{v['name']}: {v['details']}" for p in host['open_ports'] for v in p['vulnerabilities'])}</td>
-            </tr>
-            """ for host in hosts)}
+            {''.join(host_rows)}
         </table>
     </body>
     </html>
