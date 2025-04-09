@@ -11,6 +11,7 @@ from rich.table import Table
 import asyncio
 from urllib.parse import urlparse
 from requests.structures import CaseInsensitiveDict
+from collections import defaultdict
 
 # 尝试导入brotli，如果不可用则跳过
 try:
@@ -23,6 +24,14 @@ except ImportError:
 from .signatures import TECH_SIGNATURES
 
 console = Console()
+
+def merge_results(base_results: Dict[str, List[str]], new_results: Dict[str, List[str]]) -> None:
+    """合并检测结果，去重"""
+    for category, techs in new_results.items():
+        if category in base_results:
+            base_results[category].extend(techs)
+            base_results[category] = list(set(base_results[category]))
+
 async def fetch_url_data(url: str) -> Optional[Dict]:
     """异步获取URL的响应数据"""
     if not url.startswith(('http://', 'https://')):
@@ -105,18 +114,6 @@ def detect_js_imports(content: str) -> List[str]:
         matches = re.findall(pattern, content)
         imports.extend(matches)
     return list(set(imports))
-
-def detect_package_json(content: str) -> Dict[str, str]:
-    """尝试检测package.json内容"""
-    try:
-        # 查找可能的package.json内容
-        match = re.search(r'\{[\s\S]*"dependencies"[\s\S]*\}', content)
-        if match:
-            package_data = json.loads(match.group(0))
-            return package_data.get('dependencies', {})
-    except:
-        pass
-    return {}
 
 def detect_js_resources(content: str) -> List[str]:
     """检测页面中的JavaScript资源路径"""
@@ -346,157 +343,56 @@ def enhance_cdn_detection(headers: dict, content: str, js_resources: list) -> li
 
 async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
     """检测网站使用的技术"""
-    detected_tech = {category: [] for category in TECH_SIGNATURES.keys()}
-    content = response_data['content']
-    headers = response_data['headers']
-    meta_tags = extract_meta_tags(content)
+    results = {
+        'Web服务器': [],
+        'CDN': [],
+        '服务端框架': [],
+        '前端框架': [],
+        'JavaScript框架': [],
+        'JavaScript库': [],
+        'UI框架': [],
+        '状态管理': [],
+        'Web框架': [],
+        '构建工具': [],   
+        '图表工具': [],
+        '视频播放器': []
+    }
     
-    # 首先分析HTTP响应头，检测Web服务器和CDN
-    header_tech = analyze_response_headers(headers)
-    for category, techs in header_tech.items():
-        detected_tech[category].extend(techs)
-    
-    # 然后检测JavaScript内容中的技术特征
-    js_features = await detect_js_content(content, response_data)
-    
-    # 合并JavaScript特征到检测结果
-    for category, techs in js_features.items():
-        detected_tech[category].extend(techs)
-
-    # 再进行基础特征检测
-    for category, technologies in TECH_SIGNATURES.items():
-        # 跳过已经通过响应头分析过的类别
-        if category in ['Web服务器', 'CDN']:
-            continue
-            
-        for tech_name, signatures in technologies.items():
-            # 检查HTTP头 (对于非Web服务器和CDN类别)
-            if 'headers' in signatures:
-                # 处理新的嵌套headers格式
-                if isinstance(signatures['headers'], dict):
-                    for header_name, patterns in signatures['headers'].items():
-                        header_value = headers.get(header_name, '').lower()
-                        if header_value:
-                            for pattern in patterns:
-                                if re.search(pattern, header_value, re.I):
-                                    detected_tech[category].append(tech_name)
-                                    break
-                # 处理旧的headers格式
-                elif isinstance(signatures['headers'], list):
-                    for header in signatures['headers']:
-                        header_value = headers.get(header, '').lower()
-                        if header_value and 'pattern' in signatures and re.search(signatures['pattern'], header_value, re.I):
-                            detected_tech[category].append(tech_name)
-                            break
-
-            # 检查页面内容
-            if 'content' in signatures and isinstance(signatures['content'], str):
-                if re.search(signatures['content'], content, re.I):
-                    detected_tech[category].append(tech_name)
-            
-            # 检查内容模式
-            if 'patterns' in signatures:
-                for pattern in signatures['patterns']:
-                    if re.search(pattern, content, re.I):
-                        detected_tech[category].append(tech_name)
-                        break
-
-            # 检查meta标签
-            if 'meta' in signatures:
-                for meta_name, pattern in signatures['meta'].items():
-                    meta_value = meta_tags.get(meta_name, '').lower()
-                    if meta_value and re.search(pattern, meta_value, re.I):
-                        detected_tech[category].append(tech_name)
-
-    # 最后进行JavaScript资源和导入分析
-    js_resources = detect_js_resources(content)
-    if js_resources:
-        console.print("\n[yellow]发现JavaScript资源:[/]")
-        framework_keywords = {
-            'react': 'React',
-            'vue': 'Vue.js',
-            'angular': 'Angular',
-            'svelte': 'Svelte',
-            'redux': 'Redux',
-            'vuex': 'Vuex',
-            'mobx': 'MobX',
-            'antd': 'Ant Design',
-            'element-ui': 'Element UI',
-            'material-ui': 'Material-UI',
-            'mui': 'Material-UI',
-            'jquery': 'jQuery',
-            'underscore': 'Underscore.js',
-            'lodash': 'Lodash',
-            'fingerprintjs': 'FingerprintJS',
-            'swiper': 'Swiper',
-            'core-js': 'core-js',
-            'pinia': 'Pinia',
-            'naive-ui': 'Naive UI',
-            'vant': 'Vant'
-        }
+    try:
+        # 分析HTTP响应头
+        header_results = analyze_response_headers(response_data['headers'])
+        merge_results(results, header_results)
         
-        for resource in js_resources:
-            # 格式化资源URL
-            if resource.startswith('//'):
-                resource = 'https:' + resource
-            elif not resource.startswith(('http://', 'https://')):
-                resource = f"https://{response_data.get('host', '')}{resource if resource.startswith('/') else '/' + resource}"
-            
-            # 打印资源路径
-            console.print(f"  [dim]- {resource}[/]")
-            
-            # 检查资源路径中的框架关键词
-            resource_lower = resource.lower()
-            for keyword, framework in framework_keywords.items():
-                if keyword in resource_lower:
-                    if framework in ['React', 'Vue.js', 'Angular', 'Svelte']:
-                        detected_tech['JavaScript框架'].append(framework)
-                    elif framework in ['Redux', 'Vuex', 'MobX']:
-                        detected_tech['状态管理'].append(framework)
-                    elif framework in ['Ant Design', 'Element UI', 'Material-UI']:
-                        detected_tech['UI框架'].append(framework)
-
-    # JavaScript导入分析
-    js_imports = detect_js_imports(content)
-    if js_imports:
-        console.print("\n[yellow]发现需要进一步分析的JavaScript模块:[/]")
-        for imp in js_imports:
-            imp_lower = imp.lower()
-            if any(keyword in imp_lower for keyword in framework_keywords.keys()):
-                console.print(f"  [dim]- {imp}[/]")
-                # 根据导入语句检测框架
-                for keyword, framework in framework_keywords.items():
-                    if keyword in imp_lower:
-                        if framework in ['React', 'Vue.js', 'Angular', 'Svelte']:
-                            detected_tech['JavaScript框架'].append(framework)
-                        elif framework in ['Redux', 'Vuex', 'MobX']:
-                            detected_tech['状态管理'].append(framework)
-                        elif framework in ['Ant Design', 'Element UI', 'Material-UI']:
-                            detected_tech['UI框架'].append(framework)
-
-    # 依赖项检测
-    package_deps = detect_package_json(content)
-    for dep_name in package_deps:
-        if any(framework.lower() in dep_name.lower() for framework in ['express', 'koa', 'fastify']):
-            detected_tech['Web框架'].append('Node.js')
-        elif 'nuxt' in dep_name:
-            detected_tech['Web框架'].append('Nuxt.js')
-        elif 'next' in dep_name:
-            detected_tech['Web框架'].append('Next.js')
-        elif '@vue' in dep_name:
-            detected_tech['JavaScript框架'].append('Vue.js')
-        elif 'react' in dep_name:
-            detected_tech['JavaScript框架'].append('React')
-        elif '@angular' in dep_name:
-            detected_tech['JavaScript框架'].append('Angular')
-
-    # 检测CDN
-    cdn_providers = enhance_cdn_detection(headers, content, js_resources)
-    if cdn_providers:
-        detected_tech['CDN'].extend(cdn_providers)
-
-    # 移除重复项
-    return {k: list(set(v)) for k, v in detected_tech.items() if v}
+        # 检测JavaScript内容
+        js_features = await detect_js_content(response_data['content'], response_data)
+        merge_results(results, js_features)
+        
+        # 分析JavaScript资源
+        js_resources = detect_js_resources(response_data['content'])
+        if js_resources:
+            console.print("\n[yellow]发现JavaScript资源:[/]")
+            for resource in js_resources:
+                normalized_url = normalize_resource_url(resource, response_data.get('host', ''))
+                console.print(f"  [dim]- {normalized_url}[/]")
+                resource_results = analyze_js_resource(normalized_url, framework_keywords)
+                merge_results(results, resource_results)
+        
+        # 检测CDN
+        cdn_results = enhance_cdn_detection(
+            response_data['headers'], 
+            response_data['content'], 
+            js_resources
+        )
+        if cdn_results:
+            results['CDN'].extend(cdn_results)
+            results['CDN'] = list(set(results['CDN']))
+        
+        # 移除空类别
+        return {k: v for k, v in results.items() if v}
+        
+    except Exception as e:
+        console.print(f"[red]技术检测过程中出错: {str(e)}[/]")
+        return {}
 
 def display_results(results: Dict[str, List[str]]) -> None:
     """使用rich表格显示结果"""
@@ -549,17 +445,6 @@ async def analyze_tech_stack(url: str) -> None:
         for imp in js_imports[:3]:  # 只显示前3个
             console.print(f"      [dim]{imp}[/]")
     
-    # 4. 分析package.json
-    console.print("\n  [cyan]4. 检测package.json...[/]")
-    package_deps = detect_package_json(response_data['content'])
-    if package_deps:
-        console.print(f"    - 发现 {len(package_deps)} 个依赖项")
-        console.print("    - 部分依赖示例:")
-        for dep in list(package_deps.keys())[:3]:  # 只显示前3个
-            console.print(f"      [dim]{dep}[/]")
-    else:
-        console.print("    - 未发现package.json内容")
-    
     # 执行技术检测
     console.print("\n[yellow]正在整合检测结果...[/]")
     results = await detect_technologies(response_data)
@@ -577,13 +462,14 @@ async def analyze_tech_stack(url: str) -> None:
         console.print("[yellow]未检测到已知的技术特征[/]")
 
 def analyze_response_headers(original_headers: Dict[str, str]) -> Dict[str, List[str]]:
-    """通过分析HTTP响应头来检测Web服务器和CDN提供商"""
+    """通过分析HTTP响应头来检测Web服务器、CDN和服务端框架"""
     detected_tech = {
         'Web服务器': [],
-        'CDN': []
+        'CDN': [],
+        '服务端框架': []  # 新增服务端框架类别
     }
 
-    headers = CaseInsensitiveDict(original_headers);
+    headers = CaseInsensitiveDict(original_headers)
     
     # 记录所有头部信息用于调试
     console.print("\n[yellow]分析HTTP响应头...[/]")
@@ -675,8 +561,83 @@ def analyze_response_headers(original_headers: Dict[str, str]) -> Dict[str, List
                     detected_tech['CDN'].append(name)
                 console.print(f"  [green]✓ 从Via头检测到: {name}[/]")
     
+    # 检测服务端框架
+    console.print("\n[cyan]检测服务端框架...[/]")
+    from .signatures.server_frameworks import enhance_framework_detection
+    detected_frameworks = enhance_framework_detection(headers, '')
+    if detected_frameworks:
+        detected_tech['服务端框架'].extend(detected_frameworks)
+        console.print(f"  [green]✓ 检测到服务端框架: {', '.join(detected_frameworks)}[/]")
+    
     # 移除重复项
     for category in detected_tech:
         detected_tech[category] = list(set(detected_tech[category]))
     
     return detected_tech
+
+# 将重复的框架检测逻辑抽取为独立函数
+def categorize_framework(framework: str) -> tuple[str, str]:
+    """根据框架名称返回其类别和名称"""
+    framework_categories = {
+        'JavaScript框架': ['React', 'Vue.js', 'Angular', 'Svelte'],
+        '状态管理': ['Redux', 'Vuex', 'MobX', 'Pinia'],
+        'UI框架': ['Ant Design', 'Element UI', 'Material-UI', 'Naive UI', 'Vant'],
+        'Web框架': ['Express', 'Koa', 'Fastify', 'Next.js', 'Nuxt.js'],
+        'JavaScript库': ['jQuery', 'Underscore.js', 'Lodash', 'core-js'],
+        '图表工具': ['ECharts', 'Chart.js', 'D3.js'],
+        '视频播放器': ['Video.js', 'Plyr', 'DPlayer']
+    }
+    
+    for category, frameworks in framework_categories.items():
+        if framework in frameworks:
+            return category, framework
+    return '', ''
+
+# 更新framework_keywords定义
+framework_keywords = {
+    'react': 'React',
+    'vue': 'Vue.js',
+    'angular': 'Angular',
+    'svelte': 'Svelte',
+    'redux': 'Redux',
+    'vuex': 'Vuex',
+    'mobx': 'MobX',
+    'pinia': 'Pinia',
+    'antd': 'Ant Design',
+    'element-ui': 'Element UI',
+    'material-ui': 'Material-UI',
+    'mui': 'Material-UI',
+    'naive-ui': 'Naive UI',
+    'vant': 'Vant',
+    'jquery': 'jQuery',
+    'underscore': 'Underscore.js',
+    'lodash': 'Lodash',
+    'core-js': 'core-js',
+    'echarts': 'ECharts',
+    'chart.js': 'Chart.js',
+    'd3': 'D3.js',
+    'video.js': 'Video.js',
+    'plyr': 'Plyr',
+    'dplayer': 'DPlayer'
+}
+
+def normalize_resource_url(resource: str, host: str) -> str:
+    """标准化资源URL"""
+    if resource.startswith('//'):
+        return f'https:{resource}'
+    elif not resource.startswith(('http://', 'https://')):
+        return f"https://{host}{resource if resource.startswith('/') else '/' + resource}"
+    return resource
+
+def analyze_js_resource(resource: str, framework_keywords: dict) -> Dict[str, List[str]]:
+    """分析单个JavaScript资源"""
+    results = defaultdict(list)
+    resource_lower = resource.lower()
+    
+    for keyword, framework in framework_keywords.items():
+        if keyword in resource_lower:
+            category, name = categorize_framework(framework)
+            if category and name:
+                results[category].append(name)
+    
+    return dict(results)
