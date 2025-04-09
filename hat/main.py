@@ -17,6 +17,7 @@ from modules.dir_scanner import smart_dirb
 from modules.subdomain_scanner import smart_subdomains
 from modules.dns_info import dns_info
 from modules.lan_scanner import lan_scan
+from modules.security_scanner import security_scan  # 导入安全检测模块
 
 console = Console()
 
@@ -46,6 +47,7 @@ def show_menu():
     table.add_row("4", "子域名枚举", "枚举目标域名的子域名")
     table.add_row("5", "DNS信息收集", "收集域名的DNS记录信息")
     table.add_row("6", "局域网扫描", "扫描局域网内的活跃主机")
+    table.add_row("7", "安全检测", "检测网站的安全问题")  # 添加安全检测选项
     table.add_row("0", "退出", "退出程序")
     
     console.print(table)
@@ -57,7 +59,7 @@ async def main():
     parser.add_argument("-p", "--port", help="端口扫描范围 (例如: 1-1024)")
     parser.add_argument("-d", "--domain", help="目标域名")
     parser.add_argument("-n", "--network", help="目标网段 (例如: 192.168.1.0/24)")
-    parser.add_argument("-m", "--mode", type=int, choices=range(7), help="运行模式: 1=技术栈检测, 2=端口扫描, 3=目录扫描, 4=子域名枚举, 5=DNS信息收集, 6=局域网扫描, 0=交互模式")
+    parser.add_argument("-m", "--mode", type=int, choices=range(8), help="运行模式: 1=技术栈检测, 2=端口扫描, 3=目录扫描, 4=子域名枚举, 5=DNS信息收集, 6=局域网扫描, 7=安全检测, 0=交互模式")
     
     args = parser.parse_args()
     
@@ -66,7 +68,7 @@ async def main():
         show_banner()
         while True:
             show_menu()
-            choice = Prompt.ask("请选择功能", choices=["0", "1", "2", "3", "4", "5", "6"], default="0")
+            choice = Prompt.ask("请选择功能", choices=["0", "1", "2", "3", "4", "5", "6", "7"], default="0")
             
             if choice == "0":
                 console.print("[bold green]感谢使用HAT工具，再见！[/]")
@@ -116,6 +118,11 @@ async def execute_function(mode, args):
             network = args.network or Prompt.ask("请输入目标网段", default="192.168.1.0/24")
             console.print(f"[bold blue]正在扫描网段 {network}...[/]")
             await lan_scan(network)
+            
+        elif mode == 7:  # 安全检测
+            url = args.url or Prompt.ask("请输入目标URL", default="https://www.example.com/")
+            console.print(f"[bold blue]正在检测 {url} 的安全问题...[/]")
+            await security_scan(url)
             
     except Exception as e:
         console.print(f"[bold red]执行过程中出错: {str(e)}[/]")
