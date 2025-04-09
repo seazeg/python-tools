@@ -34,6 +34,10 @@ DEVICE_SIGNATURES = {
     "iot": ["iot", "smart", "xiaomi", "tuya"]
 }
 
+CRITICAL_PORTS = {
+    21, 22, 23, 25, 53, 80, 443, 445, 1433, 3306, 3389, 5432, 6379, 8080, 27017
+}  # 只扫描这些重要端口的漏洞
+
 def get_local_network() -> str:
     """获取本地网段"""
     try:
@@ -124,30 +128,33 @@ async def check_vulnerability(ip: str, port: int, service: str) -> List[dict]:
     nm = nmap.PortScanner()
     
     try:
-        # 使用nmap脚本进行漏洞扫描
-        script_args = f"--script vuln -p{port}"
-        nm.scan(ip, arguments=script_args)
+        # 只使用针对性的脚本
+        specific_scripts = {
+            'http': 'http-vuln*',
+            'ssh': 'ssh-vuln*',
+            'smb': 'smb-vuln*',
+            'ftp': 'ftp-vuln*',
+            'mysql': 'mysql-vuln*'
+        }
+        
+        script = specific_scripts.get(service, 'vuln')
+        script_args = f"--script {script} -p{port}"
+        
+        nm.scan(ip, arguments=f"{script_args} -T4")
         
         if ip in nm.all_hosts():
-            for script_result in nm[ip]['tcp'][port].get('script', {}).items():
-                vulns.append({
-                    'name': script_result[0],
-                    'details': script_result[1]
-                })
+            script_results = nm[ip]['tcp'][port].get('script', {})
+            for name, details in script_results.items():
+                if 'VULNERABLE' in details.upper():
+                    vulns.append({
+                        'name': name,
+                        'details': details
+                    })
     except Exception as e:
-        console.print(f"[yellow]漏洞扫描出错 ({ip}:{port}): {str(e)}[/]")
+        pass
     
     return vulns
 
-async def get_service_banner(ip: str, port: int) -> str:
-    """获取服务banner信息"""
-    try:
-        reader, writer = await asyncio.open_connection(ip, port)
-        writer.close()
-        await writer.wait_closed()
-        return banner
-    except:
-        return ""
 
 async def analyze_network_topology(hosts: List[dict]) -> dict:
     """分析网络拓扑结构"""
@@ -178,14 +185,15 @@ async def deep_port_scan(ip: str) -> List[dict]:
     nm = nmap.PortScanner()
     
     try:
-        # 使用更快的扫描方式
-        # -T4: 更快的计时模板
-        # --min-rate=1000: 最小发包率
-        # --max-retries=2: 最大重试次数
-        # --host-timeout=30s: 主机超时时间
+        # 优化扫描参数
+        # -T5: 最快的计时模板
+        # -n: 不进行DNS解析
+        # --min-rate=2000: 提高最小发包率
+        # -Pn: 跳过主机发现
+        # --version-intensity 2: 降低版本检测强度
         nm.scan(
             ip,
-            arguments='-sS -sV -T4 --min-rate=1000 --max-retries=2 --host-timeout=10s --version-light'
+            arguments='-sS -sV -T5 -n -Pn --min-rate=2000 --max-retries=1 --host-timeout=10s --version-intensity 2'
         )
         
         if ip in nm.all_hosts():
@@ -194,9 +202,9 @@ async def deep_port_scan(ip: str) -> List[dict]:
                 for port in ports:
                     service = nm[ip][proto][port]
                     if service['state'] == 'open':
-                        # 只对关键端口进行漏洞扫描
+                        # 只对重要端口进行漏洞扫描
                         vulns = []
-                        if port in COMMON_PORTS:
+                        if port in CRITICAL_PORTS:  # 定义关键端口列表
                             vulns = await check_vulnerability(ip, port, service['name'])
                         
                         open_ports.append({
@@ -205,9 +213,6 @@ async def deep_port_scan(ip: str) -> List[dict]:
                             'version': service.get('version', ''),
                             'vulnerabilities': vulns
                         })
-                        
-                        # 实时显示发现的端口
-                        console.print(f"    [yellow]发现开放端口: {port}/{service['name']}[/]")
                         
     except Exception as e:
         console.print(f"[yellow]端口扫描出错 ({ip}): {str(e)}[/]")
@@ -241,10 +246,18 @@ async def get_hostname(ip: str) -> str:
             pass
         return "Unknown"
 
+async def scan_with_timeout(coro, timeout=10):
+    """带超时的扫描包装器"""
+    try:
+        return await asyncio.wait_for(coro, timeout=timeout)
+    except asyncio.TimeoutError:
+        return None
+    except Exception as e:
+        return None
+
 async def lan_scan(network: str):
     """增强版局域网扫描"""
     try:
-        # 使用 asyncio.wait_for 代替 asyncio.timeout
         async def scan_process():
             console.print(f"\n[bold blue]正在执行深度网络扫描 {network}...[/]")
             
@@ -254,87 +267,125 @@ async def lan_scan(network: str):
                 arp = ARP(pdst=network)
                 ether = Ether(dst="ff:ff:ff:ff:ff:ff")
                 packet = ether/arp
-                result = srp(packet, timeout=3, verbose=0)[0]
+                result = srp(packet, timeout=2, verbose=0)[0]
                 progress.update(task1, completed=1)
                 
                 if not result:
                     console.print("\n[yellow]未发现活跃主机[/]")
                     return
                 
-                # 详细信息收集
-                host_details = []
-                total_steps = len(result) * 5  # 每个主机5个步骤
-                task2 = progress.add_task(
-                    "[cyan]正在深度分析主机...", 
-                    total=total_steps
-                )
+                total_hosts = len(result)
+                progress.print(f"[green]发现 {total_hosts} 个活跃主机[/]")
                 
+                # 创建任务组
+                main_task = progress.add_task("[cyan]扫描进度", total=total_hosts * 5)
+                
+                async def scan_step(ip: str, step: str) -> tuple[str, any]:
+                    """执行单个扫描步骤"""
+                    try:
+                        # 设置不同步骤的超时时间
+                        timeouts = {
+                            "hostname": 5,  # 主机名解析超时5秒
+                            "os": 10,       # 操作系统检测超时10秒
+                            "ports": 30     # 端口扫描超时30秒
+                        }
+                        
+                        if step == "hostname":
+                            result = await scan_with_timeout(
+                                get_hostname(ip), 
+                                timeout=timeouts["hostname"]
+                            )
+                        elif step == "os":
+                            result = await scan_with_timeout(
+                                get_os_info(ip), 
+                                timeout=timeouts["os"]
+                            )
+                        elif step == "ports":
+                            result = await scan_with_timeout(
+                                deep_port_scan(ip), 
+                                timeout=timeouts["ports"]
+                            )
+                            
+                        if result is None:
+                            progress.print(f"[yellow]{step}扫描超时 ({ip})[/]")
+                            result = "Unknown" if step != "ports" else []
+                            
+                        progress.update(main_task, advance=1)
+                        return step, result
+                    except Exception as e:
+                        progress.print(f"[yellow]{step}扫描出错 ({ip}): {str(e)}[/]")
+                        progress.update(main_task, advance=1)
+                        # 返回默认值而不是None
+                        return step, "Unknown" if step != "ports" else []
+
+                # 并发扫描所有主机
+                host_details = []
                 for sent, received in result:
-                    ip = received.psrc
-                    mac = received.hwsrc
+                    ip, mac = received.psrc, received.hwsrc
+                    progress.print(f"\n[blue]扫描主机: {ip}[/]")
                     
-                    progress.print(f"[blue]正在分析主机: {ip}[/]")
+                    # 获取厂商信息（这个比较快，可以同步执行）
+                    vendor = await scan_with_timeout(get_mac_vendor(mac), timeout=2)
+                    vendor = vendor or "Unknown"
+                    progress.update(main_task, advance=1)
                     
-                    # 获取主机名
-                    progress.print(f"  [cyan]→ 正在获取主机名...[/]")
-                    hostname = await get_hostname(ip)
-                    progress.update(task2, advance=1)
+                    # 创建该主机的所有扫描任务
+                    tasks = [
+                        scan_step(ip, "hostname"),
+                        scan_step(ip, "os"),
+                        scan_step(ip, "ports")
+                    ]
                     
-                    # 获取厂商信息
-                    progress.print(f"  [cyan]→ 正在获取厂商信息...[/]")
-                    vendor = await get_mac_vendor(mac)
-                    progress.update(task2, advance=1)
+                    # 并发执行该主机的所有扫描任务
+                    results = await asyncio.gather(*tasks, return_exceptions=True)
                     
-                    # 获取操作系统信息
-                    progress.print(f"  [cyan]→ 正在识别操作系统...[/]")
-                    os_info = await get_os_info(ip)
-                    progress.update(task2, advance=1)
+                    # 整理扫描结果，处理可能的异常
+                    scan_results = {}
+                    for result in results:
+                        if isinstance(result, tuple):  # 正常结果
+                            step, value = result
+                            scan_results[step] = value
+                        else:  # 发生异常
+                            continue
                     
-                    # 端口扫描
-                    progress.print(f"  [cyan]→ 正在扫描开放端口...[/]")
-                    open_ports = await deep_port_scan(ip)
-                    progress.update(task2, advance=1)
-                    
-                    # 设备类型识别
-                    progress.print(f"  [cyan]→ 正在识别设备类型...[/]")
-                    device_type = await get_device_type(vendor, open_ports, hostname)
-                    progress.update(task2, advance=1)
+                    # 识别设备类型
+                    device_type = await scan_with_timeout(
+                        get_device_type(
+                            vendor, 
+                            scan_results.get("ports", []),
+                            scan_results.get("hostname", "Unknown")
+                        ),
+                        timeout=5
+                    ) or "Unknown"
+                    progress.update(main_task, advance=1)
                     
                     host_details.append({
                         'ip': ip,
                         'mac': mac,
-                        'hostname': hostname,
+                        'hostname': scan_results.get("hostname", "Unknown"),
                         'vendor': vendor,
-                        'os': os_info,
+                        'os': scan_results.get("os", "Unknown"),
                         'device_type': device_type,
-                        'open_ports': open_ports
+                        'open_ports': scan_results.get("ports", [])
                     })
-                    
-                    progress.print(f"[green]✓ 主机 {ip} 分析完成[/]\n")
                 
                 # 分析网络拓扑
-                task3 = progress.add_task("[cyan]正在分析网络拓扑...", total=1)
-                topology = await analyze_network_topology(host_details)
-                progress.update(task3, completed=1)
+                progress.print("\n[cyan]正在分析网络拓扑...[/]")
+                topology = await scan_with_timeout(
+                    analyze_network_topology(host_details),
+                    timeout=10
+                ) or {'gateway': None, 'device_types': {}}
                 
                 # 生成报告
-                task4 = progress.add_task("[cyan]正在生成报告...", total=1)
+                progress.print("[cyan]正在生成报告...[/]")
                 await generate_report(network, host_details, topology)
-                progress.update(task4, completed=1)
-                
-                # 显示结果
                 await display_results(host_details, topology)
-                
-                # 显示摘要
                 await display_summary(network, host_details, topology)
         
-        # 使用 wait_for 设置超时
-        await asyncio.wait_for(scan_process(), timeout=300)  # 5分钟超时
+        await scan_process()
             
-    except asyncio.TimeoutError:
-        console.print("[red]扫描超时，已强制结束[/]")
     except Exception as e:
-        console.print(f"[red]扫描出错: {str(e)}[/]")
+        console.print(f"[red]扫描过程中出错: {str(e)}[/]")
 
 async def generate_report(network: str, hosts: List[dict], topology: dict):
     """生成详细的扫描报告"""
@@ -365,9 +416,13 @@ async def display_results(hosts: List[dict], topology: dict):
         box=box.SQUARE
     )
     
+    # 添加更多列以显示设备信息
     table.add_column("IP地址", style="cyan")
-    table.add_column("设备类型", style="green")
-    table.add_column("操作系统", style="yellow")
+    table.add_column("MAC地址", style="blue")
+    table.add_column("主机名", style="green")
+    table.add_column("设备厂商", style="yellow")
+    table.add_column("设备类型", style="magenta")
+    table.add_column("操作系统", style="cyan")
     table.add_column("开放端口", style="red")
     table.add_column("漏洞", style="red")
     
@@ -380,9 +435,12 @@ async def display_results(hosts: List[dict], topology: dict):
         
         table.add_row(
             host['ip'],
+            host['mac'],
+            host['hostname'] or "未知",
+            host['vendor'] or "未知",
             host['device_type'],
-            host['os'],
-            ports_str,
+            host['os'] or "未知",
+            ports_str or "无",
             f"发现 {vulns} 个漏洞" if vulns else "无"
         )
     
@@ -390,9 +448,21 @@ async def display_results(hosts: List[dict], topology: dict):
     
     # 显示拓扑信息
     console.print("\n[bold blue]网络拓扑分析[/]")
-    console.print(f"网关: {topology['gateway']}")
+    console.print(f"网关: [cyan]{topology['gateway']}[/]")
+    
+    # 按设备类型分组显示
     for device_type, ips in topology['device_types'].items():
-        console.print(f"{device_type}: {len(ips)} 台设备")
+        console.print(f"\n[bold green]{device_type}:[/] ({len(ips)}台)")
+        for ip in ips:
+            # 查找对应主机的详细信息
+            host = next((h for h in hosts if h['ip'] == ip), None)
+            if host:
+                console.print(
+                    f"  • {host['ip']} - "
+                    f"MAC: {host['mac']} - "
+                    f"厂商: {host['vendor'] or '未知'} - "
+                    f"主机名: {host['hostname'] or '未知'}"
+                )
 
 async def generate_html_report(report_file: Path, network: str, hosts: List[dict], topology: dict):
     """生成HTML格式的扫描报告"""
@@ -487,12 +557,23 @@ async def display_summary(network: str, hosts: List[dict], topology: dict):
     console.print(f"[cyan]发现主机数:[/] {len(hosts)}")
     
     # 显示网关信息
-    console.print(f"\n[bold green]网关设备:[/] {topology['gateway']}")
+    gateway_host = next((h for h in hosts if h['ip'] == topology['gateway']), None)
+    if gateway_host:
+        console.print(f"\n[bold green]网关设备:[/]")
+        console.print(f"  IP: {gateway_host['ip']}")
+        console.print(f"  MAC: {gateway_host['mac']}")
+        console.print(f"  厂商: {gateway_host['vendor'] or '未知'}")
+        console.print(f"  设备类型: {gateway_host['device_type']}")
     
     # 显示设备类型统计
     console.print("\n[bold green]设备类型分布:[/]")
     for device_type, ips in topology['device_types'].items():
         console.print(f"  • {device_type}: {len(ips)}台")
+        # 显示每种类型的第一个设备作为示例
+        if ips:
+            example_host = next((h for h in hosts if h['ip'] == ips[0]), None)
+            if example_host:
+                console.print(f"    示例: {example_host['ip']} ({example_host['vendor'] or '未知厂商'})")
     
     # 显示漏洞统计
     total_vulns = sum(len(port['vulnerabilities']) 
@@ -510,6 +591,11 @@ async def display_summary(network: str, hosts: List[dict], topology: dict):
         for host in high_risk_hosts:
             vuln_count = sum(len(port['vulnerabilities']) 
                            for port in host['open_ports'])
-            console.print(f"  • {host['ip']} ({host['hostname']}) - {vuln_count}个漏洞")
+            console.print(
+                f"  • {host['ip']} - "
+                f"MAC: {host['mac']} - "
+                f"厂商: {host['vendor'] or '未知'} - "
+                f"{vuln_count}个漏洞"
+            )
     
     console.print("\n[bold blue]========================[/]") 
