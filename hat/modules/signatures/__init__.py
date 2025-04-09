@@ -11,7 +11,6 @@ from .cdn_providers import CDN_PROVIDERS
 from .analytics import ANALYTICS
 from .ui_frameworks import UI_FRAMEWORKS
 from .state_management import STATE_MANAGEMENT
-from .server_frameworks import SERVER_FRAMEWORKS
 
 # 合并所有特征签名
 TECH_SIGNATURES = {
@@ -25,6 +24,5 @@ TECH_SIGNATURES = {
     'CDN': CDN_PROVIDERS,
     '分析': ANALYTICS,
     'UI框架': UI_FRAMEWORKS,
-    '状态管理': STATE_MANAGEMENT,
-    '服务端框架': SERVER_FRAMEWORKS
+    '状态管理': STATE_MANAGEMENT
 } 

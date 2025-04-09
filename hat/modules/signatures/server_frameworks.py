@@ -1,23 +1,17 @@
 """服务端框架检测签名"""
-import re
+import re;
 
 SERVER_FRAMEWORKS = {
     'Django': {
         'headers': {
             'Server': [r'WSGIServer/'],
-            'X-Django-Version': [r'.*']
+            'X-Django-Version': [r'.*'],
         },
         'cookies': [r'django_', r'csrftoken'],
         'patterns': [
             r'__admin_media_prefix__',
             r'django-\w+',
-            r'djangoproject',
-            r'csrfmiddlewaretoken',
-            r'admin/(?:css|img|js)/',
-            r'django\.contrib',
-            r'django\.core',
-            r'django\.template',
-            r'django\.utils'
+            r'djangoproject'
         ]
     },
     'Flask': {
@@ -28,10 +22,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'flask\.',
             r'werkzeug\.',
-            r'pocoo\.org',
-            r'flask_[a-z]+',
-            r'Flask(?:Form|Script|Cache|Admin|Login|Upload|RESTful)',
-            r'jinja2\.environment'
+            r'pocoo\.org'
         ]
     },
     'FastAPI': {
@@ -42,10 +33,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'fastapi\.',
             r'uvicorn\.',
-            r'starlette\.',
-            r'pydantic\.',
-            r'/docs(?:#|$)',  # Swagger UI
-            r'/redoc(?:#|$)'  # ReDoc
+            r'starlette\.'
         ]
     },
     'Spring Boot': {
@@ -57,14 +45,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'org\.springframework\.',
             r'spring-boot',
-            r'spring-core',
-            r'spring-web',
-            r'spring-context',
-            r'spring-security',
-            r'spring-data',
-            r'spring-cloud',
-            r'spring-test',
-            r'spring-boot-starter-\w+'
+            r'spring-core'
         ]
     },
     'Laravel': {
@@ -75,12 +56,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'laravel_session',
             r'Illuminate\\',
-            r'laravel-\w+',
-            r'vendor/laravel/',
-            r'artisan',
-            r'resources/views/',
-            r'storage/framework/',
-            r'\.blade\.php'
+            r'laravel-\w+'
         ]
     },
     'Express': {
@@ -90,14 +66,33 @@ SERVER_FRAMEWORKS = {
         },
         'patterns': [
             r'express\.',
-            r'node_modules/express',
-            r'app\.(?:get|post|put|delete|use|all|set|engine)',
-            r'express-session',
-            r'express-validator',
-            r'express-middleware',
-            r'body-parser',
-            r'morgan',
-            r'passport'
+            r'node_modules/express'
+        ]
+    },
+    'Ruby on Rails': {
+        'headers': {
+            'X-Powered-By': [r'Phusion Passenger|Ruby on Rails'],
+            'X-Rails-Version': [r'.*'],
+            'X-Runtime': [r'.*']
+        },
+        'cookies': [r'_rails', r'_session_id'],
+        'patterns': [
+            r'rails\.',
+            r'assets/rails-',
+            r'ruby on rails'
+        ]
+    },
+    'ASP.NET': {
+        'headers': {
+            'X-AspNet-Version': [r'.*'],
+            'X-Powered-By': [r'ASP\.NET'],
+            'Server': [r'Microsoft-IIS']
+        },
+        'cookies': [r'ASP\.NET_SessionId'],
+        'patterns': [
+            r'__VIEWSTATE',
+            r'asp\.net',
+            r'\.aspx'
         ]
     },
     'Nest.js': {
@@ -108,12 +103,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'@nestjs/',
             r'nest-\w+',
-            r'nestjs',
-            r'@Injectable',
-            r'@Controller',
-            r'@Module',
-            r'@Inject',
-            r'NestFactory'
+            r'nestjs'
         ]
     },
     'Koa': {
@@ -124,10 +114,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'koa\.',
             r'koa-\w+',
-            r'koajs',
-            r'app\.use\(async',
-            r'ctx\.',
-            r'next\(\)'
+            r'koajs'
         ]
     },
     'ThinkPHP': {
@@ -138,11 +125,7 @@ SERVER_FRAMEWORKS = {
         'patterns': [
             r'thinkphp',
             r'think-\w+',
-            r'topthink',
-            r'application/index/',
-            r'public/static/',
-            r'think\\',
-            r'ThinkPHP[\d.]+'
+            r'topthink'
         ]
     }
 }
