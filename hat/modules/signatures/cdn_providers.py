@@ -1,4 +1,5 @@
 """CDN提供商特征"""
+import re
 
 CDN_PROVIDERS = {
     'Cloudflare': {
@@ -120,36 +121,3 @@ CDN_PROVIDERS = {
     }
 }
 
-def enhance_cdn_detection(headers: dict, content: str, js_resources: list) -> list:
-    """增强的CDN检测"""
-    detected_cdns = []
-    
-    # 检查响应头
-    for cdn_name, signatures in CDN_PROVIDERS.items():
-        # 检查头部特征
-        if 'headers' in signatures:
-            for header, patterns in signatures['headers'].items():
-                header_value = headers.get(header, '').lower()
-                if header_value:
-                    for pattern in patterns:
-                        if re.search(pattern, header_value, re.I):
-                            detected_cdns.append(cdn_name)
-                            break
-        
-        # 检查内容模式
-        if 'patterns' in signatures:
-            # 检查页面内容
-            for pattern in signatures['patterns']:
-                if re.search(pattern, content, re.I):
-                    detected_cdns.append(cdn_name)
-                    break
-                    
-            # 检查JavaScript资源URL
-            for resource in js_resources:
-                for pattern in signatures['patterns']:
-                    if re.search(pattern, resource, re.I):
-                        detected_cdns.append(cdn_name)
-                        break
-
-    # 移除重复项
-    return list(set(detected_cdns)) 

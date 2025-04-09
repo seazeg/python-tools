@@ -301,6 +301,49 @@ async def detect_js_content(content: str, response_data: Dict) -> Dict[str, List
 
     return {k: list(set(v)) for k, v in js_features.items() if v}
 
+def enhance_cdn_detection(headers: dict, content: str, js_resources: list) -> list:
+    """增强的CDN检测"""
+    detected_cdns = []
+    from .signatures.cdn_providers import CDN_PROVIDERS    
+    # 检查响应头
+    for cdn_name, signatures in CDN_PROVIDERS.items():
+        # 检查头部特征
+        if 'headers' in signatures:
+            # 处理headers是字典的情况
+            if isinstance(signatures['headers'], dict):
+                for header, patterns in signatures['headers'].items():
+                    header_value = headers.get(header, '').lower()
+                    if header_value:
+                        for pattern in patterns:
+                            if re.search(pattern, header_value, re.I):
+                                detected_cdns.append(cdn_name)
+                                break
+            # 处理headers是列表的情况
+            elif isinstance(signatures['headers'], list):
+                for header in signatures['headers']:
+                    header_value = headers.get(header, '').lower()
+                    if header_value and header_value.strip():
+                        detected_cdns.append(cdn_name)
+                        break
+        
+        # 检查内容模式
+        if 'patterns' in signatures:
+            # 检查页面内容
+            for pattern in signatures['patterns']:
+                if re.search(pattern, content, re.I):
+                    detected_cdns.append(cdn_name)
+                    break
+                    
+            # 检查JavaScript资源URL
+            for resource in js_resources:
+                for pattern in signatures['patterns']:
+                    if re.search(pattern, resource, re.I):
+                        detected_cdns.append(cdn_name)
+                        break
+
+    # 移除重复项
+    return list(set(detected_cdns)) 
+
 async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
     """检测网站使用的技术"""
     detected_tech = {category: [] for category in TECH_SIGNATURES.keys()}
@@ -448,7 +491,6 @@ async def detect_technologies(response_data: Dict) -> Dict[str, List[str]]:
             detected_tech['JavaScript框架'].append('Angular')
 
     # 检测CDN
-    from .signatures.cdn_providers import enhance_cdn_detection
     cdn_providers = enhance_cdn_detection(headers, content, js_resources)
     if cdn_providers:
         detected_tech['CDN'].extend(cdn_providers)
