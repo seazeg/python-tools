@@ -1,0 +1,69 @@
+[
+  {
+    "path": "search.jsp",
+    "url": "https://www.qdu.edu.cn/search.jsp",
+    "status": 200,
+    "size": 63,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false,
+    "headers": {
+      "Content-Type": "text/html;charset=UTF-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "none",
+      "Date": "Thu, 10 Apr 2025 03:41:22 GMT",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Vary": "User-Agent",
+      "Set-Cookie": "JSESSIONID=C2BE094BC2C7D08F9A25EA51C645D57C; Path=/; HttpOnly",
+      "Content-Language": "zh-CN",
+      "Content-Encoding": "gzip"
+    },
+    "title": "",
+    "server": "none",
+    "powered_by": ""
+  },
+  {
+    "path": "content.jsp",
+    "url": "https://www.qdu.edu.cn/content.jsp",
+    "status": 200,
+    "size": 63,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false,
+    "headers": {
+      "Content-Type": "text/html;charset=UTF-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "none",
+      "Date": "Thu, 10 Apr 2025 03:41:24 GMT",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Vary": "User-Agent",
+      "Content-Language": "zh-CN",
+      "Content-Encoding": "gzip"
+    },
+    "title": "",
+    "server": "none",
+    "powered_by": ""
+  },
+  {
+    "path": "system",
+    "url": "https://www.qdu.edu.cn/system",
+    "status": 200,
+    "size": 912,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false,
+    "headers": {
+      "Content-Type": "text/html;charset=UTF-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "none",
+      "Date": "Thu, 10 Apr 2025 03:41:26 GMT",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Vary": "Accept-Encoding",
+      "Content-Language": "zh-CN",
+      "Content-Encoding": "gzip"
+    },
+    "title": "\u7cfb\u7edf\u63d0\u793a",
+    "server": "none",
+    "powered_by": ""
+  }
+]

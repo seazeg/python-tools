@@ -1,0 +1,26 @@
+[
+  {
+    "path": "search.jsp",
+    "url": "https://www.qdu.edu.cn/search.jsp",
+    "status": 200,
+    "size": 63,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false
+  },
+  {
+    "path": "content.jsp",
+    "url": "https://www.qdu.edu.cn/content.jsp",
+    "status": 200,
+    "size": 63,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false
+  },
+  {
+    "path": "system",
+    "url": "https://www.qdu.edu.cn/system",
+    "status": 200,
+    "size": 912,
+    "content_type": "text/html;charset=UTF-8",
+    "is_sensitive": false
+  }
+]

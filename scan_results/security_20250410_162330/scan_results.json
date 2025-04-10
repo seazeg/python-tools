@@ -1,0 +1,52 @@
+{
+  "X-Frame-Options": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "防止点击劫持攻击 - 建议设置此头部"
+  },
+  "X-XSS-Protection": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "防止跨站脚本攻击 - 建议设置此头部"
+  },
+  "X-Content-Type-Options": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "防止MIME类型嗅探 - 建议设置此头部"
+  },
+  "Content-Security-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "内容安全策略 - 建议设置此头部"
+  },
+  "Strict-Transport-Security": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "强制使用HTTPS - 建议设置此头部"
+  },
+  "Referrer-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "控制Referer头信息 - 建议设置此头部"
+  },
+  "Permissions-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "控制浏览器功能 - 建议设置此头部"
+  },
+  "服务器信息泄露": {
+    "status": "通过",
+    "value": "未泄露",
+    "description": "服务器信息泄露 - 未发现信息泄露"
+  },
+  "技术栈信息泄露": {
+    "status": "通过",
+    "value": "未泄露",
+    "description": "技术栈信息泄露 - 未发现信息泄露"
+  },
+  "HTTPS支持": {
+    "status": "通过",
+    "value": "已启用",
+    "description": "网站使用HTTPS加密传输，基本安全"
+  }
+}

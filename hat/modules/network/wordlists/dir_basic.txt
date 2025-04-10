@@ -1,0 +1,540 @@
+# 管理后台目录
+admin
+administrator
+manage
+manager
+mgr
+backend
+control
+panel
+console
+dashboard
+wp-admin
+phpmyadmin
+adminer
+webadmin
+
+# 用户相关
+user
+users
+member
+members
+account
+accounts
+profile
+register
+signup
+login
+logout
+password
+forgot-password
+
+# API相关
+api
+api/v1
+api/v2
+api/docs
+swagger
+graphql
+rest
+soap
+
+# 内容管理
+content
+posts
+blog
+news
+article
+articles
+page
+pages
+category
+categories
+tag
+tags
+comment
+comments
+
+# 系统目录
+system
+core
+app
+include
+includes
+inc
+function
+functions
+class
+classes
+lib
+libs
+vendor
+node_modules
+
+# 资源目录
+static
+assets
+resource
+resources
+public
+uploads
+upload
+files
+file
+images
+img
+css
+js
+javascript
+media
+fonts
+video
+audio
+
+# 开发相关
+dev
+develop
+development
+test
+testing
+demo
+beta
+debug
+tmp
+temp
+cache
+log
+logs
+error
+errors
+
+# 配置目录
+config
+conf
+setting
+settings
+option
+options
+preference
+preferences
+setup
+install
+configuration
+
+# 安全相关
+secure
+security
+auth
+authentication
+authorize
+certified
+encrypt
+crypto
+certificate
+ssl
+https
+
+# 备份目录
+backup
+bak
+old
+new
+_bak
+_old
+_new
+copy
+archive
+dump
+
+# 其他常见目录
+about
+contact
+help
+faq
+support
+status
+privacy
+terms
+search
+sitemap
+rss
+feed
+mobile
+m
+wap
+docs
+document
+documentation
+download
+downloads
+tools
+service
+services
+
+# 特殊文件
+robots.txt
+sitemap.xml
+.htaccess
+.git
+.svn
+.env
+.DS_Store
+web.config
+crossdomain.xml
+favicon.ico
+humans.txt
+security.txt
+manifest.json
+package.json
+composer.json
+
+# 常见CMS目录
+wp-content
+wp-includes
+themes
+plugins
+modules
+components
+templates
+layouts
+assets
+uploads
+media
+images
+cache
+logs
+
+# 教育机构特定目录
+student
+students
+teacher
+teachers
+faculty
+staff
+course
+courses
+exam
+exams
+library
+research
+academic
+admission
+alumni
+campus
+scholarship
+enrollment
+department
+college
+laboratory
+lab
+study
+education
+online
+distance
+elearning
+moodle
+blackboard
+portal
+webmail
+jwc         # 教务处
+xsc         # 学生处
+zsc         # 招生处
+lib         # 图书馆
+oa          # 办公自动化
+mail        # 邮件系统
+info        # 信息门户
+jw          # 教务系统
+xg          # 学工系统
+zs          # 招生系统
+graduate    # 研究生
+undergraduate # 本科生
+international # 国际学生
+employment  # 就业
+career      # 就业指导
+training    # 培训
+conference  # 会议
+competition # 竞赛
+scholarship # 奖学金
+notice      # 通知公告
+news        # 新闻
+bbs         # 论坛
+forum       # 讨论区
+
+# 常见子系统
+mis         # 管理信息系统
+ems         # 考试管理系统
+lms         # 学习管理系统
+crm         # 客户关系管理
+hrm         # 人力资源管理
+asset       # 资产管理
+finance     # 财务系统
+budget      # 预算系统
+project     # 项目管理
+workflow    # 工作流
+document    # 文档管理
+knowledge   # 知识库
+ticket      # 工单系统
+helpdesk    # 服务台
+
+# 技术文档目录
+swagger-ui
+api-docs
+apidoc
+redoc
+graphiql
+docs/swagger
+docs/api
+docs/dev
+docs/admin
+docs/user
+
+# 开发环境相关
+dev-api
+test-api
+stage-api
+uat
+staging
+testing
+development
+.git/config
+.svn/wc.db
+.env.development
+.env.testing
+.env.staging
+composer.lock
+package-lock.json
+yarn.lock
+
+# 数据库管理
+phpmyadmin
+adminer
+mysql
+pgsql
+oracle
+sqlserver
+mongodb
+redis
+memcached
+
+# 监控和统计
+prometheus
+grafana
+kibana
+zabbix
+nagios
+cacti
+munin
+awstats
+webalizer
+analytics
+
+# 常见漏洞目录
+WEB-INF/web.xml
+META-INF/context.xml
+server-status
+server-info
+.well-known/
+crossdomain.xml
+clientaccesspolicy.xml
+phpinfo.php
+info.php
+test.php
+shell.php
+cmd.php
+eval.php
+system.php
+exec.php
+webshell.php
+backdoor.php
+config.inc
+database.inc
+conn.inc
+db.inc
+
+# 上传和下载
+upload/image
+upload/file
+upload/media
+download/file
+download/temp
+download/public
+attachment
+attachments
+userfiles
+tempfiles
+storage/app
+storage/public
+storage/logs
+
+# 缓存和日志
+cache/
+logs/
+log/
+temp/
+tmp/
+sessions/
+_sessions/
+.cache/
+.logs/
+.temp/
+error_log
+access_log
+debug_log
+app.log
+web.log
+error.log
+debug.log
+access.log
+
+# 常见应用目录
+phpMyAdmin
+phpmyadmin
+mysql
+database
+server-status
+server-info
+status
+info
+monitor
+monitoring
+stats
+statistics
+analytics
+report
+reports
+admin/login
+administrator/login
+manage/login
+login/admin
+user/login
+auth/login
+
+# 开发框架目录
+laravel
+symfony
+django
+flask
+spring
+struts
+thinkphp
+yii
+rails
+node
+angular
+react
+vue
+
+# 上传目录变体
+upload_file
+uploadfile
+fileupload
+file_upload
+uploader
+uploads/image
+uploads/file
+uploads/media
+upload/images
+upload/files
+upload/media
+
+# 备份文件变体
+backup.zip
+backup.tar
+backup.gz
+backup.sql
+backup.bak
+www.zip
+www.tar
+www.gz
+site.zip
+site.tar
+site.gz
+db.sql
+database.sql
+data.sql
+web.config.bak
+.htaccess.bak
+config.php.bak
+index.php.bak
+
+# 敏感配置文件
+.env.local
+.env.backup
+.env.dev
+.env.prod
+.env.test
+config.inc.php
+configuration.php
+settings.php
+setup.php
+install.php
+database.php
+db.php
+conn.php
+connection.php
+mysql.php
+sqlconfig.php
+configuration.ini
+web.config.old
+php.ini
+.htpasswd
+
+# 开发和测试文件
+test.html
+demo.html
+example.html
+sample.html
+dev.html
+beta.html
+temp.html
+phpinfo.php
+test.php
+demo.php
+example.php
+sample.php
+dev.php
+beta.php
+temp.php
+
+# 文档和帮助
+docs/api
+api/docs
+documentation
+manual
+help
+guide
+tutorial
+faq
+readme
+changelog
+license
+about
+contact
+support
+
+# 系统和工具
+tools
+utilities
+scripts
+cron
+tasks
+jobs
+scheduler
+backup
+restore
+import
+export
+update
+upgrade
+install
+setup
+config
+settings
+preferences
+options
+profile
+account
+security
+logs
+temp
+cache

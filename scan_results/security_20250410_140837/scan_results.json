@@ -1,0 +1,67 @@
+{
+  "X-Frame-Options": {
+    "status": "通过",
+    "value": "SAMEORIGIN",
+    "description": "防止点击劫持攻击 - 设置正确"
+  },
+  "X-XSS-Protection": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "防止跨站脚本攻击 - 建议设置此头部"
+  },
+  "X-Content-Type-Options": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "防止MIME类型嗅探 - 建议设置此头部"
+  },
+  "Content-Security-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "内容安全策略 - 建议设置此头部"
+  },
+  "Strict-Transport-Security": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "强制使用HTTPS - 建议设置此头部"
+  },
+  "Referrer-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "控制Referer头信息 - 建议设置此头部"
+  },
+  "Permissions-Policy": {
+    "status": "未设置",
+    "value": "未设置",
+    "description": "控制浏览器功能 - 建议设置此头部"
+  },
+  "服务器信息泄露": {
+    "status": "信息",
+    "value": "none",
+    "description": "服务器信息已简化，风险较低"
+  },
+  "技术栈信息泄露": {
+    "status": "通过",
+    "value": "未泄露",
+    "description": "技术栈信息泄露 - 未发现信息泄露"
+  },
+  "HTTPS支持": {
+    "status": "通过",
+    "value": "已启用",
+    "description": "网站使用HTTPS加密传输，基本安全"
+  },
+  "内联脚本": {
+    "status": "信息",
+    "value": "发现52个内联脚本",
+    "description": "内联脚本可能增加XSS风险，建议使用外部脚本并配合CSP"
+  },
+  "潜在XSS风险": {
+    "status": "警告",
+    "value": "发现2个风险点",
+    "description": "发现以下XSS风险：\n\n不安全的定时器:\n- 行 59862: setInterval('\n- 行 60959: setInterval('"
+  },
+  "敏感信息泄露": {
+    "status": "警告",
+    "value": "发现240处敏感信息",
+    "description": "发现以下敏感信息：\n\n邮箱地址:\n- 行 63339: xiaozhang@qdu.edu.cn\n- 行 63712: shuji@qdu.edu.cn\n\n手机号码:\n- 行 41008: 17441845828\n- 行 42274: 17419138416\n\n内部路径:\n- 行 644: \"images/logo.ico\"\n- 行 720: \"css/slick.css\"\n- 行 840: \"css/slick-theme.css\"\n- 行 948: \"css/new_style.css\"\n- 行 1001: \"css/index.css\"\n- 行 1066: \"css/phone.css\"\n- 行 1152: \"css/animate.css\"\n- 行 1276: \"css/settings.css\"\n- 行 1344: \"css/bootsnav.css\"\n- 行 1412: \"css/style3.css\"\n- 行 1478: \"css/style0628_1.css\"\n- 行 1549: \"css/index2.css\"\n- 行 1598: \"css/flex.css\"\n- 行 1690: \"css/2024-top.css\"\n- 行 1814: \"_sitegray/_sitegray_d.css\"\n- 行 1880: \"_sitegray/_sitegray.js\"\n- 行 2200: /system/resource/js/counter.js\"\n- 行 2514: /system/resource/js/dynclicks.js\"\n- 行 2617: \"images/kb.png\"\n- 行 4040: \"images/sear.png\"\n- 行 4158: /system/resource/js/base64.js\"\n- 行 4233: /system/resource/js/formfunc.js\"\n- 行 4358: /system/resource/js/openlink.js\"\n- 行 4418: \"index/ksfw.htm\"\n- 行 4554: \"index/xsfw.htm\"\n- 行 4690: \"index/jzgfw.htm\"\n- 行 5145: /new/index.html\"\n- 行 5492: \"images/logo3.png\"\n- 行 5610: \"xxgk/xxjj.htm\"\n- 行 5770: \"xxgk/xxjj.htm\"\n- 行 5856: \"xxgk/lsyg.htm\"\n- 行 5942: \"xxgk/xrld.htm\"\n- 行 6012: \"xxgk/lrld.htm\"\n- 行 6082: \"xxgk/xhxx.htm\"\n- 行 6152: \"xxgk/dxzc.htm\"\n- 行 6324: \"xxgk/lxlx.htm\"\n- 行 6394: \"xwzx/yxqd.htm\"\n- 行 6613: \"jgsz/xysz.htm\"\n- 行 6773: \"jgsz/xysz.htm\"\n- 行 6843: \"jgsz/dzbm.htm\"\n- 行 6913: \"jgsz/xszc.htm\"\n- 行 6983: \"jgsz/kyjg.htm\"\n- 行 7053: \"jgsz/fsjg.htm\"\n- 行 7123: \"jgsz/zljg.htm\"\n- 行 8973: \"kxyj/kyjg.htm\"\n- 行 9310: \"kxyj/kyjg.htm\"\n- 行 10664: \"js/centerCutImg.js\"\n- 行 10878: \"images/2025chunri.jpg\"\n- 行 11024: \"images/2025chunri.jpg\"\n- 行 11327: /info/1040/20533.htm\"\n- 行 11381: \"images/2025nianzhongyangbaxiangguiding.png\"\n- 行 11536: /info/1040/20533.htm\"\n- 行 11590: \"images/2025nianzhongyangbaxiangguiding.png\"\n- 行 11722: /info/1040/20533.htm\"\n- 行 11968: \"images/49b1eeccca82bd71c6fcb8daba088f02.png\"\n- 行 12136: \"images/49b1eeccca82bd71c6fcb8daba088f02.png\"\n- 行 12473: \"images/2025zhongcengganbuyantaoban.png\"\n- 行 12636: \"images/2025zhongcengganbuyantaoban.png\"\n- 行 12968: \"images/2025nianshuangdaihui0103.png\"\n- 行 13128: \"images/2025nianshuangdaihui0103.png\"\n- 行 13457: \"images/2024fenfa.png\"\n- 行 13602: \"images/2024fenfa.png\"\n- 行 14295: \"images/xin.png\"\n- 行 14377: \"xwzx/xw.htm\"\n- 行 14613: /system/resource/js/centerCutImg.js\"\n- 行 14694: /system/resource/js/ajax.js\"\n- 行 14769: \"info/1040/20615.htm\"\n- 行 15287: \"info/1040/20614.htm\"\n- 行 15759: \"info/1040/20576.htm\"\n- 行 16229: \"info/1040/20577.htm\"\n- 行 16695: \"info/1040/20536.htm\"\n- 行 17651: \"info/1040/20572.htm\"\n- 行 17823: \"info/1040/20621.htm\"\n- 行 17983: \"info/1040/20616.htm\"\n- 行 18179: \"info/1040/20617.htm\"\n- 行 18337: \"info/1040/20615.htm\"\n- 行 18543: \"info/1040/20614.htm\"\n- 行 18703: \"info/1040/20594.htm\"\n- 行 19434: \"xwzx/xs.htm\"\n- 行 19499: \"images/tong.png\"\n- 行 19672: \"info/1041/20643.htm\"\n- 行 19803: \"info/1041/20636.htm\"\n- 行 19912: \"info/1041/20630.htm\"\n- 行 20055: \"info/1041/20596.htm\"\n- 行 20178: \"info/1041/20592.htm\"\n- 行 20309: \"info/1041/20583.htm\"\n- 行 20446: \"info/1041/20581.htm\"\n- 行 21307: \"ztzl/lssj.htm\"\n- 行 21374: \"images/wzyy.png\"\n- 行 21790: \"info/1324/16006.htm\"\n- 行 21850: /__local/4/45/9C/5B7266B3C2529E0FFA4CC1EDCDE_1E662606_89849.jpg\"\n- 行 22014: \"info/1324/16005.htm\"\n- 行 22074: /__local/0/74/FC/B9B1B9342391CDCD70DFF597786_8786878E_A2AC.jpg\"\n- 行 22237: \"info/1324/16004.htm\"\n- 行 22297: /__local/E/B0/15/402A41EAF9CEE5BB0A5D29959AE_0F6127EC_9164C.jpg\"\n- 行 22461: \"info/1324/16003.htm\"\n- 行 22521: /__local/8/9E/FE/16DDB63A16E0C2C58AE417CCD3F_7DF0D1BF_2DCF4.jpg\"\n- 行 22685: \"info/1324/16002.htm\"\n- 行 22745: /__local/3/19/EE/96922730CEAA476080D5EA175C2_CB6AAC5A_1A1C7.jpg\"\n- 行 22909: \"info/1324/16001.htm\"\n- 行 22969: /__local/C/57/10/35FCF85E7D0B2EF962B9141A5AF_C55FC36F_16146.jpg\"\n- 行 23141: \"info/1324/16000.htm\"\n- 行 23201: /__local/C/55/77/BD3A80AF2E04F153696C4EB94B2_A35BD7CF_8A238.jpg\"\n- 行 23365: \"info/1324/15999.htm\"\n- 行 23425: /__local/C/CF/74/212136571BC87BCF0425AEB3932_C589BC84_4F7DD.jpg\"\n- 行 23589: \"info/1324/15998.htm\"\n- 行 23649: /__local/5/FC/A5/2B13CBD9F809DCC9476A93375E0_62F70F24_1956D.jpg\"\n- 行 23813: \"info/1324/15997.htm\"\n- 行 23873: /__local/A/83/32/5848E70E42F99DD48135432D624_A3B52FBA_8D96E.jpg\"\n- 行 24037: \"info/1324/15996.htm\"\n- 行 24097: /__local/4/87/00/0F3222209A0451D0A6C224BBEC4_6F52544A_11B8D.jpg\"\n- 行 24261: \"info/1324/15995.htm\"\n- 行 24321: /__local/6/84/D1/FE56F732167DF2A73881F027275_9B7E87DE_28C6A.jpg\"\n- 行 24493: \"info/1324/15994.htm\"\n- 行 24553: /__local/3/F0/3F/695D86D8912F77521706AB618D9_AB0FAC1E_89D80.jpg\"\n- 行 25587: /images/30title.jpg\"\n- 行 25658: \"xwzx/tzyg.htm\"\n- 行 25725: \"images/mryg.png\"\n- 行 25909: \"info/1042/20635.htm\"\n- 行 26372: \"info/1042/20537.htm\"\n- 行 26839: \"info/1042/20454.htm\"\n- 行 27298: \"info/1042/20406.htm\"\n- 行 28227: \"info/1042/20081.htm\"\n- 行 28696: \"info/1042/19980.htm\"\n- 行 29164: \"info/1042/19858.htm\"\n- 行 29624: \"info/1042/19853.htm\"\n- 行 30476: \"xwzx/zhxw.htm\"\n- 行 30543: \"images/zbxm.png\"\n- 行 30827: \"info/1238/20644.htm\"\n- 行 31283: \"info/1238/20639.htm\"\n- 行 31770: \"info/1238/20627.htm\"\n- 行 32939: \"info/1238/20644.htm\"\n- 行 33058: \"info/1238/20642.htm\"\n- 行 33183: \"info/1238/20641.htm\"\n- 行 33328: \"info/1238/20639.htm\"\n- 行 33745: \"xwzx/ybdt.htm\"\n- 行 33812: \"images/mryg1.png\"\n- 行 34092: \"info/1047/20633.htm\"\n- 行 34573: \"info/1047/20629.htm\"\n- 行 35050: \"info/1047/20564.htm\"\n- 行 36242: \"info/1047/20633.htm\"\n- 行 36388: \"info/1047/20640.htm\"\n- 行 36522: \"info/1047/20638.htm\"\n- 行 36653: \"info/1047/20631.htm\"\n- 行 37857: /__local/B/01/00/407216920425AB140577480F552_B6FA11AF_7DFE.jpg\"\n- 行 38133: /__local/A/8A/E1/415C6C34595E555BFA05A4548E8_BA972F17_9B43.jpg\"\n- 行 38413: /__local/E/18/E7/25D6235522190A905A6C97BBA1B_A2242102_848F.jpg\"\n- 行 38740: /__local/B/3B/2C/758244140F538324947334770AE_D77E8E54_1EB07.jpg\"\n- 行 38954: \"ztzl/qdrw.htm\"\n- 行 39482: /__local/A/92/13/D24E04180AA34FADF8E6DE3552F_2CC4F6A2_1C7B3.jpg\"\n- 行 39741: /__local/0/5B/43/3B58EF8A674DD94E419D79BBE94_2B33AE44_1F034.jpg\"\n- 行 40003: /__local/7/AD/0E/319B5F37950194E6AC42EF98021_EC59D7EF_1DBE8.jpg\"\n- 行 40278: /__local/9/F3/51/E28B217F672E165DC801FA5EBE9_823BDB14_2ECC3.jpg\"\n- 行 40488: \"xwzx/hlqd.htm\"\n- 行 41739: /art/2025/1/24/art_11972_10336575.html\"\n- 行 41980: /art/2025/3/11/art_11972_10337156.html\"\n- 行 42863: /jiankang/xw/202503/t20250307_15624942.htm\"\n- 行 43127: /general/25779537.html\"\n- 行 43414: \"xwzx/mtqd.htm\"\n- 行 43996: \"info/1294/20580.htm\"\n- 行 44089: /__local/F/CC/31/D22DA9003972D65EA1D4FA8397E_BEAF66A7_7F8C1.jpg\"\n- 行 44289: \"info/1294/20506.htm\"\n- 行 44382: /__local/1/E0/11/04CAA4715728BC1C3AFFDB95C2C_BA1EB504_35EC6.jpg\"\n- 行 44582: \"info/1294/20548.htm\"\n- 行 44675: /__local/E/5F/F1/7AF8780DD240F4B823A563A8BB7_70BA6E49_364C3.jpg\"\n- 行 44875: \"info/1294/20549.htm\"\n- 行 44968: /__local/8/BB/09/529374FFCD7D7304126350A6D7C_91400FE9_3339C.jpg\"\n- 行 45168: \"info/1294/20145.htm\"\n- 行 45262: /__local/A/D9/C7/A0C4CC109010EF94FC2E11F7DF3_DA2E775B_7CC33.jpg\"\n- 行 45463: \"info/1294/20047.htm\"\n- 行 45557: /__local/3/F4/EE/1B459454CE44C3DEFC11F3E0A18_B9D8ADD6_36D38.jpg\"\n- 行 46286: \"info/1234/19949.htm\"\n- 行 46376: /__local/F/B2/1A/EE913BF3231B9AAF279835E6F7A_5B41457B_5915C.png\"\n- 行 46576: \"info/1234/19950.htm\"\n- 行 46656: /__local/3/CF/D9/5269193514BA7D0E6446D785FA4_1D5A4C6A_66E00.png\"\n- 行 46846: \"info/1234/19951.htm\"\n- 行 46931: /__local/4/4C/2B/2916780E58A9F6F2FC31A385564_9C0DFE92_231A7.png\"\n- 行 47140: \"xwzx/yxqd/spl.htm\"\n- 行 47742: /__local/B/01/00/407216920425AB140577480F552_B6FA11AF_7DFE.jpg\"\n- 行 48315: /__local/A/8A/E1/415C6C34595E555BFA05A4548E8_BA972F17_9B43.jpg\"\n- 行 48888: /__local/E/18/E7/25D6235522190A905A6C97BBA1B_A2242102_848F.jpg\"\n- 行 49482: /__local/B/3B/2C/758244140F538324947334770AE_D77E8E54_1EB07.jpg\"\n- 行 50061: /__local/D/8A/D5/7992B6E05115DD4265F63A70297_5BC8B766_8590.jpg\"\n- 行 50631: /__local/3/A8/F7/EA6656B0ECBE129D8D14F1E507E_92527AC5_C5BC.jpg\"\n- 行 51206: /__local/7/CF/B5/05B3A982B1329E716C03A11502D_9C7D5257_1E512.jpg\"\n- 行 51776: /__local/E/FE/AB/B07F17AD10FD14E0AE1F506DABA_274C970A_8DE6.jpg\"\n- 行 52534: \"xwzx/yxqd.htm\"\n- 行 53575: \"images/wzyy.png\"\n- 行 53871: /__local/1/87/60/76B656CDC691269106BBA3538A5_276490B7_16C6B.jpg\"\n- 行 54078: /__local/8/BB/FF/FB47CC5B7FBDA7A49488BCA74C9_A30E68F3_117F5.jpg\"\n- 行 54266: /__local/A/30/FD/7FA6AE25F774DAA81F28922DD0E_1496CFD8_3DBE.jpg\"\n- 行 54458: /__local/8/7B/E9/82D24916D535051E7BFEA57F792_DD3AA93D_AA06.jpg\"\n- 行 55043: \"images/dangan.jpg\"\n- 行 55283: \"images/webvpn.png\"\n- 行 55521: \"images/xk.png\"\n- 行 55641: /new/index.html\"\n- 行 55770: \"images/yy.png\"\n- 行 56002: \"images/zbxm.png\"\n- 行 56248: \"images/dxb.png\"\n- 行 56482: \"images/fds.png\"\n- 行 56717: \"images/wzyy.png\"\n- 行 56951: \"images/52.png\"\n- 行 57046: \"dhhmcx/cydhhm.htm\"\n- 行 57178: \"images/VAS.png\"\n- 行 57409: \"images/zbxm.png\"\n- 行 57646: \"images/wxiu.png\"\n- 行 57743: \"info/1064/4150.htm\"\n- 行 57876: \"images/lux.png\"\n- 行 58111: \"images/WEQ.png\"\n- 行 58351: \"images/rl.png\"\n- 行 61511: \"images/kong.png\"\n- 行 61624: \"images/kong.png\"\n- 行 62206: /system/resource/js/news/mp4video.js\"\n- 行 62489: /__local/9/BF/C0/0F79743C1196F64B7E27438EC06_F6558176_3C08.png\"\n- 行 62857: /__local/9/BF/C0/0F79743C1196F64B7E27438EC06_F6558176_3C08.png\"\n- 行 63225: /__local/7/C6/EC/483346235EFA8ABF9EE4E2AC23F_C9B21999_3BE7.png\"\n- 行 63598: /__local/7/C6/EC/483346235EFA8ABF9EE4E2AC23F_C9B21999_3BE7.png\"\n- 行 63967: /__local/2/90/8A/9FC374964CFDCAD0C57B0B7CF36_67CAAF7D_3C16.png\"\n- 行 64329: /__local/1/C6/76/BBB1F96F54D9DA38AE4C8756A29_8B9E82EB_414.png\"\n- 行 64542: \"images/logo-foot.png\"\n- 行 64621: \"images/20/12/22/11u4rr96wd/2wx.png\"\n- 行 64667: \"images/20/12/22/11u4rr96wd/2wx.png\"\n- 行 64736: \"images/20/12/22/11u4rr96wd/2wb.png\"\n- 行 64782: \"images/20/12/22/11u4rr96wd/2wb.png\"\n- 行 64851: \"images/20/12/22/11u4rr96wd/2dy.png\"\n- 行 64897: \"images/20/12/22/11u4rr96wd/2dy.png\"\n- 行 64971: \"images/20/12/22/11u4rr96wd/2sp.png\"\n- 行 65017: \"images/20/12/22/11u4rr96wd/2sp.png\"\n- 行 65893: \"images/blue.png\"\n- 行 66290: \"js/common.js\"\n- 行 66353: \"js/SuperSlide.js\"\n- 行 66427: \"js1/bootsnav.js\"\n- 行 66471: \"js1/functions.js\"\n- 行 68477: \"js/js.js\"\n- 行 68657: \"js/mousewheel.js\"\n- 行 68699: \"js/wow.js\""
+  }
+}

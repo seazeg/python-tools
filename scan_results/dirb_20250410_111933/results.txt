@@ -1,0 +1,398 @@
+目录扫描结果 - https://www.qdu.edu.cn
+扫描时间: 2025-04-10 11:19:33.046395
+------------------------------------------------------------
+
+发现的敏感文件:
+- access.log~ (403)
+  URL: https://www.qdu.edu.cn/access.log~
+  大小: 2617 bytes
+  类型: text/html
+
+- .DS_Store.backup (403)
+  URL: https://www.qdu.edu.cn/.DS_Store.backup
+  大小: 2622 bytes
+  类型: text/html
+
+- web.config.php (403)
+  URL: https://www.qdu.edu.cn/web.config.php
+  大小: 2620 bytes
+  类型: text/html
+
+- modules.backup (403)
+  URL: https://www.qdu.edu.cn/modules.backup
+  大小: 2620 bytes
+  类型: text/html
+
+- web.config.aspx (403)
+  URL: https://www.qdu.edu.cn/web.config.aspx
+  大小: 2621 bytes
+  类型: text/html
+
+- web.config.asp (403)
+  URL: https://www.qdu.edu.cn/web.config.asp
+  大小: 2620 bytes
+  类型: text/html
+
+- crossdomain.xml.backup (403)
+  URL: https://www.qdu.edu.cn/crossdomain.xml.backup
+  大小: 2628 bytes
+  类型: text/html
+
+- web.config.bak (403)
+  URL: https://www.qdu.edu.cn/web.config.bak
+  大小: 2620 bytes
+  类型: text/html
+
+- login.php~ (403)
+  URL: https://www.qdu.edu.cn/login.php~
+  大小: 2616 bytes
+  类型: text/html
+
+- composer.json.backup (403)
+  URL: https://www.qdu.edu.cn/composer.json.backup
+  大小: 2626 bytes
+  类型: text/html
+
+- error.log.jsp (403)
+  URL: https://www.qdu.edu.cn/error.log.jsp
+  大小: 2619 bytes
+  类型: text/html
+
+- wp-config.php.asp (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.asp
+  大小: 2623 bytes
+  类型: text/html
+
+- .env.backup (403)
+  URL: https://www.qdu.edu.cn/.env.backup
+  大小: 2617 bytes
+  类型: text/html
+
+- web.config.jsp (403)
+  URL: https://www.qdu.edu.cn/web.config.jsp
+  大小: 2620 bytes
+  类型: text/html
+
+- phpinfo.php.backup (403)
+  URL: https://www.qdu.edu.cn/phpinfo.php.backup
+  大小: 2624 bytes
+  类型: text/html
+
+- robots.txt.backup (403)
+  URL: https://www.qdu.edu.cn/robots.txt.backup
+  大小: 2623 bytes
+  类型: text/html
+
+- web.log~ (403)
+  URL: https://www.qdu.edu.cn/web.log~
+  大小: 2614 bytes
+  类型: text/html
+
+- web.config.backup (403)
+  URL: https://www.qdu.edu.cn/web.config.backup
+  大小: 2623 bytes
+  类型: text/html
+
+- error.log~ (403)
+  URL: https://www.qdu.edu.cn/error.log~
+  大小: 2616 bytes
+  类型: text/html
+
+- package.json.backup (403)
+  URL: https://www.qdu.edu.cn/package.json.backup
+  大小: 2625 bytes
+  类型: text/html
+
+- wp-config.php.bak (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.bak
+  大小: 2623 bytes
+  类型: text/html
+
+- wp-config.php.aspx (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.aspx
+  大小: 2624 bytes
+  类型: text/html
+
+- wp-config.php.jsp (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.jsp
+  大小: 2623 bytes
+  类型: text/html
+
+- web.config.old (403)
+  URL: https://www.qdu.edu.cn/web.config.old
+  大小: 2620 bytes
+  类型: text/html
+
+- .hg/store/data.backup (403)
+  URL: https://www.qdu.edu.cn/.hg/store/data.backup
+  大小: 2627 bytes
+  类型: text/html
+
+- shell.php.backup (403)
+  URL: https://www.qdu.edu.cn/shell.php.backup
+  大小: 2622 bytes
+  类型: text/html
+
+- wp-config.php~ (403)
+  URL: https://www.qdu.edu.cn/wp-config.php~
+  大小: 2620 bytes
+  类型: text/html
+
+- wp-config.php.html (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.html
+  大小: 2624 bytes
+  类型: text/html
+
+- config.yml~ (403)
+  URL: https://www.qdu.edu.cn/config.yml~
+  大小: 2617 bytes
+  类型: text/html
+
+- backup.sql~ (403)
+  URL: https://www.qdu.edu.cn/backup.sql~
+  大小: 2617 bytes
+  类型: text/html
+
+- conf.backup (403)
+  URL: https://www.qdu.edu.cn/conf.backup
+  大小: 2617 bytes
+  类型: text/html
+
+- wp-config.php.old (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.old
+  大小: 2623 bytes
+  类型: text/html
+
+- wp-config.php.backup (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.backup
+  大小: 2626 bytes
+  类型: text/html
+
+- config.php~ (403)
+  URL: https://www.qdu.edu.cn/config.php~
+  大小: 2617 bytes
+  类型: text/html
+
+- admin.php~ (403)
+  URL: https://www.qdu.edu.cn/admin.php~
+  大小: 2616 bytes
+  类型: text/html
+
+- web.config~ (403)
+  URL: https://www.qdu.edu.cn/web.config~
+  大小: 2617 bytes
+  类型: text/html
+
+- web.config (403)
+  URL: https://www.qdu.edu.cn/web.config
+  大小: 2616 bytes
+  类型: text/html
+
+- database.yml.backup (403)
+  URL: https://www.qdu.edu.cn/database.yml.backup
+  大小: 2625 bytes
+  类型: text/html
+
+- debug.log~ (403)
+  URL: https://www.qdu.edu.cn/debug.log~
+  大小: 2616 bytes
+  类型: text/html
+
+- web.config.html (403)
+  URL: https://www.qdu.edu.cn/web.config.html
+  大小: 2621 bytes
+  类型: text/html
+
+- wp-config.php (403)
+  URL: https://www.qdu.edu.cn/wp-config.php
+  大小: 2619 bytes
+  类型: text/html
+
+- config.php.jsp (403)
+  URL: https://www.qdu.edu.cn/config.php.jsp
+  大小: 2620 bytes
+  类型: text/html
+
+- .git/HEAD.backup (403)
+  URL: https://www.qdu.edu.cn/.git/HEAD.backup
+  大小: 2622 bytes
+  类型: text/html
+
+- .svn/entries.backup (403)
+  URL: https://www.qdu.edu.cn/.svn/entries.backup
+  大小: 2625 bytes
+  类型: text/html
+
+- .htaccess.backup (403)
+  URL: https://www.qdu.edu.cn/.htaccess.backup
+  大小: 2622 bytes
+  类型: text/html
+
+- wp-config.php.php (403)
+  URL: https://www.qdu.edu.cn/wp-config.php.php
+  大小: 2623 bytes
+  类型: text/html
+
+
+其他发现的路径:
+- shell.php.aspx (403)
+- .hg/store/data.old (403)
+- dump~ (403)
+- .DS_Store.bak (403)
+- database.yml (403)
+- .DS_Store.asp (403)
+- .htaccess.html (403)
+- shell.php (403)
+- .git/HEAD.old (403)
+- package.json.old (403)
+- composer.json.bak (403)
+- .git/HEAD.php (403)
+- pages.asp (403)
+- shell.php.jsp (403)
+- .hg/store/data (403)
+- composer.json.old (403)
+- composer.json.jsp (403)
+- develop.html (403)
+- README.md~ (403)
+- composer.json.html (403)
+- lib~ (403)
+- info.php~ (403)
+- .htaccess~ (403)
+- shell.php.asp (403)
+- .svn/entries.html (403)
+- .DS_Store.jsp (403)
+- .git/HEAD (403)
+- .svn/entries.aspx (403)
+- database.yml.aspx (403)
+- security.html (403)
+- phpinfo.php.html (403)
+- sitemap.xml~ (403)
+- .htaccess.asp (403)
+- robots.txt.aspx (403)
+- encrypt.asp (403)
+- .DS_Store.aspx (403)
+- .git/HEAD.aspx (403)
+- 1.txt~ (403)
+- .DS_Store~ (403)
+- shell.php.php (403)
+- package.json (403)
+- readme.md~ (403)
+- public.html (403)
+- package.json.php (403)
+- phpinfo.php.aspx (403)
+- .svn/entries.jsp (403)
+- database.yml.old (403)
+- robots.txt.php (403)
+- search.jsp (200)
+- download (403)
+- package.json.jsp (403)
+- robots.txt.html (403)
+- .svn/entries.php (403)
+- preference.php (403)
+- phpinfo.php (403)
+- .svn/entries.asp (403)
+- crossdomain.xml~ (403)
+- api/v2.bak (403)
+- shell.php.old (403)
+- composer.json.asp (403)
+- security.txt~ (403)
+- .svn/entries (403)
+- test.txt.asp (403)
+- .DS_Store (403)
+- package.json.aspx (403)
+- .htaccess.old (403)
+- database.yml.bak (403)
+- database.yml.asp (403)
+- database.yml.html (403)
+- settings.py~ (403)
+- users.html (403)
+- dump.sql~ (403)
+- composer.json~ (403)
+- humans.txt~ (403)
+- package.json.bak (403)
+- www.zip~ (403)
+- phpinfo.php~ (403)
+- package.json~ (403)
+- README.md.html (403)
+- .hg/store/data.html (403)
+- test.php~ (403)
+- .git~ (403)
+- phpinfo.php.jsp (403)
+- .hg/store/data.php (403)
+- .htaccess.bak (403)
+- api/v2 (403)
+- dev.php~ (403)
+- composer.json.aspx (403)
+- .hg/store/data.aspx (403)
+- system (200)
+- .env.jsp (403)
+- .env~ (403)
+- .env.aspx (403)
+- css.asp (403)
+- database.yml~ (403)
+- robots.txt.bak (403)
+- robots.txt.asp (403)
+- manager.aspx (403)
+- favicon.ico~ (403)
+- phpinfo.php.asp (403)
+- search.bak (403)
+- website.bak~ (403)
+- phpinfo.php.old (403)
+- .svn~ (403)
+- .hg/store/data.bak (403)
+- .env (403)
+- .env.old (403)
+- .git/HEAD.asp (403)
+- settings.asp (403)
+- phpinfo.php.bak (403)
+- old.aspx (403)
+- robots.txt.jsp (403)
+- shell.php.bak (403)
+- .env.asp (403)
+- .git/HEAD.bak (403)
+- images~ (403)
+- .env.php (403)
+- application.properties~ (403)
+- .svn/entries.old (403)
+- .env.bak (403)
+- .git/HEAD.html (403)
+- sitemap.aspx (403)
+- robots.txt~ (403)
+- composer.json.php (403)
+- .htaccess.php (403)
+- .DS_Store.old (403)
+- composer.json (403)
+- .htaccess.jsp (403)
+- video.old (403)
+- upload.php~ (403)
+- shell.php~ (403)
+- .env.html (403)
+- secure~ (403)
+- .htaccess.aspx (403)
+- .git/HEAD~ (403)
+- .DS_Store.php (403)
+- security.php (403)
+- .svn/entries~ (403)
+- package.json.asp (403)
+- .DS_Store.html (403)
+- database.yml.jsp (403)
+- .hg/store/data.jsp (403)
+- robots.txt.old (403)
+- .hg/store/data.asp (403)
+- sitemap.html (403)
+- phpinfo.php.php (403)
+- tag.php (403)
+- database.yml.php (403)
+- test.txt~ (403)
+- downloads.aspx (403)
+- .git/HEAD.jsp (403)
+- .hg/store/data~ (403)
+- shell.php.html (403)
+- manifest.json~ (403)
+- fonts.asp (403)
+- package.json.html (403)
+- .htaccess (403)
+- api/v1.bak (403)
+- .svn/entries.bak (403)
+- dev.php.php (403)
+- content.jsp (200)

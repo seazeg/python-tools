@@ -1,0 +1,94 @@
+子域名枚举结果 - haier.com
+扫描时间: 2025-04-10 11:51:39
+------------------------------------------------------------
+
+子域名: test.haier.com
+发现方式: DNS-A, SSL, HTTP
+IP地址: 203.130.41.19
+协议: https
+状态码: 403
+服务器: QTS
+网页标题: 403 forbidden
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: service.haier.com
+发现方式: DNS-A, SSL, HTTP
+IP地址: 203.130.41.20
+协议: https
+状态码: 200
+服务器: wswaf
+网页标题: 海尔售后服务与支持-自助服务-海尔官网
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: www.haier.com
+发现方式: DNS-CNAME, DNS-A, SSL, HTTP
+IP地址: 124.134.127.26, 61.162.101.82
+协议: https
+状态码: 200
+服务器: wswaf
+网页标题: 海尔 - 以无界生态共创无限可能
+CNAME记录: www.haier.com.cdn20.com.
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: report.haier.com
+发现方式: DNS-A, SSL, HTTP
+IP地址: 203.130.41.25
+协议: https
+状态码: 403
+服务器: QHT
+网页标题: 403 forbidden
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: download.haier.com
+发现方式: DNS-CNAME, DNS-A, SSL, HTTP
+IP地址: 124.134.127.26, 61.162.101.82
+协议: https
+状态码: 403
+服务器: nginx
+网页标题: 403 forbidden
+CNAME记录: download.haier.com.wscdns.com.
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: portal.haier.com
+发现方式: DNS-A, SSL, HTTP
+IP地址: 60.209.105.213
+协议: https
+状态码: 200
+服务器: Tengine
+网页标题: No title
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: image.haier.com
+发现方式: DNS-CNAME, DNS-A, SSL, HTTP
+IP地址: 203.130.41.20
+协议: https
+状态码: 200
+服务器: wswaf
+网页标题: 海尔 - 以无界生态共创无限可能
+CNAME记录: image.haier.com.cdn20.com.
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: mail.haier.com
+发现方式: DNS-A
+IP地址: 218.58.70.163, 58.56.128.35
+----------------------------------------
+子域名: video.haier.com
+发现方式: DNS-CNAME, DNS-A, SSL, HTTP
+IP地址: 60.210.9.157
+协议: https
+状态码: 403
+服务器: nginx
+网页标题: 403 forbidden
+CNAME记录: video.haier.com.cdn20.com.
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
+子域名: bbs.haier.com
+发现方式: DNS-CNAME, DNS-A, SSL, HTTP
+IP地址: 203.130.41.20
+协议: https
+状态码: 200
+服务器: wswaf
+网页标题: 海尔官网
+CNAME记录: bbs.haier.com.wscdns.com.
+证书中的域名: haier.com, *.haier.com
+----------------------------------------
