@@ -18,7 +18,6 @@ from modules.subdomain_scanner import smart_subdomains
 from modules.dns_info import dns_info
 from modules.lan_scanner import lan_scan
 from modules.security_scanner import security_scan  # 导入安全检测模块
-from modules.packet_capture import packet_capture
 
 console = Console()
 
@@ -48,8 +47,7 @@ def show_menu():
     table.add_row("4", "子域名枚举", "枚举目标域名的子域名")
     table.add_row("5", "DNS信息收集", "收集域名的DNS记录信息")
     table.add_row("6", "局域网扫描", "扫描局域网内的活跃主机")
-    table.add_row("7", "安全检测", "检测网站的安全问题")  # 添加安全检测选项
-    table.add_row("8", "网络抓包", "抓取网络数据包")
+    table.add_row("7", "安全检测", "检测网站的安全问题")
     table.add_row("0", "退出", "退出程序")
     
     console.print(table)
@@ -61,7 +59,7 @@ async def main():
     parser.add_argument("-p", "--port", help="端口扫描范围 (例如: 1-1024)")
     parser.add_argument("-d", "--domain", help="目标域名")
     parser.add_argument("-n", "--network", help="目标网段 (例如: 192.168.1.0/24)")
-    parser.add_argument("-m", "--mode", type=int, choices=range(9), help="运行模式: 1=技术栈检测, 2=端口扫描, 3=目录扫描, 4=子域名枚举, 5=DNS信息收集, 6=局域网扫描, 7=安全检测, 8=网络抓包, 0=交互模式")
+    parser.add_argument("-m", "--mode", type=int, choices=range(8), help="运行模式: 1=技术栈检测, 2=端口扫描, 3=目录扫描, 4=子域名枚举, 5=DNS信息收集, 6=局域网扫描, 7=安全检测, 0=交互模式")
     
     args = parser.parse_args()
     
@@ -70,7 +68,7 @@ async def main():
         show_banner()
         while True:
             show_menu()
-            choice = Prompt.ask("请选择功能", choices=["0", "1", "2", "3", "4", "5", "6", "7", "8"], default="0")
+            choice = Prompt.ask("请选择功能", choices=["0", "1", "2", "3", "4", "5", "6", "7"], default="0")
             
             if choice == "0":
                 console.print("[bold green]感谢使用HAT工具，再见！[/]")
@@ -125,18 +123,6 @@ async def execute_function(mode, args):
             url = args.url or Prompt.ask("请输入目标URL", default="https://www.example.com/")
             console.print(f"[bold blue]正在检测 {url} 的安全问题...[/]")
             await security_scan(url)
-            
-        elif mode == 8:  # 网络抓包
-            interface = Prompt.ask("请输入网络接口", default="eth0")
-            filter_str = Prompt.ask("请输入过滤器(可选)", default="tcp port 80")
-            count = Prompt.ask("请输入抓包数量(可选,回车表示无限制)", default="1000")
-            timeout = Prompt.ask("请输入超时时间(秒,可选,回车表示无限制)", default="60")
-            
-            count = int(count) if count else None
-            timeout = int(timeout) if timeout else None
-            
-            console.print(f"\n[bold blue]开始网络抓包...[/]")
-            await packet_capture(interface, filter_str, count, timeout)
             
     except Exception as e:
         console.print(f"[bold red]执行过程中出错: {str(e)}[/]")

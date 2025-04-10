@@ -7,7 +7,7 @@ import asyncio
 from scapy.all import ARP, Ether, srp, ICMP, IP, sr1
 import nmap
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from rich.progress import Progress
 from rich.table import Table
 from rich.console import Console
@@ -257,6 +257,8 @@ async def scan_with_timeout(coro, timeout=10):
 
 async def lan_scan(network: str):
     """增强版局域网扫描"""
+    start_time = datetime.now()
+    
     try:
         async def scan_process():
             console.print(f"\n[bold blue]正在执行深度网络扫描 {network}...[/]")
@@ -379,8 +381,17 @@ async def lan_scan(network: str):
                 # 生成报告
                 progress.print("[cyan]正在生成报告...[/]")
                 await generate_report(network, host_details, topology)
-                await display_results(host_details, topology)
-                await display_summary(network, host_details, topology)
+                
+                # 计算扫描时长
+                scan_duration = datetime.now() - start_time
+                
+                # 只显示一次完整的扫描结果
+                await display_final_results(
+                    network, 
+                    host_details, 
+                    topology, 
+                    scan_duration
+                )
         
         await scan_process()
             
@@ -406,63 +417,97 @@ async def generate_report(network: str, hosts: List[dict], topology: dict):
     # 显示摘要
     await display_summary(network, hosts, topology)
 
-async def display_results(hosts: List[dict], topology: dict):
-    """显示扫描结果"""
-    # 主机表格
-    table = Table(
-        title="局域网扫描详细结果",
-        show_header=True,
-        header_style="bold magenta",
-        box=box.SQUARE
-    )
+async def display_final_results(
+    network: str, 
+    hosts: List[dict], 
+    topology: dict,
+    scan_duration: timedelta
+):
+    """显示最终的扫描结果"""
+    console.print("\n[bold blue]===== 扫描结果 =====[/]")
     
-    # 添加更多列以显示设备信息
+    # 1. 基本信息
+    console.print(f"\n[bold cyan]基本信息[/]")
+    console.print(f"目标网段: {network}")
+    console.print(f"扫描时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    console.print(f"扫描用时: {scan_duration.total_seconds():.1f}秒")
+    console.print(f"发现主机: {len(hosts)}台")
+    
+    # 2. 网关信息
+    gateway_host = next((h for h in hosts if h['ip'] == topology['gateway']), None)
+    if gateway_host:
+        console.print(f"\n[bold cyan]网关设备[/]")
+        console.print(f"IP地址: {gateway_host['ip']}")
+        console.print(f"MAC地址: {gateway_host['mac']}")
+        console.print(f"设备厂商: {gateway_host['vendor'] or '未知'}")
+        console.print(f"设备类型: {gateway_host['device_type']}")
+    
+    # 3. 设备类型分布
+    console.print(f"\n[bold cyan]设备类型分布[/]")
+    for device_type, ips in topology['device_types'].items():
+        console.print(f"• {device_type}: {len(ips)}台")
+        if ips:  # 显示该类型的第一个设备作为示例
+            example_host = next((h for h in hosts if h['ip'] == ips[0]), None)
+            if example_host:
+                console.print(f"  示例: {example_host['ip']} ({example_host['vendor'] or '未知厂商'})")
+    
+    # 4. 漏洞信息
+    total_vulns = sum(len(port['vulnerabilities']) 
+                     for host in hosts 
+                     for port in host['open_ports'])
+    if total_vulns > 0:
+        console.print(f"\n[bold red]安全风险[/]")
+        console.print(f"发现漏洞: {total_vulns}个")
+        
+        high_risk_hosts = [
+            host for host in hosts 
+            if any(port['vulnerabilities'] for port in host['open_ports'])
+        ]
+        
+        for host in high_risk_hosts:
+            vuln_count = sum(len(port['vulnerabilities']) 
+                           for port in host['open_ports'])
+            console.print(
+                f"• {host['ip']} - "
+                f"MAC: {host['mac']} - "
+                f"厂商: {host['vendor'] or '未知'} - "
+                f"{vuln_count}个漏洞"
+            )
+    
+    # 5. 主机详情表格
+    console.print(f"\n[bold cyan]主机详情[/]")
+    table = Table(show_header=True, header_style="bold magenta", box=box.SQUARE)
+    
     table.add_column("IP地址", style="cyan")
     table.add_column("MAC地址", style="blue")
-    table.add_column("主机名", style="green")
-    table.add_column("设备厂商", style="yellow")
     table.add_column("设备类型", style="magenta")
-    table.add_column("操作系统", style="cyan")
+    table.add_column("操作系统", style="green")
     table.add_column("开放端口", style="red")
     table.add_column("漏洞", style="red")
     
     for host in hosts:
         vulns = sum(len(port['vulnerabilities']) for port in host['open_ports'])
         ports_str = "\n".join([
-            f"• {p['port']}/{p['service']} ({p['version']})"
+            f"• {p['port']}/{p['service']}"
             for p in host['open_ports']
         ])
         
         table.add_row(
             host['ip'],
             host['mac'],
-            host['hostname'] or "未知",
-            host['vendor'] or "未知",
             host['device_type'],
             host['os'] or "未知",
             ports_str or "无",
-            f"发现 {vulns} 个漏洞" if vulns else "无"
+            f"{vulns}个" if vulns else "无"
         )
     
     console.print(table)
     
-    # 显示拓扑信息
-    console.print("\n[bold blue]网络拓扑分析[/]")
-    console.print(f"网关: [cyan]{topology['gateway']}[/]")
+    # 6. 报告保存位置
+    console.print(f"\n[bold cyan]报告详情[/]")
+    console.print(f"完整报告已保存至: scan_results/lanscan_{datetime.now().strftime('%Y%m%d_%H%M%S')}/")
     
-    # 按设备类型分组显示
-    for device_type, ips in topology['device_types'].items():
-        console.print(f"\n[bold green]{device_type}:[/] ({len(ips)}台)")
-        for ip in ips:
-            # 查找对应主机的详细信息
-            host = next((h for h in hosts if h['ip'] == ip), None)
-            if host:
-                console.print(
-                    f"  • {host['ip']} - "
-                    f"MAC: {host['mac']} - "
-                    f"厂商: {host['vendor'] or '未知'} - "
-                    f"主机名: {host['hostname'] or '未知'}"
-                )
+    console.print("\n[bold blue]========================[/]")
 
 async def generate_html_report(report_file: Path, network: str, hosts: List[dict], topology: dict):
     """生成HTML格式的扫描报告"""

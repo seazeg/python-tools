@@ -1,0 +1,136 @@
+{
+  "scan_time": "2025-04-10T09:45:44.652465",
+  "network": "192.168.31.0/24",
+  "topology": {
+    "gateway": null,
+    "subnets": {},
+    "device_types": {
+      "Iot": [
+        "192.168.31.1"
+      ],
+      "Unknown": [
+        "192.168.31.76",
+        "192.168.31.18",
+        "192.168.31.81",
+        "192.168.31.8",
+        "192.168.31.7",
+        "192.168.31.128",
+        "192.168.31.104",
+        "192.168.31.219",
+        "192.168.31.184",
+        "192.168.31.241",
+        "192.168.31.250"
+      ]
+    }
+  },
+  "hosts": [
+    {
+      "ip": "192.168.31.1",
+      "mac": "28:d1:27:e5:9b:f7",
+      "hostname": "Unknown",
+      "vendor": "Beijing Xiaomi Mobile Software Co., Ltd",
+      "os": "OpenWrt Chaos Calmer 15.05 (Linux 3.18) or Designated Driver (Linux 4.1 or 4.4)",
+      "device_type": "Iot",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.76",
+      "mac": "3c:06:30:0c:6a:3b",
+      "hostname": "Unknown",
+      "vendor": "Apple, Inc.",
+      "os": "Apple macOS 10.13 (High Sierra) - 10.15 (Catalina) or iOS 11.0 - 13.4 (Darwin 17.0.0 - 19.2.0)",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.18",
+      "mac": "f8:ff:c2:1f:24:9e",
+      "hostname": "Unknown",
+      "vendor": "Apple, Inc.",
+      "os": "Apple Mac OS X 10.11 (El Capitan) or iOS 12.4 - 13.0 (Darwin 15.6.0 - 19.0.0)",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.81",
+      "mac": "f8:5e:a0:4b:7f:21",
+      "hostname": "Unknown",
+      "vendor": "Intel Corporate",
+      "os": "Microsoft Windows XP SP3",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.8",
+      "mac": "aa:77:43:34:51:93",
+      "hostname": "Unknown",
+      "vendor": "Unknown",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.7",
+      "mac": "f2:9e:1f:04:66:1c",
+      "hostname": "Unknown",
+      "vendor": "Unknown",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.128",
+      "mac": "7c:50:79:a7:41:f3",
+      "hostname": "Unknown",
+      "vendor": "Intel Corporate",
+      "os": "Microsoft Windows 10 1709 - 1909",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.104",
+      "mac": "58:85:e9:2b:72:7d",
+      "hostname": "Unknown",
+      "vendor": "Realme Chongqing MobileTelecommunications Corp Ltd",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.219",
+      "mac": "18:26:49:18:c1:53",
+      "hostname": "Unknown",
+      "vendor": "Intel Corporate",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.184",
+      "mac": "70:a6:cc:07:56:4d",
+      "hostname": "Unknown",
+      "vendor": "Intel Corporate",
+      "os": "FreeBSD 6.2-RELEASE",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.241",
+      "mac": "48:e7:da:eb:d4:dd",
+      "hostname": "Unknown",
+      "vendor": "AzureWave Technology Inc.",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.250",
+      "mac": "34:86:da:71:ce:31",
+      "hostname": "Unknown",
+      "vendor": "Honor Device Co., Ltd.",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    }
+  ]
+}

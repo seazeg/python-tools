@@ -1,0 +1,96 @@
+
+    <html>
+    <head>
+        <title>局域网扫描报告 - 192.168.31.0/24</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .vulnerability { color: red; }
+        </style>
+    </head>
+    <body>
+        <h1>局域网扫描报告</h1>
+        <p>扫描时间: 2025-04-09 21:08:22</p>
+        <p>目标网段: 192.168.31.0/24</p>
+        
+        <h2>网络拓扑</h2>
+        <p>网关: None</p>
+        <h3>设备类型分布:</h3>
+        <ul>
+            <li>Iot: 1台设备</li><li>Unknown: 2台设备</li>
+        </ul>
+        
+        <h2>主机详情</h2>
+        <table>
+            <tr>
+                <th>IP地址</th>
+                <th>MAC地址</th>
+                <th>主机名</th>
+                <th>设备类型</th>
+                <th>操作系统</th>
+                <th>开放端口</th>
+                <th>漏洞信息</th>
+            </tr>
+            
+            <tr>
+                <td>192.168.31.1</td>
+                <td>c8:bf:4c:26:b2:4e</td>
+                <td>Unknown</td>
+                <td>Iot</td>
+                <td>Linux 4.4</td>
+                <td>53/domain ()<br>80/http (1.12.2)<br>8080/http (1.12.2)</td>
+                <td class="vulnerability">http-vuln-cve2011-3192: 
+  VULNERABLE:
+  Apache byterange filter DoS
+    State: VULNERABLE
+    IDs:  BID:49303  CVE:CVE-2011-3192
+      The Apache web server is vulnerable to a denial of service attack when numerous
+      overlapping byte ranges are requested.
+    Disclosure date: 2011-08-19
+    References:
+      https://www.tenable.com/plugins/nessus/55976
+      https://seclists.org/fulldisclosure/2011/Aug/175
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+      https://www.securityfocus.com/bid/49303
+<br>http-vuln-cve2011-3192: 
+  VULNERABLE:
+  Apache byterange filter DoS
+    State: VULNERABLE
+    IDs:  CVE:CVE-2011-3192  BID:49303
+      The Apache web server is vulnerable to a denial of service attack when numerous
+      overlapping byte ranges are requested.
+    Disclosure date: 2011-08-19
+    References:
+      https://seclists.org/fulldisclosure/2011/Aug/175
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+      https://www.securityfocus.com/bid/49303
+      https://www.tenable.com/plugins/nessus/55976
+</td>
+            </tr>
+        
+            <tr>
+                <td>192.168.31.136</td>
+                <td>b0:4a:39:d6:8e:bc</td>
+                <td>Unknown</td>
+                <td>Unknown</td>
+                <td>2N Helios IP VoIP doorbell</td>
+                <td></td>
+                <td class="vulnerability"></td>
+            </tr>
+        
+            <tr>
+                <td>192.168.31.249</td>
+                <td>34:86:da:71:ce:31</td>
+                <td>Unknown</td>
+                <td>Unknown</td>
+                <td>Unknown</td>
+                <td></td>
+                <td class="vulnerability"></td>
+            </tr>
+        
+        </table>
+    </body>
+    </html>
+    

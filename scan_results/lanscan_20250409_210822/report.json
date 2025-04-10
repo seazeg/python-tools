@@ -1,0 +1,75 @@
+{
+  "scan_time": "2025-04-09T21:08:22.625474",
+  "network": "192.168.31.0/24",
+  "topology": {
+    "gateway": null,
+    "subnets": {},
+    "device_types": {
+      "Iot": [
+        "192.168.31.1"
+      ],
+      "Unknown": [
+        "192.168.31.136",
+        "192.168.31.249"
+      ]
+    }
+  },
+  "hosts": [
+    {
+      "ip": "192.168.31.1",
+      "mac": "c8:bf:4c:26:b2:4e",
+      "hostname": "Unknown",
+      "vendor": "Beijing Xiaomi Mobile Software Co., Ltd",
+      "os": "Linux 4.4",
+      "device_type": "Iot",
+      "open_ports": [
+        {
+          "port": 53,
+          "service": "domain",
+          "version": "",
+          "vulnerabilities": []
+        },
+        {
+          "port": 80,
+          "service": "http",
+          "version": "1.12.2",
+          "vulnerabilities": [
+            {
+              "name": "http-vuln-cve2011-3192",
+              "details": "\n  VULNERABLE:\n  Apache byterange filter DoS\n    State: VULNERABLE\n    IDs:  BID:49303  CVE:CVE-2011-3192\n      The Apache web server is vulnerable to a denial of service attack when numerous\n      overlapping byte ranges are requested.\n    Disclosure date: 2011-08-19\n    References:\n      https://www.tenable.com/plugins/nessus/55976\n      https://seclists.org/fulldisclosure/2011/Aug/175\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192\n      https://www.securityfocus.com/bid/49303\n"
+            }
+          ]
+        },
+        {
+          "port": 8080,
+          "service": "http",
+          "version": "1.12.2",
+          "vulnerabilities": [
+            {
+              "name": "http-vuln-cve2011-3192",
+              "details": "\n  VULNERABLE:\n  Apache byterange filter DoS\n    State: VULNERABLE\n    IDs:  CVE:CVE-2011-3192  BID:49303\n      The Apache web server is vulnerable to a denial of service attack when numerous\n      overlapping byte ranges are requested.\n    Disclosure date: 2011-08-19\n    References:\n      https://seclists.org/fulldisclosure/2011/Aug/175\n      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192\n      https://www.securityfocus.com/bid/49303\n      https://www.tenable.com/plugins/nessus/55976\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ip": "192.168.31.136",
+      "mac": "b0:4a:39:d6:8e:bc",
+      "hostname": "Unknown",
+      "vendor": "Beijing Roborock Technology Co., Ltd.",
+      "os": "2N Helios IP VoIP doorbell",
+      "device_type": "Unknown",
+      "open_ports": []
+    },
+    {
+      "ip": "192.168.31.249",
+      "mac": "34:86:da:71:ce:31",
+      "hostname": "Unknown",
+      "vendor": "Honor Device Co., Ltd.",
+      "os": "Unknown",
+      "device_type": "Unknown",
+      "open_ports": []
+    }
+  ]
+}
